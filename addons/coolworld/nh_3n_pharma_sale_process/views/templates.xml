@@ -1,0 +1,26 @@
+<odoo>
+    <data>
+        <template id="report_saleorder_document_general" inherit_id="sale.report_saleorder_document"> 
+            <xpath expr="//div[@class='page']/h2" position="replace">
+                <t t-if="not (env.context.get('proforma', False) or is_pro_forma)">
+                    <span t-if="doc.state not in ['draft','sent']">Order # </span>
+                    <span t-if="doc.state in ['draft','sent']">Order # </span>
+                </t>
+                <t t-if="env.context.get('proforma', False) or is_pro_forma">
+                    <span>Pro-Forma Invoice # </span>
+                </t>
+                <span t-field="doc.name"/>
+                               
+            </xpath>
+
+            <xpath expr="//div[@class='page']/div[@id='informations']/div[3]" position="replace">
+                <div t-if="doc.date_order and doc.state in ['draft','sent']" class="col-xs-3">
+                    <strong>Order Date:</strong>
+                    <p t-field="doc.date_order"/>
+                </div>
+                               
+            </xpath>
+        
+       </template>
+    </data>
+</odoo>

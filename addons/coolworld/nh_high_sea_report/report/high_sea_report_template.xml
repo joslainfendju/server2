@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+<data>
+
+
+  </data>
+    <template id="report_transit" >
+      <t t-call="nh_high_sea_report.external_layout_high_sea_transit_report">
+        <div class="page">
+            <style>
+                            .header_table{
+                                width:100%;
+                            }
+                            .header_table th{
+                                padding:5px;
+                                text-align:center;
+                                border:1px solid black;
+                                background:#c8cace;
+                                width :100px;
+                            }
+                            .header_table td{
+                                padding:5px;
+                                text-align:center;
+                                border:1px solid black;
+                                width :100px;
+                            }
+                            .my_table{
+                                width:100%;
+                            }
+                            .my_table th{
+                                padding:5px;
+                                border-bottom:1px solid #000;
+                            }
+                            .my_table td{
+                                padding:5px;
+                                border-bottom:1px solid #efefef;
+                            }
+                        </style>
+            <div class="oe_structure"/>
+            <div class="row">
+              <center>
+                  <h3>Goods Pending Under Import</h3>
+                  <u><b>As  on date : </b></u> <span t-esc="specific_date"/>
+                
+              </center>
+            </div>
+
+            <div class="row"> 
+
+              <p>
+
+                <br/>
+                <br/>
+                 
+                 <table class="header_table">
+                  <thead>
+                    <tr>
+                      <th style="background:#d6d6d6;width:10%;">Purchase No</th>
+                      <th style="background:#d6d6d6;width:10%;">Date Order</th>
+                      <th style="background:#d6d6d6;width:10%;">Purchase value</th>
+                      <th style="background:#d6d6d6;width:10%;">Bill of Landing</th>
+                      <th style="background:#d6d6d6;width:10%;">Shipping Detail</th>
+                      <th style="background:#d6d6d6;width:10%;">SGS No</th>
+                      <th style="background:#d6d6d6;width:10%;">Country of embarkation</th>
+                      <th style="background:#d6d6d6;width:10%;">Landing country</th>
+                      <th style="background:#d6d6d6;width:10%;">ETA</th>
+                      <th style="background:#d6d6d6;width:10%;">Number of days delay</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    
+                     
+                    <tr t-foreach="data" t-as="line">
+                      <td ><span t-esc="line['order']"/></td>
+                      <td><span t-esc="line['date']"/></td>
+                      <td><span t-esc="line['value']"/></td>
+                      <td><span t-esc="line['bill']"/></td>
+                      <td><span t-esc="line['state']"/></td>
+                      <td><span t-esc="line['sgs']"/></td>
+                      <td><span t-esc="line['origin_country']"/></td>
+                      <td><span t-esc="line['arrival_country']"/></td>
+                      <td><span t-esc="line['eta']"/></td>
+                      <td><span t-esc="line['delays']"/></td>
+
+                    </tr>
+
+                  
+
+                  </tbody>
+                </table> 
+                
+              </p>   
+                           
+            </div>
+
+
+        
+        </div>
+      </t>
+
+    </template>
+
+  
+
+
+</odoo>

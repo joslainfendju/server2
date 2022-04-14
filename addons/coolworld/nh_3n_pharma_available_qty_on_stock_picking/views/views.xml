@@ -1,0 +1,23 @@
+<odoo>
+  <data>
+   
+     <!-- vue pour afficher la quantité d'article disponible en stock-->
+    <record model="ir.ui.view" id="stock_move_avec_quantite_disponible" >
+      <field name="name">stock_move_avec_quantite_disponible</field>
+      <field name="model">stock.move</field>
+      <!--<field name="priority" eval="11"/>-->
+      <field name="inherit_id" ref="stock.view_move_picking_tree" />
+      <field name="arch" type="xml">
+        <xpath expr="//tree/field[@name='product_uom_qty']" position="after">
+          <field name="quantiteEnStock">
+              
+          </field>
+        </xpath> 
+
+             
+      </field>
+    </record>
+     <!-- fin vue pour rédefinir les lignes d'achats -->
+  
+  </data>
+</odoo>

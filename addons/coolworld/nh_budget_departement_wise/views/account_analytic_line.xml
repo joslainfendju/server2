@@ -1,0 +1,30 @@
+<odoo>
+    <data>
+         <record id="view_account_analytic_line_form_with_department" model="ir.ui.view">
+            <field name="name">account.analytic.line.form.inherit.account</field>
+            <field name="model">account.analytic.line</field>
+            <field name="inherit_id" ref="analytic.view_account_analytic_line_form"/>
+            <field name="arch" type="xml">
+                <data>
+                    <xpath expr="//field[@name='tag_ids']" position="after">
+                        <field name="departement_id" />
+                    </xpath>
+                </data>
+            </field>
+        </record>
+        <record id="view_account_analytic_line_tree_inherit_with_department" model="ir.ui.view">
+            <field name="name">account.analytic.line.tree.inherit.account</field>
+            <field name="model">account.analytic.line</field>
+            <field name="inherit_id" ref="analytic.view_account_analytic_line_tree"/>
+            <field name="arch" type="xml">
+                <data>
+                    <xpath expr="//field[@name='account_id']" position="after">
+                        <field name="departement_id" />
+                    </xpath>
+                </data>
+            </field>
+        </record>
+    </data>
+</odoo>
+
+

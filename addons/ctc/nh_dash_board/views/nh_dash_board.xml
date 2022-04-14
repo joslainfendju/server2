@@ -1,0 +1,863 @@
+<odoo>
+    <data>
+        <template id="assets_backend" name="static_resources_demo assets" inherit_id="web.assets_backend">
+            <xpath expr="." position="inside">
+		        <!--<link href="/nh_dash_board/static/src/less/kanban_view.less" rel="stylesheet" type="text/less"/>-->
+            </xpath>
+        </template>
+        <record id="channel_dashboard_kanban_view" model="ir.ui.view">
+            <field name="name">nh.dashboard.view</field>
+            <field name="model">nh.dashboard</field>
+            <field name="arch" type="xml">
+                <kanban class="oe_background_grey o_kanban_dashboard o_salesteam_kanban"   create="0">
+                    <field name="color"/>
+                    <field name="name"/>
+                    <field name="application"/>
+                    <field name="total_sale_weekly"/>
+                    <field name="total_sale_monthly"/>
+                    <field name="total_sale_yearly"/>
+                    <field name="currency_id"/>
+                    <field name="count_done_sales"/>
+                    <field name="count_undone_sales"/>
+                    <field name="count_done_deliveries"/>
+                    <field name="count_undone_deliveries"/>
+                    <field name="branch_payment_json"/>
+                    <field name="branch_sale_json"/>
+                    <field name="oustanding_customers_json"/>
+                    <field name="products_json"/>
+                    <templates>
+                        <span t-name="kanban-box" >
+                            <field name="currency_id" invisible="1"/>
+                            <div t-attf-class="#{kanban_color(record.color.raw_value)} kanban_card">
+                                <div class="o_project_kanban_manage">
+                                    <a class="o_kanban_manage_toggle_button" href="#">More
+                                        <i class="fa fa-caret-down"/>
+                                    </a>
+                            </div>
+                                <div attrs ="{'invisible' : [('application','!=', 'sale')]}" class="o_project_kanban_main"  id="ecran1" >
+                                    <div class="o_kanban_card_content o_visible">
+                                        <div class="o_kanban_primary_left" >
+                                            <div class="o_kanban_card_header_title">
+                                                <center><span><span t-field="record.name"/></span></center>
+                                            </div>
+                                            <div>
+                                                <center>
+                                                    <button  class="btn btn-danger"  type="object"
+                                                             name="action_open_undone_sales" ><span class="fa fa-edit" >
+                                                        <div style="width:25px"></div></span>Unfinished Sales
+                                                        [<field name="count_undone_sales"/>]
+                                                    </button>
+                                                    <button   class="btn btn-primary"
+                                                              type="object" name="action_open_done_sales" >
+                                                        <span class="fa fa-check" >
+                                                            <div style="width:25px"></div></span>Done Sales
+                                                        [ <field name="count_done_sales"/>]
+                                                    </button>
+                                                    <button   class="btn btn-danger"
+                                                              type="object" name="action_open_undone_deliveries" >
+                                                        <span class="fa fa-truck" >
+                                                            <div style="width:25px"></div></span>Undone Delivery Orders
+                                                        [ <field name="count_undone_deliveries"/>]
+                                                    </button>
+                                                    <button   class="btn btn-primary"
+                                                              type="object" name="action_open_done_deliveries" >
+                                                        <span class="fa fa-truck" >
+                                                            <div style="width:25px"></div></span>Done Delivery Orders
+                                                        [ <field name="count_done_deliveries"/>]
+                                                    </button>
+                                                    <h3><field name="name"/></h3>
+                                                    <div id="chart_sale">Branch Sale Dashboard is loading...</div>
+                                                    <table border="0"
+                                                           style="border-color:#875A7B;background:#dc6965;width:75%">
+                                                        <tr>
+                                                            <td>
+                                                                <font color="#ffffff">
+                                                                    <a type="object" name="action_open_weekly_sales">
+                                                                        <t /> WTD:
+                                                                        <field name="total_sale_weekly" class="oe_inline"
+                                                                               widget="monetary"
+                                                                               options="{'currency_field': 'currency_id'}"
+                                                                        />
+                                                                    </a>
+                                                                    <field name="total_sale_weekly" class="oe_inline"
+                                                                           widget="monetary"
+                                                                           options="{'currency_field': 'currency_id'}"/>
+                                                                </font>
+                                                            </td>
+                                                            <td>
+                                                                <font color="#ffffff">
+                                                                    <a type="object" name="action_open_montly_sales" >
+                                                                            <t /> MTD:
+                                                                    </a>
+                                                                    <field name="total_sale_monthly" widget="monetary"
+                                                                           options="{'currency_field': 'currency_id'}"/>
+                                                                </font>
+                                                            </td>
+                                                            <td>
+                                                                <font color="#ffffff">
+                                                                    <a type="object" name="action_open_yearly_sales">
+                                                                        <t /> YTD:
+                                                                    </a>
+                                                                    <field name="total_sale_yearly" class="oe_inline"
+                                                                           widget="monetary"
+                                                                           options="{'currency_field': 'currency_id'}"/>
+                                                                </font>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </center>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="o_kanban_card_manage_pane o_invisible">
+                                        <div class="col-xs-6 o_kanban_card_manage_section o_kanban_manage_view">
+                                            <div class="o_kanban_card_manage_title">
+                                                <span>View</span>
+                                            </div>
+                                        </div>
+                                        <div t-if="widget.editable" class="o_project_kanban_colorpicker" >
+                                            <ul class="oe_kanban_colorpicker" data-field="color"/>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- sale Dashboard end-->
+
+                                <!-- Payment Dashboard-->
+                                <div attrs ="{'invisible' : [('application','!=', 'payment')]}"
+                                     class="o_project_kanban_main"  id="ecran2" >
+                                    <div class="o_kanban_card_content o_visible">
+                                        <div class="o_kanban_primary_left" >
+                                            <div class="o_kanban_card_header_title">
+                                                <center>
+                                                    <span><span t-field="record.name"/></span>
+                                                </center>
+                                            </div>
+                                            <div>
+                                                <center>
+                                                    <button  class="btn btn-danger"
+                                                             type="object" name="action_open_draft_invoice" >
+                                                        <span class="fa fa-edit" >
+                                                            <div style="width:25px"></div></span>Draft Invoices[
+                                                        <field name="count_draft_invoices"/>]
+                                                    </button>
+                                                    <button   class="btn btn-primary"  type="object"
+                                                              name="action_open_open_invoice" >
+                                                        <span class="fa fa-check">
+                                                            <div style="width:25px"></div></span>Open Invoices[
+                                                        <field name="count_open_invoices"/>]
+                                                    </button>
+                                                    <button   class="btn btn-danger"  type="object"
+                                                              name="action_open_paid_invoice" >
+                                                        <span class="fa fa-truck" >
+                                                            <div style="width:25px"></div></span>Paid Invoices [
+                                                        <field name="count_paid_invoices"/>]
+                                                    </button>
+                                                    <h3><field name="name"/></h3>
+                                                    <div id="chart_content">Payment Chart is loading...</div>
+                                                    <table border="0"
+                                                           style="border-color:#875A7B;background:#dc6965;width:75%;">
+                                                        <tr>
+                                                            <td>
+                                                                <font color="#ffffff">
+                                                                    WTD
+                                                                    <field name="total_collect_weekly" class="oe_inline"
+                                                                           widget="monetary"
+                                                                           options="{'currency_field': 'currency_id'}"/>
+                                                                </font>
+                                                            </td>
+                                                            <td>
+                                                                <font color="#ffffff">
+                                                                    MTD
+                                                                    <field name="total_collect_monthly" widget="monetary"
+                                                                           options="{'currency_field': 'currency_id'}"/>
+                                                                </font>
+                                                            </td>
+                                                            <td>
+                                                                <font color="#ffffff">
+                                                                    YTD
+                                                                    <field name="total_collect_yearly" class="oe_inline"
+                                                                           widget="monetary"
+                                                                           options="{'currency_field': 'currency_id'}"/>
+                                                                </font>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </center>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="o_kanban_card_manage_pane o_invisible">
+                                        <div class="col-xs-6 o_kanban_card_manage_section o_kanban_manage_view">
+                                            <div class="o_kanban_card_manage_title">
+                                                <span>View</span>
+                                            </div>
+                                        </div>
+                                        <div t-if="widget.editable" class="o_project_kanban_colorpicker" >
+                                            <ul class="oe_kanban_colorpicker" data-field="color"/>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Payment Dashboard End-->
+
+                                <!-- Request Dashboard-->
+                                <div attrs ="{'invisible' : [('application','!=', 'stock_request')]}"
+                                     class="o_project_kanban_main" id="ecran3" >
+                                    <div class="o_kanban_card_content o_visible">
+                                        <div class="o_kanban_primary_left" >
+                                            <div class="o_kanban_card_header_title">
+                                                <center>
+                                                    <span>
+                                                        <span t-field="record.name"/>
+                                                    </span>
+                                                </center>
+                                            </div>
+                                            <div>
+                                                <center>
+                                                    <center>
+                                                        <button  style="background:#FFFFFF">
+                                                            <span ><div style="width:150px"></div></span>
+                                                        </button>
+                                                        <button  class="btn btn-info"  type="object"
+                                                                 name="action_open_draft_stock_request" >
+                                                            <span class="fa fa-edit" >
+                                                                <div style="width:25px"></div>
+                                                            </span>Draft  [
+                                                            <field name="count_draft_request"/>]
+                                                        </button>
+                                                        <button   class="btn btn-danger"  type="object"
+                                                                  name="action_open_approved_stock_request" >
+                                                            <span class="fa fa-handshake-o" >
+                                                                <div style="width:25px"></div></span>Approved [
+                                                            <field name="count_approved_request"/>]
+                                                        </button>
+                                                        <button   class="btn btn-warning"  type="object"
+                                                                  name="action_open_transit_stock_request">
+                                                            <span class="fa fa-truck" >
+                                                                <div style="width:25px"></div>
+                                                            </span>In transit  [
+                                                            <field name="count_transit_request"/>]
+                                                        </button>
+                                                        <button  style="background:#FFFFFF"><span>
+                                                            <div style="width:150px"></div></span>
+                                                        </button>
+                                                    </center>
+                                                    <h3><field name="name"/></h3>
+                                                    <table class="table table-condensed">
+                                                        <tr><th>State</th><th>Counter</th><th>Value</th>
+                                                            <th>Max. Days</th>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <a type="object" name="action_open_draft_stock_request">
+                                                                    <t /> Draft
+                                                                </a>
+                                                            </td>
+                                                            <td>
+                                                                <a type="object" name="action_open_draft_stock_request" >
+                                                                    <field name="count_draft_request"/>/
+                                                                    <field name="count_total_request" />
+                                                                </a>
+                                                            </td>
+                                                            <td>
+                                                                <a type="object" name="action_open_draft_stock_request" >
+                                                                    <field name="value_draft_request" widget="monetary"
+                                                                           options="{'currency_field': 'currency_id'}"/>
+                                                                </a>
+                                                            </td>
+                                                            <td>
+                                                                <a type="object" name="action_open_draft_stock_request">
+                                                                    <field name="count_draft_request_max_days"/>
+                                                                </a>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <a type="object"
+                                                                   name="action_open_approved_stock_request">
+                                                                    <t />Approved
+                                                                </a>
+                                                            </td>
+                                                            <td>
+                                                                <a type="object"
+                                                                   name="action_open_approved_stock_request" >
+                                                                    <field name="count_approved_request"/>/
+                                                                    <field name="count_total_request"/>
+                                                                </a>
+                                                            </td>
+                                                            <td>
+                                                                <a type="object"
+                                                                   name="action_open_approved_stock_request">
+                                                                    <field name="value_approved_request"
+                                                                           widget="monetary"
+                                                                           options="{'currency_field': 'currency_id'}"/>
+                                                                </a>
+                                                            </td>
+                                                            <td>
+                                                                <a type="object"
+                                                                   name="action_open_approved_stock_request" >
+                                                                    <field name="count_approved_request_max_days"/>
+                                                                </a>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td><a type="object"
+                                                                   name="action_open_transit_stock_request">
+                                                                <t /> In transit
+                                                            </a>
+                                                            </td>
+                                                            <td>
+                                                                <a type="object"
+                                                                   name="action_open_transit_stock_request" >
+                                                                    <field name="count_transit_request" />/
+                                                                    <field name="count_total_request"/>
+                                                                </a>
+                                                            </td>
+                                                            <td>
+                                                                <a type="object"
+                                                                   name="action_open_transit_stock_request" >
+                                                                    <field name="value_transit_request" widget="monetary"
+                                                                           options="{'currency_field': 'currency_id'}"/>
+                                                                </a>
+                                                            </td>
+                                                            <td>
+                                                                <a type="object"
+                                                                   name="action_open_transit_stock_request" >
+                                                                    <field name="count_transit_request_max_days" />
+                                                                </a>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </center>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="o_kanban_card_manage_pane o_invisible">
+                                        <div class="col-xs-6 o_kanban_card_manage_section o_kanban_manage_view">
+                                            <div class="o_kanban_card_manage_title">
+                                                <span>View</span>
+                                            </div>
+                                        </div>
+                                        <div t-if="widget.editable" class="o_project_kanban_colorpicker" >
+                                            <ul class="oe_kanban_colorpicker" data-field="color"/>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- End Request Dashboard-->
+
+                                <!-- Oustanding Custumers Dashboard-->
+                                <div attrs ="{'invisible' : [('application','!=', 'customers')]}"
+                                     class="o_project_kanban_main"  id="ecran4" >
+                                    <div class="o_kanban_card_content o_visible">
+                                        <div class="o_kanban_primary_left" >
+                                            <div class="o_kanban_card_header_title">
+                                                <center>
+                                                    <span>
+                                                        <span t-field="record.name"/>
+                                                    </span>
+                                                </center>
+                                            </div>
+                                            <div>
+                                                <center>
+                                                    <button  class="btn btn-danger"  type="object"
+                                                             name="action_open_outstanding_customers" >
+                                                        <span class="fa fa-edit" ><div style="width:25px">
+
+                                                        </div></span>Oustanding Customers [
+                                                        <field name="count_outstanding_customers"/>]
+                                                    </button>
+                                                    <button   class="btn btn-primary"  type="object"
+                                                              name="action_open_open_invoice" >
+                                                        <span class="fa fa-check" >
+                                                            <div style="width:25px"></div>
+                                                        </span>
+                                                        Open Invoices Per Customers[
+                                                        <field name="count_open_invoices"/>]
+                                                    </button>
+                                                    <div id="chart_oustanding">
+                                                        Outstanding custumers Chart is loading...
+                                                    </div>
+                                                </center>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="o_kanban_card_manage_pane o_invisible">
+                                        <div class="col-xs-6 o_kanban_card_manage_section o_kanban_manage_view">
+                                            <div class="o_kanban_card_manage_title">
+                                                <span>View</span>
+                                            </div>
+                                        </div>
+                                        <div t-if="widget.editable" class="o_project_kanban_colorpicker" >
+                                            <ul class="oe_kanban_colorpicker" data-field="color"/>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Oustanding Custumers Dashboard End-->
+
+                                <!-- Purchase Dashboard-->
+                                <div attrs ="{'invisible' : [('application','!=', 'purchase')]}"
+                               class="o_project_kanban_main" id="ecran5" >
+                              <div class="o_kanban_card_content o_visible">
+                                  <div class="o_kanban_primary_left" >
+                                      <div class="o_kanban_card_header_title">
+                                          <center>
+                                              <span>
+                                                  <span t-field="record.name"/>
+                                              </span>
+                                          </center>
+                                      </div>
+                                      <div>
+                                          <center>
+                                              <button  class="btn btn-info"  type="object"
+                                                       name="action_open_draft_purchase" >
+                                                  <span class="fa fa-edit" >
+                                                      <div style="width:25px"></div>
+                                                  </span>
+                                                  Quotations  [<field name="count_draft_purchase"/>]
+                                              </button>
+                                              <button   class="btn btn-success"  type="object"
+                                                        name="action_open_confirmed_purchase" >
+                                                  <span class="fa fa-handshake-o" >
+                                                      <div style="width:25px"></div>
+                                                  </span>
+                                                  Confirmed [<field name="count_confirmed_purchase"/>]
+                                              </button>
+
+                                        <button   class="btn btn-primary"  type="object"
+                                                  name="action_open_production_purchase" >
+                                            <span class="fa fa-industry" >
+                                                <div style="width:25px"></div>
+                                            </span>
+                                            In Production  [
+                                            <field name="count_production_purchase"/>]
+                                        </button>
+                                        <button   class="btn btn-warning"  type="object"
+                                                  name="action_open_transit_purchase" >
+                                            <span class="fa fa-ship" >
+                                                <div style="width:25px"></div>
+                                            </span>In Transit  [
+                                            <field name="count_transit_purchase"/>]
+                                        </button>
+                                        <button   class="btn btn-danger"  type="object"
+                                                  name="action_open_landed_purchase" >
+                                            <span class="fa fa-money" >
+                                                <div style="width:25px">
+                                                </div>
+                                            </span>
+                                            Waiting for cost saving  [ <field name="count_landed_purchase"/>]
+                                        </button>
+                                        <h3><field name="name"/></h3>
+                                              <table class="table table-condensed">
+                                                  <tr><th>State</th><th>Counter</th><th>Value</th><th>Max. Days</th></tr>
+                                                  <tr>
+                                                      <td>
+                                                          <a type="object" name="action_open_draft_purchase">
+                                                              <t/> Quotation
+                                                          </a>
+                                                      </td>
+                                                      <td>
+                                                          <a type="object" name="action_open_draft_purchase" >
+                                                            <field name="count_draft_purchase"/>/<field name="count_total_purchase" />
+                                                          </a>
+                                                      </td>
+                                                      <td>
+                                                          <a type="object" name="action_open_draft_purchase">
+                                                              <field name="value_draft_purchase" widget="monetary"
+                                                                     options="{'currency_field': 'currency_id'}"/>
+                                                          </a>
+                                                      </td>
+                                                      <td>
+                                                          <a type="object" name="action_open_draft_purchase" >
+                                                            <field name="count_draft_purchase_max_days"/>
+                                                          </a>
+                                                      </td>
+                                                  </tr>
+                                                  <tr>
+                                                      <td>
+                                                          <a type="object" name="action_open_confirmed_purchase">
+                                                              <t />Confirmed
+                                                          </a>
+                                                      </td>
+                                                      <td>
+                                                          <a type="object" name="action_open_confirmed_purchase" >
+                                                              <field name="count_confirmed_purchase"/>/
+                                                              <field name="count_total_purchase"/>
+                                                          </a>
+                                                      </td>
+                                                      <td>
+                                                          <a type="object" name="action_open_confirmed_purchase">
+                                                              <field name="value_confirmed_purchase" widget="monetary"
+                                                                     options="{'currency_field': 'currency_id'}"/>
+                                                          </a>
+                                                      </td>
+                                                      <td>
+                                                          <a type="object" name="action_open_confirmed_purchase" >
+                                                              <field name="count_confirmed_purchase_max_days"/>
+                                                          </a>
+                                                      </td>
+                                                  </tr>
+                                                  <tr>
+                                                      <td>
+                                                          <a type="object" name="action_open_production_purchase">
+                                                              <t/> In production
+                                                          </a>
+                                                      </td>
+                                                      <td>
+                                                          <a type="object" name="action_open_production_purchase" >
+                                                              <field name="count_production_purchase" />/
+                                                              <field name="count_total_purchase"/>
+                                                          </a>
+                                                      </td>
+                                                      <td>
+                                                          <a type="object" name="action_open_production_purchase" >
+                                                            <field name="value_production_purchase" widget="monetary"
+                                                                   options="{'currency_field': 'currency_id'}"/>
+                                                          </a>
+                                                      </td>
+                                                      <td>
+                                                          <a type="object" name="action_open_production_purchase" >
+                                                          <field name="count_production_purchase_max_days" />
+                                                          </a>
+                                                      </td>
+                                                  </tr>
+                                                  <tr>
+                                                      <td>
+                                                          <a type="object" name="action_open_transit_purchase">
+                                                              <t />In transit
+                                                          </a>
+                                                      </td>
+                                                      <td>
+                                                          <a type="object" name="action_open_transit_purchase" >
+                                                              <field name="count_transit_purchase" />/
+                                                              <field name="count_total_purchase"/>
+                                                          </a>
+                                                      </td>
+                                                      <td>
+                                                          <a type="object" name="action_open_transit_purchase" >
+                                                           <field name="value_transit_purchase" widget="monetary"
+                                                                  options="{'currency_field': 'currency_id'}"/>
+                                                          </a>
+                                                      </td>
+                                                      <td>
+                                                          <a type="object" name="action_open_transit_purchase" >
+                                                              <field name="count_transit_purchase_max_days" />
+                                                          </a>
+                                                      </td>
+                                                  </tr>
+                                                  <tr>
+                                                      <td>
+                                                          <a type="object" name="action_open_landed_purchase">
+                                                              <t/>Waiting for cost validation
+                                                          </a>
+                                                      </td>
+                                                      <td>
+                                                          <a type="object" name="action_open_landed_purchase" >
+                                                              <field name="count_landed_purchase" />/
+                                                              <field name="count_total_purchase"/>
+                                                          </a>
+                                                      </td>
+                                                      <td>
+                                                          <a type="object" name="action_open_landed_purchase" >
+                                                            <field name="value_landed_purchase" widget="monetary"
+                                                                   options="{'currency_field': 'currency_id'}"/>
+                                                          </a>
+                                                      </td>
+                                                      <td>
+                                                          <a type="object" name="action_open_landed_purchase" >
+                                                          <field name="count_landed_purchase_max_days" />
+                                                          </a>
+                                                      </td>
+                                                  </tr>
+                                              </table>
+                                              <center>
+                                                   <button  class="btn btn-danger"  type="object"
+                                                            name="action_open_undone_receipt_orders" >
+                                                       <span class="fa fa-truck" >
+                                                           <div style="width:25px"></div></span> Waiting Receipt Order [
+                                                       <field name="count_undone_receipt_orders"/>]
+                                                   </button>
+                                                  <button   class="btn btn-primary"  type="object"
+                                                            name="action_open_done_receipt_orders" >
+                                                      <span class="fa fa-truck" >
+                                                          <div style="width:25px"></div>
+                                                      </span>Done Receipt Order[
+                                                      <field name="count_done_receipt_orders"/>]
+                                                  </button>
+                                              </center>
+                                          </center>
+                                      </div>
+                                  </div>
+                              </div>
+                              <div class="o_kanban_card_manage_pane o_invisible">
+                                  <div class="col-xs-6 o_kanban_card_manage_section o_kanban_manage_view">
+                                      <div class="o_kanban_card_manage_title"><span>View</span></div>
+                                  </div>
+                                  <div t-if="widget.editable" class="o_project_kanban_colorpicker" >
+                                      <ul class="oe_kanban_colorpicker" data-field="color"/>
+                                  </div>
+                              </div>
+                          </div>
+                                <!-- End Purchase Dashboard-->
+
+                                <!-- Stock Dashboard-->
+                                <div attrs ="{'invisible' : [('application','!=', 'stock')]}"
+                                     class="o_project_kanban_main"  id="ecran6" >
+                                    <div class="o_kanban_card_content o_visible">
+                                        <div class="o_kanban_primary_left" >
+                                            <div class="o_kanban_card_header_title">
+                                                <center>
+                                                    <span>
+                                                        <span t-field="record.name"/>
+                                                    </span>
+                                                </center>
+                                            </div>
+                                            <div>
+                                                <center>
+                                                    <button   class="btn btn-primary"  type="object"
+                                                              name="action_open_products" ><span class="fa fa-eye" >
+                                                        <div style="width:25px"></div></span>Current Inventory
+                                                    </button>
+                                                    <div id="chart_products">Stock Chart is loading...</div>
+                                                </center>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="o_kanban_card_manage_pane o_invisible">
+                                        <div class="col-xs-6 o_kanban_card_manage_section o_kanban_manage_view">
+                                            <div class="o_kanban_card_manage_title">
+                                                <span>View</span>
+                                            </div>
+                                        </div>
+                                        <div t-if="widget.editable" class="o_project_kanban_colorpicker" >
+                                            <ul class="oe_kanban_colorpicker" data-field="color"/>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Stock Dashboard End-->
+                            </div>
+                            <input type="text" style="visibility: hidden"
+                                   t-att-value ="record.branch_payment_json.raw_value" id="payment_tables_input"/>
+                            <input type="text" style="visibility: hidden"
+                                   t-att-value ="record.branch_sale_json.raw_value" id="sale_tables_input"/>
+                            <input type="text" style="visibility: hidden"
+                                   t-att-value ="record.oustanding_customers_json.raw_value"
+                                   id="oustanding_customers_input"/>
+                            <input type="text" style="visibility: hidden"
+                                   t-att-value ="record.products_json.raw_value" id="products_input"/>
+                            <script type="text/javascript"
+                                    src="/nh_dash_board/static/src/fusioncharts/js/fusioncharts.js"></script>
+                            <script>
+
+
+
+                           /*************sale dashboard***************************/
+
+                          //var input = $("#payment_tables_input").text();
+                          var input=document.getElementById("sale_tables_input");
+                          var jsonData1 = JSON.parse(input.value);
+
+                          var chartInstance1 = new FusionCharts({
+
+                              type: 'column3d',
+                              width: '700', // Width of the chart
+                              height: '400', // Height of the chart
+                              dataFormat: 'json', // Data type
+                              renderAt:'chart_sale', //container where the chart will render
+                              dataSource: {
+                                  "chart": {
+                                      "caption": "Sales of month per Branch",
+                                      "subCaption": "In CFA",
+                                      "xAxisName": "Branch",
+                                      "yAxisName": "Amount of sale",
+                                      "numberSuffix": " CFA",
+                                      "theme": "fusion",
+                                      "labelDisplay": "rotate",
+                                      "slantLabel": "1",
+                                  },
+                                  // Chart Data
+                                  "data": jsonData1
+                              }
+                          });
+
+                          // Render
+                          chartInstance1.render();
+
+
+                           /*************end sale dashboard***************************/
+
+
+                          /*************payment dashboard***************************/
+
+
+                          var input=document.getElementById("payment_tables_input");
+                          var jsonData2 = JSON.parse(input.value);
+                          var chartInstance2 = new FusionCharts({
+                          type: 'pie3D',
+                          width: '700', // Width of the chart
+                          height: '400', // Height of the chart
+                          dataFormat: 'json', // Data type
+                          renderAt:'chart_content', //container where the chart will render
+                          dataSource: {
+                              "chart": {
+                                  "caption": "Payment collected this month per Branch",
+                                  "subCaption": "In CFA",
+                                  "xAxisName": "Branches",
+                                  "yAxisName": "Payment Collected",
+                                  "numberSuffix": " CFA",
+                                  "theme": "fusion",
+                              },
+                              // Chart Data
+                              "data": jsonData2
+                          }
+                          });
+
+                          // Render
+                          chartInstance2.render();
+                          /*************end payment dashboard***************************/
+
+
+                          /*************oustanding dashboard***************************/
+
+                          var input=document.getElementById("oustanding_customers_input");
+                          var div=document.getElementById("chart_oustanding");
+                          //alert("div est "+div);
+                          var jsonData3 = JSON.parse(input.value);
+                          //alert("valeur "+input.value);
+                          var chartInstance3 = new FusionCharts({
+                          type: 'doughnut2D',
+                          width: '750', // Width of the chart
+                          height: '450', // Height of the chart
+                          dataFormat: 'json', // Data type
+                          renderAt:'chart_oustanding', //container where the chart will render
+                          dataSource: {
+                              "chart": {
+                                  "caption": "Top 10 outstanding customers",
+                                  "subCaption": " CFA",
+                                  "xAxisName": "Customers",
+                                  "yAxisName": "Credit",
+                                  "numberSuffix": " CFA",
+                                  "theme": "fusion",
+                                  "bgColor": "#FFFFFF",
+                                  "showBorder": "0",
+
+
+                              },
+                              // Chart Data
+                              "data": jsonData3
+                          }
+                          });
+
+                          // Render
+                          chartInstance3.render();
+                          /*************end outstanding dashboard***************************/
+
+
+                          /*************product dashboard***************************/
+
+                          var input=document.getElementById("products_input");
+                          var div=document.getElementById("chart_products");
+                          //alert("div est "+div);
+                          var jsonData4 = JSON.parse(input.value);
+                          //alert("valeur "+input.value);
+                          var chartInstance4 = new FusionCharts({
+                          type: 'doughnut2D',
+                          width: '750', // Width of the chart
+                          height: '450', // Height of the chart
+                          dataFormat: 'json', // Data type
+                          renderAt:'chart_products', //container where the chart will render
+                          dataSource: {
+                              "chart": {
+                                  "caption": "Top 20 Products current values in stock",
+                                  "subCaption": " CFA",
+                                  "xAxisName": "Products",
+                                  "yAxisName": "Value in stock",
+                                  "numberSuffix": " CFA",
+                                  "theme": "fusion",
+                                  "bgColor": "#FFFFFF",
+                                  "showBorder": "0",
+
+
+                              },
+                              // Chart Data
+                              "data": jsonData4
+                          }
+                          });
+
+                          // Render
+                          chartInstance4.render();
+                          /*************end product dashboard***************************/
+
+                     </script>
+                            <script>
+                           var taille ="700px";
+                        document.getElementById("ecran1").style.width = taille;
+                        document.getElementById("ecran1").parentNode.style.width = taille;
+                        document.getElementById("ecran1").parentNode.parentNode.style.width = taille;
+
+                           document.getElementById("ecran2").style.width = taille;
+                        document.getElementById("ecran2").parentNode.style.width = taille;
+                        document.getElementById("ecran2").parentNode.parentNode.style.width = taille;
+
+                            document.getElementById("ecran3").style.width = taille;
+                        document.getElementById("ecran3").parentNode.style.width = taille;
+                        document.getElementById("ecran3").parentNode.parentNode.style.width = taille;
+
+                            document.getElementById("ecran4").style.width = taille;
+                        document.getElementById("ecran4").parentNode.style.width = taille;
+                        document.getElementById("ecran4").parentNode.parentNode.style.width = taille;
+
+                                document.getElementById("ecran5").style.width = "100%";
+                        document.getElementById("ecran5").parentNode.style.width = "100%";
+                        document.getElementById("ecran5").parentNode.parentNode.style.width = taille;
+
+                                document.getElementById("ecran6").style.width = taille;
+                        document.getElementById("ecran6").parentNode.style.width = taille;
+                        document.getElementById("ecran6").parentNode.parentNode.style.width = taille;
+
+
+
+
+                       // document.getElementById("ecran").parentNode.parentNode.parentNode.style.width = "600px";
+
+                      // alert('la taille du div est :'+ document.getElementById("ecran5").style.width)
+                   </script>
+                        </span>
+                    </templates>
+                </kanban>
+            </field>
+        </record>
+
+        <record id="channel_dashboard_form_view" model="ir.ui.view">
+            <field name="name">nh.dashboard.form.view</field>
+            <field name="model">nh.dashboard</field>
+            <field name="arch" type="xml">
+               <form>
+                   <field name="color"/>
+                   <field name="name"/>
+              </form>
+            </field>
+        </record>
+
+        <record id="custom_sales_dashboard_action" model="ir.actions.act_window">
+            <field name="name">Dashboard</field>
+            <field name="res_model">nh.dashboard</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="view_type">form</field>
+            <field name="context">{}</field>
+            <field name="view_mode">kanban</field>
+        </record>
+
+        <menuitem name="GM DASHBOARD"
+            id="menu_root"
+            groups="gm_dashboard"
+            web_icon="nh_dash_board,static/description/icon.png"
+            sequence="100"/>
+
+        <menuitem id="menu_sales_config_inherited" parent= "menu_root" sequence= "1" name= "Main Dash Board" action="custom_sales_dashboard_action"/>
+
+
+
+
+
+    </data>
+</odoo>

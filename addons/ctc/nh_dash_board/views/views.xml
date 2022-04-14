@@ -1,0 +1,60 @@
+<odoo>
+  <data>
+    <!-- explicit list view definition -->
+    <!--
+    <record model="ir.ui.view" id="nh_dash_board.list">
+      <field name="name">nh_dash_board list</field>
+      <field name="model">nh_dash_board.nh_dash_board</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+          <field name="value"/>
+          <field name="value2"/>
+        </tree>
+      </field>
+    </record>
+    -->
+
+    <!-- actions opening views on models -->
+    <!--
+    <record model="ir.actions.act_window" id="nh_dash_board.action_window">
+      <field name="name">nh_dash_board window</field>
+      <field name="res_model">nh_dash_board.nh_dash_board</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+    -->
+
+    <!-- server action to the one above -->
+    <!--
+    <record model="ir.actions.server" id="nh_dash_board.action_server">
+      <field name="name">nh_dash_board server</field>
+      <field name="model_id" ref="model_nh_dash_board_nh_dash_board"/>
+      <field name="state">code</field>
+      <field name="code">
+        action = {
+          "type": "ir.actions.act_window",
+          "view_mode": "tree,form",
+          "res_model": self._name,
+        }
+      </field>
+    </record>
+    -->
+
+    <!-- Top menu item -->
+    <!--
+    <menuitem name="nh_dash_board" id="nh_dash_board.menu_root"/>
+    -->
+    <!-- menu categories -->
+    <!--
+    <menuitem name="Menu 1" id="nh_dash_board.menu_1" parent="nh_dash_board.menu_root"/>
+    <menuitem name="Menu 2" id="nh_dash_board.menu_2" parent="nh_dash_board.menu_root"/>
+    -->
+    <!-- actions -->
+    <!--
+    <menuitem name="List" id="nh_dash_board.menu_1_list" parent="nh_dash_board.menu_1"
+              action="nh_dash_board.action_window"/>
+    <menuitem name="Server to list" id="nh_dash_board" parent="nh_dash_board.menu_2"
+              action="nh_dash_board.action_server"/>
+    -->
+  </data>
+</odoo>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="0">
+        <record id="gm_dashboard" model="res.groups">
+          <field name="name">GM DASHBOARD</field>
+
+       </record>
+    </data>
+</odoo>

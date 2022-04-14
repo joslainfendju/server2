@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record model="ir.ui.view" id="view_init_balance_form">
+        <field name="name">initial.balance.load form</field>
+        <field name="model">initial.balance.load</field>
+        <field name="arch" type="xml">
+            <form string="initial.balance.load form" >
+                    <group>
+
+                        <field name="account_move_id" />
+                        <field name="data" filename='filename' widget="binary" />
+                        <field name="filename" invisible='1' />
+                    </group>
+
+					<footer >
+                        <button name="load_init_balance" string="Load" type="object" class="oe_highlight"/>
+						 or
+                        <button string="Cancel" class="oe_link" special="cancel"/>
+                    </footer>
+            </form>
+        </field>
+    </record>
+
+
+    <record model="ir.actions.act_window" id="action_init_balance">
+        <field name="name">initial.balance.load</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">initial.balance.load</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="view_init_balance_form"/>
+    </record>
+
+    <menuitem name="Initial balance Import"
+              id="menu_init_balance"
+              parent="account.account_management_menu"
+              action="action_init_balance"
+              sequence="4"
+
+        />
+
+
+</odoo>

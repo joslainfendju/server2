@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record model="ir.ui.view" id="view_inventory_date_correc_form">
+        <field name="name">inventory.date.correct form</field>
+        <field name="model">inventory.date.correct</field>
+        <field name="arch" type="xml">
+            <form string="inventory.date.correct form" >
+                    <group>
+                        <field name="code" />
+                        <field name="date" />
+                        <field name="branch_date_correct" />
+                    </group>
+					<footer >
+                        <button name="start" string="Launch" type="object" class="oe_highlight"/>
+						 or
+                        <button string="Cancel" class="oe_link" special="cancel"/>
+                    </footer>
+            </form>
+        </field>
+    </record>
+
+
+    <record model="ir.actions.act_window" id="action_inventory_date_correct">
+        <field name="name">inventory.date.correct</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">inventory.date.correct</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="view_inventory_date_correc_form"/>
+    </record>
+
+    <menuitem name="show-account-entries_start_date_correct"
+              id="menu_inventory_date_correct"
+              parent="account.account_management_menu"
+              action="action_inventory_date_correct"
+              sequence="3"
+
+        />
+
+
+</odoo>

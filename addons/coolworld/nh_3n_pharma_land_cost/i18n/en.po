@@ -1,0 +1,1159 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* nh_3n_pharma_land_cost
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 11.0e+e-20180216\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-01-14 17:09+0000\n"
+"PO-Revision-Date: 2019-01-14 17:09+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: nh_3n_pharma_land_cost
+#: model:ir.model.fields,field_description:nh_3n_pharma_land_cost.field_purchase_order_land_costs_total_difference
+msgid " Difference on Total Purchase Price with Land Cost"
+msgstr " Difference on Total Purchase Price with Land Cost"
+
+#. module: nh_3n_pharma_land_cost
+#: model:ir.model.fields,field_description:nh_3n_pharma_land_cost.field_purchase_order_line_final_average_cost_price
+msgid " Final  Cost Price"
+msgstr " Final  Cost Price"
+
+#. module: nh_3n_pharma_land_cost
+#: model:ir.ui.view,arch_db:nh_3n_pharma_land_cost.landing_cost_form
+msgid "<b>Formula ⁣</b>"
+msgstr "<b>Formula ⁣</b>"
+
+#. module: nh_3n_pharma_land_cost
+#: model:ir.ui.view,arch_db:nh_3n_pharma_land_cost.landing_cost_form
+msgid "<b>Manual</b>"
+msgstr "<b>Manual</b>"
+
+#. module: nh_3n_pharma_land_cost
+#: model:ir.ui.view,arch_db:nh_3n_pharma_land_cost.landing_cost_form
+msgid "<b>Total</b>"
+msgstr "<b>Total</b>"
+
+#. module: nh_3n_pharma_land_cost
+#: model:ir.ui.view,arch_db:nh_3n_pharma_land_cost.landing_cost_form
+msgid "<b>difference ⁣</b>"
+msgstr "<b>difference ⁣</b>"
+
+#. module: nh_3n_pharma_land_cost
+#: model:ir.ui.view,arch_db:nh_3n_pharma_land_cost.landing_cost_form
+msgid "Approve"
+msgstr "Approve"
+
+#. module: nh_3n_pharma_land_cost
+#: model:ir.model.fields,field_description:nh_3n_pharma_land_cost.field_nh_3n_pharma_land_cost_land_cost_date_approve
+msgid "Approve Date"
+msgstr "Approve Date"
+
+#. module: nh_3n_pharma_land_cost
+#: selection:nh_3n_pharma_land_cost.land_cost,state:0
+msgid "Approved"
+msgstr "Approved"
+
+#. module: nh_3n_pharma_land_cost
+#: model:ir.model.fields,field_description:nh_3n_pharma_land_cost.field_nh_3n_pharma_land_cost_land_cost_confirmation_wizard_arrival_country
+#: model:ir.model.fields,field_description:nh_3n_pharma_land_cost.field_purchase_order_arrival_country
+msgid "Arrival Country"
+msgstr "Arrival Country"
+
+#. module: nh_3n_pharma_land_cost
+#: model:ir.model.fields,field_description:nh_3n_pharma_land_cost.field_nh_3n_pharma_land_cost_land_cost_confirmation_wizard_arrival_town
+#: model:ir.model.fields,field_description:nh_3n_pharma_land_cost.field_purchase_order_arrival_town
+msgid "Arrival Town"
+msgstr "Arrival Town"
+
+#. module: nh_3n_pharma_land_cost
+#: model:ir.model.fields,field_description:nh_3n_pharma_land_cost.field_nh_3n_pharma_land_cost_land_cost_confirmation_wizard_sgs_number
+#: model:ir.model.fields,field_description:nh_3n_pharma_land_cost.field_purchase_order_sgs_number
+msgid "SGS Number"
+msgstr "SGS Number"
+
+#. module: nh_3n_pharma_land_cost
+#: model:ir.model.fields,field_description:nh_3n_pharma_land_cost.field_purchase_order_origin_country
+msgid "Country of purchase"
+msgstr "Country of purchase"
+
+#. module: nh_3n_pharma_land_cost
+#: model:ir.model.fields,field_description:nh_3n_pharma_land_cost.field_nh_3n_pharma_land_cost_land_cost_confirmation_wizard_bill_of_landing_number
+#: model:ir.model.fields,field_description:nh_3n_pharma_land_cost.field_purchase_order_bill_of_landing_number
+msgid "Bill of Landing Number"
+msgstr "Bill of Landing Number"
+
+#. module: nh_3n_pharma_land_cost
+#: model:ir.model.fields,field_description:nh_3n_pharma_land_cost.field_purchase_order_shipment_number
+msgid "Shipment Number"
+msgstr "Shipment Number"
+
+#. module: nh_3n_pharma_land_cost
+#: model:ir.ui.view,arch_db:nh_3n_pharma_land_cost.nh_3n_pharma_land_cost_product_template_field_control_expense
+msgid "Budget Control"
+msgstr "Budget Control"
+
+#. module: nh_3n_pharma_land_cost
+#: model:res.groups,name:nh_3n_pharma_land_cost.button_approve_landing_cost
+msgid "Button Approve Landing Cost"
+msgstr "Button Approve Landing Cost"
+
+#. module: nh_3n_pharma_land_cost
+#: model:res.groups,name:nh_3n_pharma_land_cost.button_generate_landing_cost
+msgid "Button Compute Landing Cost"
+msgstr "Button Compute Landing Cost"
+
+#. module: nh_3n_pharma_land_cost
+#: model:res.groups,name:nh_3n_pharma_land_cost.button_confirm
+msgid "Button Confirm"
+msgstr "Button Confirm"
+
+#. module: nh_3n_pharma_land_cost
+#: model:res.groups,name:nh_3n_pharma_land_cost.button_view_second_level_validation
+msgid "Button GM Validation"
+msgstr "Button Manager Validation"
+
+#. module: nh_3n_pharma_land_cost
+#: model:res.groups,name:nh_3n_pharma_land_cost.button_landed
+msgid "Button Landed"
+msgstr "Button Landed"
+
+#. module: nh_3n_pharma_land_cost
+#: model:res.groups,name:nh_3n_pharma_land_cost.button_view_first_level_validation
+msgid "Button MD Validation"
+msgstr "Button DAF Validation"
+
+#. module: nh_3n_pharma_land_cost
+#: model:res.groups,name:nh_3n_pharma_land_cost.button_print_landing_cost
+msgid "Button Print Landing Cost"
+msgstr "Button Print Landing Cost"
+
+#. module: nh_3n_pharma_land_cost
+#: model:res.groups,name:nh_3n_pharma_land_cost.button_production
+msgid "Button Switch to production"
+msgstr "Button Switch to production"
+
+#. module: nh_3n_pharma_land_cost
+#: model:res.groups,name:nh_3n_pharma_land_cost.button_transit
+msgid "Button Switch to transit"
+msgstr "Button Switch to transit"
+
+#. module: nh_3n_pharma_land_cost
+#: model:res.groups,name:nh_3n_pharma_land_cost.button_view_landing_cost
+msgid "Button View Landing Cost"
+msgstr "Button View Landing Cost"
+
+#. module: nh_3n_pharma_land_cost
+#: model:res.groups,name:nh_3n_pharma_land_cost.button_approve
+msgid "Button approve"
+msgstr "Button approve"
+
+#. module: nh_3n_pharma_land_cost
+#: model:res.groups,name:nh_3n_pharma_land_cost.button_cancel
+msgid "Button cancel"
+msgstr "Button cancel"
+
+#. module: nh_3n_pharma_land_cost
+#: model:res.groups,name:nh_3n_pharma_land_cost.button_cancel_landing_cost
+msgid "Button cancel Landing Cost"
+msgstr "Button cancel Landing Cost"
+
+#. module: nh_3n_pharma_land_cost
+#: model:res.groups,name:nh_3n_pharma_land_cost.button_done
+msgid "Button done"
+msgstr "Button done"
+
+#. module: nh_3n_pharma_land_cost
+#: model:res.groups,name:nh_3n_pharma_land_cost.button_draft
+msgid "Button draft"
+msgstr "Button draft"
+
+#. module: nh_3n_pharma_land_cost
+#: model:res.groups,name:nh_3n_pharma_land_cost.button_unlock
+msgid "Button unlock'"
+msgstr "Button unlock'"
+
+#. module: nh_3n_pharma_land_cost
+#: model:ir.ui.view,arch_db:nh_3n_pharma_land_cost.land_cost_confirmation_wizard
+#: model:ir.ui.view,arch_db:nh_3n_pharma_land_cost.landing_cost_form
+#: model:ir.ui.view,arch_db:nh_3n_pharma_land_cost.nh_3n_pharma_land_cost_purchase_order
+#: model:ir.ui.view,arch_db:nh_3n_pharma_land_cost.view_land_cost_export
+msgid "Cancel"
+msgstr "Cancel"
+
+#. module: nh_3n_pharma_land_cost
+#: selection:nh_3n_pharma_land_cost.land_cost,state:0
+#: selection:purchase.order,state_expense:0
+#: selection:purchase.order,state_local:0
+msgid "Cancelled"
+msgstr "Cancelled"
+
+#. module: nh_3n_pharma_land_cost
+#: model:ir.ui.view,arch_db:nh_3n_pharma_land_cost.view_land_cost_export
+msgid "Close"
+msgstr "Close"
+
+#. module: nh_3n_pharma_land_cost
+#: model:ir.ui.view,arch_db:nh_3n_pharma_land_cost.nh_3n_pharma_land_cost_purchase_order
+msgid "Compute Landing Cost"
+msgstr "Compute Landing Cost"
+
+#. module: nh_3n_pharma_land_cost
+#: model:ir.ui.view,arch_db:nh_3n_pharma_land_cost.land_cost_confirmation_wizard
+msgid "Confirm"
+msgstr "Confirm"
+
+#. module: nh_3n_pharma_land_cost
+#: model:ir.model,name:nh_3n_pharma_land_cost.model_nh_3n_pharma_land_cost_land_cost_confirmation_wizard
+msgid "Confirm Landing Cost"
+msgstr "Confirm Landing Cost"
+
+#. module: nh_3n_pharma_land_cost
+#: model:ir.ui.view,arch_db:nh_3n_pharma_land_cost.nh_3n_pharma_land_cost_purchase_order
+msgid "Confirm Order"
+msgstr "Confirm Order"
+
+#. module: nh_3n_pharma_land_cost
+#: model:ir.ui.view,arch_db:nh_3n_pharma_land_cost.nh_3n_pharma_land_cost_purchase_order
+msgid "Confirm product have landed"
+msgstr "Confirm product have landed"
+
+#. module: nh_3n_pharma_land_cost
+#: model:ir.model.fields,field_description:nh_3n_pharma_land_cost.field_purchase_order_date_confirm
+msgid "Confirmation Date"
+msgstr "Confirmation Date"
+
+#. module: nh_3n_pharma_land_cost
+#: model:ir.model.fields,field_description:nh_3n_pharma_land_cost.field_product_product_control_expense
+#: model:ir.model.fields,field_description:nh_3n_pharma_land_cost.field_product_template_control_expense
+msgid "Control expenses"
+msgstr "Control expenses"
+
+#. module: nh_3n_pharma_land_cost
+#: model:ir.model.fields,field_description:nh_3n_pharma_land_cost.field_nh_3n_pharma_land_cost_land_cost_line_cost_per_unit_purchase
+#: model:ir.model.fields,field_description:nh_3n_pharma_land_cost.field_purchase_order_line_cost_per_unit_purchase
+msgid "Cost  Per unit purchase"
+msgstr "Cost  Per unit purchase"
+
+#. module: nh_3n_pharma_land_cost
+#: model:ir.model.fields,field_description:nh_3n_pharma_land_cost.field_stock_move_line_land_cost_line_id
+msgid "Cost Details"
+msgstr "Cost Details"
+
+#. module: nh_3n_pharma_land_cost
+#: selection:nh_3n_pharma_land_cost.land_cost,transit_cost_mode:0
+#: selection:nh_3n_pharma_land_cost.land_cost_confirmation_wizard,transit_cost_mode:0
+#: selection:purchase.order,transit_cost_mode:0
+msgid "Cost Insurance and Freight (CIF)"
+msgstr "Cost Insurance and Freight (CIF)"
+
+#. module: nh_3n_pharma_land_cost
+#: model:ir.model.fields,field_description:nh_3n_pharma_land_cost.field_product_product_land_cost_log_ids
+#: model:ir.model.fields,field_description:nh_3n_pharma_land_cost.field_product_template_land_cost_log_ids
+msgid "Cost Price History"
+msgstr "Cost Price History"
+
+#. module: nh_3n_pharma_land_cost
+#: model:ir.model.fields,field_description:nh_3n_pharma_land_cost.field_nh_3n_pharma_land_cost_land_cost_line_cost_before_purchase
+msgid "Cost before arrival"
+msgstr "Cost before arrival"
+
+#. module: nh_3n_pharma_land_cost
+#: model:ir.model.fields,field_description:nh_3n_pharma_land_cost.field_nh_3n_pharma_land_cost_land_cost_log_landed_product_cost
+msgid "Cost of Landed Product"
+msgstr "Cost of Landed Product"
+
+#. module: nh_3n_pharma_land_cost
+#: model:ir.model.fields,field_description:nh_3n_pharma_land_cost.field_nh_3n_pharma_land_cost_land_cost_log_date_log
+msgid "Cost update on"
+msgstr "Cost update on"
+
+#. module: nh_3n_pharma_land_cost
+#: model:ir.model.fields,field_description:nh_3n_pharma_land_cost.field_nh_3n_pharma_land_cost_land_cost_confirmation_wizard_create_uid
+#: model:ir.model.fields,field_description:nh_3n_pharma_land_cost.field_nh_3n_pharma_land_cost_land_cost_create_uid
+#: model:ir.model.fields,field_description:nh_3n_pharma_land_cost.field_nh_3n_pharma_land_cost_land_cost_export_wizard_create_uid
+#: model:ir.model.fields,field_description:nh_3n_pharma_land_cost.field_nh_3n_pharma_land_cost_land_cost_line_create_uid
+#: model:ir.model.fields,field_description:nh_3n_pharma_land_cost.field_nh_3n_pharma_land_cost_land_cost_log_create_uid
+msgid "Created by"
+msgstr "Created by"
+
+#. module: nh_3n_pharma_land_cost
+#: model:ir.model.fields,field_description:nh_3n_pharma_land_cost.field_nh_3n_pharma_land_cost_land_cost_confirmation_wizard_create_date
+#: model:ir.model.fields,field_description:nh_3n_pharma_land_cost.field_nh_3n_pharma_land_cost_land_cost_create_date
+#: model:ir.model.fields,field_description:nh_3n_pharma_land_cost.field_nh_3n_pharma_land_cost_land_cost_export_wizard_create_date
+#: model:ir.model.fields,field_description:nh_3n_pharma_land_cost.field_nh_3n_pharma_land_cost_land_cost_line_create_date
+#: model:ir.model.fields,field_description:nh_3n_pharma_land_cost.field_nh_3n_pharma_land_cost_land_cost_log_create_date
+msgid "Created on"
+msgstr "Created on"
+
+#. module: nh_3n_pharma_land_cost
+#: model:ir.model.fields,field_description:nh_3n_pharma_land_cost.field_nh_3n_pharma_land_cost_land_cost_confirmation_wizard_currency_id
+#: model:ir.model.fields,field_description:nh_3n_pharma_land_cost.field_nh_3n_pharma_land_cost_land_cost_currency_id
+#: model:ir.model.fields,field_description:nh_3n_pharma_land_cost.field_nh_3n_pharma_land_cost_land_cost_line_currency_id
+msgid "Currency"
+msgstr "Currency"
+
+#. module: nh_3n_pharma_land_cost
+#: model:ir.model.fields,field_description:nh_3n_pharma_land_cost.field_nh_3n_pharma_land_cost_land_cost_confirmation_wizard_land_cost_currency_id
+#: model:ir.model.fields,field_description:nh_3n_pharma_land_cost.field_purchase_order_land_cost_currency_id
+msgid "Currency of the cost sheet"
+msgstr "Currency of the cost sheet"
+
+#. module: nh_3n_pharma_land_cost
+#: model:ir.model.fields,field_description:nh_3n_pharma_land_cost.field_nh_3n_pharma_land_cost_land_cost_confirmation_wizard_custom_cost
+#: model:ir.model.fields,field_description:nh_3n_pharma_land_cost.field_nh_3n_pharma_land_cost_land_cost_custom_cost
+#: model:ir.model.fields,field_description:nh_3n_pharma_land_cost.field_nh_3n_pharma_land_cost_land_cost_line_line_custom_cost
+#: model:ir.model.fields,field_description:nh_3n_pharma_land_cost.field_purchase_order_custom_cost
+#: model:ir.model.fields,field_description:nh_3n_pharma_land_cost.field_purchase_order_line_line_custom_cost
+msgid "Custom Cost"
+msgstr "Custom Cost"
+
+#. module: nh_3n_pharma_land_cost
+#: model:ir.model.fields,field_description:nh_3n_pharma_land_cost.field_purchase_order_departement_id
+msgid "Departement"
+msgstr "Departement"
+
+#. module: nh_3n_pharma_land_cost
+#: model:ir.model.fields,field_description:nh_3n_pharma_land_cost.field_nh_3n_pharma_land_cost_land_cost_custom_cost_difference
+#: model:ir.model.fields,field_description:nh_3n_pharma_land_cost.field_purchase_order_custom_cost_difference
+msgid "Difference on Custom Cost"
+msgstr "Difference on Custom Cost"
+
+#. module: nh_3n_pharma_land_cost
+#: model:ir.model.fields,field_description:nh_3n_pharma_land_cost.field_nh_3n_pharma_land_cost_land_cost_financial_expense_value_difference
+#: model:ir.model.fields,field_description:nh_3n_pharma_land_cost.field_purchase_order_financial_expense_value_difference
+msgid "Difference on Financial Expense"
+msgstr "Difference on Financial Expense"
+
+#. module: nh_3n_pharma_land_cost
+#: model:ir.model.fields,field_description:nh_3n_pharma_land_cost.field_nh_3n_pharma_land_cost_land_cost_freight_difference
+#: model:ir.model.fields,field_description:nh_3n_pharma_land_cost.field_purchase_order_freight_difference
+msgid "Difference on Freight charges"
+msgstr "Difference on Freight charges"
+
+#. module: nh_3n_pharma_land_cost
+#: model:ir.model.fields,field_description:nh_3n_pharma_land_cost.field_nh_3n_pharma_land_cost_land_cost_handling_cost_difference
+#: model:ir.model.fields,field_description:nh_3n_pharma_land_cost.field_purchase_order_handling_cost_difference
+msgid "Difference on Handling Cost"
+msgstr "Difference on Handling Cost"
+
+#. module: nh_3n_pharma_land_cost
+#: model:ir.model.fields,field_description:nh_3n_pharma_land_cost.field_nh_3n_pharma_land_cost_land_cost_external_audit_cost_value_difference
+#: model:ir.model.fields,field_description:nh_3n_pharma_land_cost.field_purchase_order_external_audit_cost_value_difference
+msgid "Difference on Import Audit Cost (SGS)"
+msgstr "Difference on Import Audit Cost (SGS)"
+
+#. module: nh_3n_pharma_land_cost
+#: model:ir.model.fields,field_description:nh_3n_pharma_land_cost.field_nh_3n_pharma_land_cost_land_cost_intervention_charge_difference
+#: model:ir.model.fields,field_description:nh_3n_pharma_land_cost.field_purchase_order_intervention_charge_difference
+msgid "Difference on Intervention Charge"
+msgstr "Difference on Intervention Charge"
+
+#. module: nh_3n_pharma_land_cost
+#: model:ir.model.fields,field_description:nh_3n_pharma_land_cost.field_nh_3n_pharma_land_cost_land_cost_outlay_charge_difference
+#: model:ir.model.fields,field_description:nh_3n_pharma_land_cost.field_purchase_order_outlay_charge_difference
+msgid "Difference on Outlay Charge"
+msgstr "Difference on Outlay Charge"
+
+#. module: nh_3n_pharma_land_cost
+#: model:ir.model.fields,field_description:nh_3n_pharma_land_cost.field_nh_3n_pharma_land_cost_land_cost_amount_total_difference
+#: model:ir.model.fields,field_description:nh_3n_pharma_land_cost.field_purchase_order_amount_total_difference
+msgid "Difference on Total Purchase"
+msgstr "Difference on Total Purchase"
+
+#. module: nh_3n_pharma_land_cost
+#: model:ir.model.fields,field_description:nh_3n_pharma_land_cost.field_nh_3n_pharma_land_cost_land_cost_amount_total_with_land_costs_difference
+#: model:ir.model.fields,field_description:nh_3n_pharma_land_cost.field_nh_3n_pharma_land_cost_land_cost_land_costs_total_difference
+msgid "Difference on Total Purchase Price with Landing Costs"
+msgstr "Difference on Total Purchase Price with Landing Costs"
+
+#. module: nh_3n_pharma_land_cost
+#: model:ir.model.fields,field_description:nh_3n_pharma_land_cost.field_nh_3n_pharma_land_cost_land_cost_whithholding_on_sale_value_difference
+#: model:ir.model.fields,field_description:nh_3n_pharma_land_cost.field_purchase_order_whithholding_on_sale_value_difference
+msgid "Difference on Withholding on sale"
+msgstr "Difference on Withholding on sale"
+
+#. module: nh_3n_pharma_land_cost
+#: model:ir.model.fields,field_description:nh_3n_pharma_land_cost.field_nh_3n_pharma_land_cost_land_cost_confirmation_wizard_display_name
+#: model:ir.model.fields,field_description:nh_3n_pharma_land_cost.field_nh_3n_pharma_land_cost_land_cost_display_name
+#: model:ir.model.fields,field_description:nh_3n_pharma_land_cost.field_nh_3n_pharma_land_cost_land_cost_export_wizard_display_name
+#: model:ir.model.fields,field_description:nh_3n_pharma_land_cost.field_nh_3n_pharma_land_cost_land_cost_line_display_name
+#: model:ir.model.fields,field_description:nh_3n_pharma_land_cost.field_nh_3n_pharma_land_cost_land_cost_log_display_name
+msgid "Display Name"
+msgstr "Display Name"
+
+#. module: nh_3n_pharma_land_cost
+#: model:ir.ui.view,arch_db:nh_3n_pharma_land_cost.view_land_cost_export
+msgid "Download options :"
+msgstr "Download options :"
+
+#. module: nh_3n_pharma_land_cost
+#: selection:nh_3n_pharma_land_cost.land_cost,state:0
+msgid "Draft"
+msgstr "Draft"
+
+#. module: nh_3n_pharma_land_cost
+#: model:ir.model.fields,field_description:nh_3n_pharma_land_cost.field_purchase_order_expected_landed_date
+msgid "Expected Arrival Date (ETA)"
+msgstr "Expected Arrival Date (ETA)"
+
+#. module: nh_3n_pharma_land_cost
+#: model:ir.model.fields,field_description:nh_3n_pharma_land_cost.field_purchase_order_expected_production_end_date
+msgid "Expected date of end of production"
+msgstr "Expected date of end of production"
+
+#. module: nh_3n_pharma_land_cost
+#: selection:purchase.order,type:0
+msgid "Expense"
+msgstr "Expense"
+
+#. module: nh_3n_pharma_land_cost
+#: model:ir.ui.view,arch_db:nh_3n_pharma_land_cost.view_land_cost_export
+msgid "Export to EXCEL FILE"
+msgstr "Export to EXCEL FILE"
+
+#. module: nh_3n_pharma_land_cost
+#: model:ir.ui.view,arch_db:nh_3n_pharma_land_cost.view_land_cost_export
+msgid "Exportation finished"
+msgstr "Exportation finished"
+
+#. module: nh_3n_pharma_land_cost
+#: model:ir.model.fields,field_description:nh_3n_pharma_land_cost.field_nh_3n_pharma_land_cost_land_cost_export_wizard_data
+msgid "File"
+msgstr "File"
+
+#. module: nh_3n_pharma_land_cost
+#: model:ir.model.fields,field_description:nh_3n_pharma_land_cost.field_nh_3n_pharma_land_cost_land_cost_export_wizard_name
+msgid "File name"
+msgstr "File name"
+
+#. module: nh_3n_pharma_land_cost
+#: model:ir.model.fields,field_description:nh_3n_pharma_land_cost.field_nh_3n_pharma_land_cost_land_cost_line_cost_price_after_purchase
+msgid "Final Cost Price"
+msgstr "Final Cost Price"
+
+#. module: nh_3n_pharma_land_cost
+#: model:ir.model.fields,field_description:nh_3n_pharma_land_cost.field_nh_3n_pharma_land_cost_land_cost_confirmation_wizard_financial_expense_value
+#: model:ir.model.fields,field_description:nh_3n_pharma_land_cost.field_nh_3n_pharma_land_cost_land_cost_financial_expense_value
+#: model:ir.model.fields,field_description:nh_3n_pharma_land_cost.field_nh_3n_pharma_land_cost_land_cost_line_line_financial_expense_value
+#: model:ir.model.fields,field_description:nh_3n_pharma_land_cost.field_purchase_order_financial_expense_value
+#: model:ir.model.fields,field_description:nh_3n_pharma_land_cost.field_purchase_order_line_line_financial_expense_value
+msgid "Financial Expense"
+msgstr "Financial Expense"
+
+#. module: nh_3n_pharma_land_cost
+#: model:ir.model.fields,field_description:nh_3n_pharma_land_cost.field_nh_3n_pharma_land_cost_land_cost_confirmation_wizard_financial_expense_rate
+#: model:ir.model.fields,field_description:nh_3n_pharma_land_cost.field_nh_3n_pharma_land_cost_land_cost_financial_expense_rate
+#: model:ir.model.fields,field_description:nh_3n_pharma_land_cost.field_purchase_order_financial_expense_rate
+msgid "Financial Expense rate in percentage"
+msgstr "Financial Expense rate in percentage"
+
+#. module: nh_3n_pharma_land_cost
+#: code:addons/nh_3n_pharma_land_cost/models/purchase_order.py:426
+#: code:addons/nh_3n_pharma_land_cost/models/purchase_order_line.py:118
+#, python-format
+msgid "For Expense, you have to choose only product on whitch control expense is activated"
+msgstr "For Expense, you have to choose only product on whitch control expense is activated"
+
+#. module: nh_3n_pharma_land_cost
+#: code:addons/nh_3n_pharma_land_cost/models/purchase_order.py:429
+#: code:addons/nh_3n_pharma_land_cost/models/purchase_order_line.py:121
+#, python-format
+msgid "For Purchase of not Expense type, you can't choose  product on whitch control expense is activated"
+msgstr "For Purchase of not Expense type, you can't choose  product on whitch control expense is activated"
+
+#. module: nh_3n_pharma_land_cost
+#: model:ir.ui.view,arch_db:nh_3n_pharma_land_cost.nh_3n_pharma_land_cost_purchase_order
+msgid "For example enter 10 if value is 10%"
+msgstr "For example enter 10 if value is 10%"
+
+#. module: nh_3n_pharma_land_cost
+#: model:ir.model.fields,field_description:nh_3n_pharma_land_cost.field_nh_3n_pharma_land_cost_land_cost_custom_cost_formula
+#: model:ir.model.fields,field_description:nh_3n_pharma_land_cost.field_purchase_order_custom_cost_formula
+msgid "Formula Custom Cost"
+msgstr "Formula Custom Cost"
+
+#. module: nh_3n_pharma_land_cost
+#: model:ir.model.fields,field_description:nh_3n_pharma_land_cost.field_nh_3n_pharma_land_cost_land_cost_financial_expense_value_formula
+#: model:ir.model.fields,field_description:nh_3n_pharma_land_cost.field_purchase_order_financial_expense_value_formula
+msgid "Formula Financial Expense"
+msgstr "Formula Financial Expense"
+
+#. module: nh_3n_pharma_land_cost
+#: model:ir.model.fields,field_description:nh_3n_pharma_land_cost.field_nh_3n_pharma_land_cost_land_cost_freight_formula
+#: model:ir.model.fields,field_description:nh_3n_pharma_land_cost.field_purchase_order_freight_formula
+msgid "Formula Freight charges"
+msgstr "Formula Freight charges"
+
+#. module: nh_3n_pharma_land_cost
+#: model:ir.model.fields,field_description:nh_3n_pharma_land_cost.field_nh_3n_pharma_land_cost_land_cost_handling_cost_formula
+#: model:ir.model.fields,field_description:nh_3n_pharma_land_cost.field_purchase_order_handling_cost_formula
+msgid "Formula Handling Cost"
+msgstr "Formula Handling Cost"
+
+#. module: nh_3n_pharma_land_cost
+#: model:ir.model.fields,field_description:nh_3n_pharma_land_cost.field_nh_3n_pharma_land_cost_land_cost_external_audit_cost_value_formula
+#: model:ir.model.fields,field_description:nh_3n_pharma_land_cost.field_purchase_order_external_audit_cost_value_formula
+msgid "Formula Import Audit Cost (SGS)"
+msgstr "Formula Import Audit Cost (SGS)"
+
+#. module: nh_3n_pharma_land_cost
+#: model:ir.model.fields,field_description:nh_3n_pharma_land_cost.field_nh_3n_pharma_land_cost_land_cost_intervention_charge_formula
+#: model:ir.model.fields,field_description:nh_3n_pharma_land_cost.field_purchase_order_intervention_charge_formula
+msgid "Formula Intervention Charge"
+msgstr "Formula Intervention Charge"
+
+#. module: nh_3n_pharma_land_cost
+#: model:ir.model.fields,field_description:nh_3n_pharma_land_cost.field_nh_3n_pharma_land_cost_land_cost_outlay_charge_formula
+#: model:ir.model.fields,field_description:nh_3n_pharma_land_cost.field_purchase_order_outlay_charge_formula
+msgid "Formula Outlay Charge"
+msgstr "Formula Outlay Charge"
+
+#. module: nh_3n_pharma_land_cost
+#: model:ir.model.fields,field_description:nh_3n_pharma_land_cost.field_nh_3n_pharma_land_cost_land_cost_amount_total_formula
+#: model:ir.model.fields,field_description:nh_3n_pharma_land_cost.field_purchase_order_amount_total_formula
+msgid "Formula Total Purchase Price"
+msgstr "Formula Total Purchase Price"
+
+#. module: nh_3n_pharma_land_cost
+#: model:ir.model.fields,field_description:nh_3n_pharma_land_cost.field_nh_3n_pharma_land_cost_land_cost_amount_total_with_land_costs_formula
+#: model:ir.model.fields,field_description:nh_3n_pharma_land_cost.field_purchase_order_amount_total_with_land_costs_formula
+msgid "Formula Total Purchase Price with Land Cost"
+msgstr "Formula Total Purchase Price with Land Cost"
+
+#. module: nh_3n_pharma_land_cost
+#: model:ir.model.fields,field_description:nh_3n_pharma_land_cost.field_nh_3n_pharma_land_cost_land_cost_land_costs_total_formula
+#: model:ir.model.fields,field_description:nh_3n_pharma_land_cost.field_purchase_order_land_costs_total_formula
+msgid "Formula Total cost of landing"
+msgstr "Formula Total cost of landing"
+
+#. module: nh_3n_pharma_land_cost
+#: model:ir.model.fields,field_description:nh_3n_pharma_land_cost.field_nh_3n_pharma_land_cost_land_cost_whithholding_on_sale_value_formula
+#: model:ir.model.fields,field_description:nh_3n_pharma_land_cost.field_purchase_order_whithholding_on_sale_value_formula
+msgid "Formula Withholding on sale"
+msgstr "Formula Withholding on sale"
+
+#. module: nh_3n_pharma_land_cost
+#: selection:nh_3n_pharma_land_cost.land_cost,transit_cost_mode:0
+#: selection:nh_3n_pharma_land_cost.land_cost_confirmation_wizard,transit_cost_mode:0
+#: selection:purchase.order,transit_cost_mode:0
+msgid "Free on Board (FOB)"
+msgstr "Free on Board (FOB)"
+
+#. module: nh_3n_pharma_land_cost
+#: model:ir.model.fields,field_description:nh_3n_pharma_land_cost.field_nh_3n_pharma_land_cost_land_cost_confirmation_wizard_transit_cost_mode
+#: model:ir.model.fields,field_description:nh_3n_pharma_land_cost.field_nh_3n_pharma_land_cost_land_cost_transit_cost_mode
+#: model:ir.model.fields,field_description:nh_3n_pharma_land_cost.field_purchase_order_transit_cost_mode
+msgid "Freight Mode"
+msgstr "Freight Mode"
+
+#. module: nh_3n_pharma_land_cost
+#: model:ir.model.fields,field_description:nh_3n_pharma_land_cost.field_nh_3n_pharma_land_cost_land_cost_confirmation_wizard_freight
+#: model:ir.model.fields,field_description:nh_3n_pharma_land_cost.field_nh_3n_pharma_land_cost_land_cost_freight
+#: model:ir.model.fields,field_description:nh_3n_pharma_land_cost.field_nh_3n_pharma_land_cost_land_cost_line_line_freight
+#: model:ir.model.fields,field_description:nh_3n_pharma_land_cost.field_purchase_order_freight
+#: model:ir.model.fields,field_description:nh_3n_pharma_land_cost.field_purchase_order_line_line_freight
+msgid "Freight charges"
+msgstr "Freight charges"
+
+#. module: nh_3n_pharma_land_cost
+#: model:ir.ui.view,arch_db:nh_3n_pharma_land_cost.nh_3n_pharma_land_cost_purchase_order
+msgid "GM Validation"
+msgstr "Manager Validation"
+
+#. module: nh_3n_pharma_land_cost
+#: model:ir.model.fields,field_description:nh_3n_pharma_land_cost.field_purchase_order_date_second_level_validation
+msgid "GM validation date"
+msgstr "Manager validation date"
+
+#. module: nh_3n_pharma_land_cost
+#: model:ir.model.fields,field_description:nh_3n_pharma_land_cost.field_nh_3n_pharma_land_cost_land_cost_line_global_cost_purchase
+#: model:ir.model.fields,field_description:nh_3n_pharma_land_cost.field_purchase_order_line_global_cost_purchase
+msgid "Global Cost Price"
+msgstr "Global Cost Price"
+
+#. module: nh_3n_pharma_land_cost
+#: model:ir.model.fields,field_description:nh_3n_pharma_land_cost.field_nh_3n_pharma_land_cost_land_cost_confirmation_wizard_handling_cost
+#: model:ir.model.fields,field_description:nh_3n_pharma_land_cost.field_nh_3n_pharma_land_cost_land_cost_handling_cost
+#: model:ir.model.fields,field_description:nh_3n_pharma_land_cost.field_nh_3n_pharma_land_cost_land_cost_line_line_handling_cost
+#: model:ir.model.fields,field_description:nh_3n_pharma_land_cost.field_purchase_order_handling_cost
+#: model:ir.model.fields,field_description:nh_3n_pharma_land_cost.field_purchase_order_line_line_handling_cost
+msgid "Handling Cost"
+msgstr "Handling Cost"
+
+#. module: nh_3n_pharma_land_cost
+#: model:ir.model.fields,field_description:nh_3n_pharma_land_cost.field_purchase_order_has_land_cost
+msgid "Has Landing Cost ?"
+msgstr "Has Landing Cost ?"
+
+#. module: nh_3n_pharma_land_cost
+#: model:ir.model.fields,field_description:nh_3n_pharma_land_cost.field_purchase_order_has_valid_land_cost
+msgid "Has a draft or an approved landin cost ?"
+msgstr "Has a draft or an approved landin cost ?"
+
+#. module: nh_3n_pharma_land_cost
+#: model:ir.model.fields,field_description:nh_3n_pharma_land_cost.field_nh_3n_pharma_land_cost_land_cost_confirmation_wizard_id
+#: model:ir.model.fields,field_description:nh_3n_pharma_land_cost.field_nh_3n_pharma_land_cost_land_cost_export_wizard_id
+#: model:ir.model.fields,field_description:nh_3n_pharma_land_cost.field_nh_3n_pharma_land_cost_land_cost_id
+#: model:ir.model.fields,field_description:nh_3n_pharma_land_cost.field_nh_3n_pharma_land_cost_land_cost_line_id
+#: model:ir.model.fields,field_description:nh_3n_pharma_land_cost.field_nh_3n_pharma_land_cost_land_cost_log_id
+msgid "ID"
+msgstr "ID"
+
+#. module: nh_3n_pharma_land_cost
+#: model:ir.ui.view,arch_db:nh_3n_pharma_land_cost.landing_cost_form
+msgid "If request is transit, you can not modify it anymore."
+msgstr "If request is transit, you can not modify it anymore."
+
+#. module: nh_3n_pharma_land_cost
+#: selection:purchase.order,type:0
+msgid "Import"
+msgstr "Import"
+
+#. module: nh_3n_pharma_land_cost
+#: model:ir.model.fields,field_description:nh_3n_pharma_land_cost.field_nh_3n_pharma_land_cost_land_cost_line_line_external_audit_cost_value
+#: model:ir.model.fields,field_description:nh_3n_pharma_land_cost.field_purchase_order_line_line_external_audit_cost_value
+msgid "Import Audit Cost"
+msgstr "Import Audit Cost"
+
+#. module: nh_3n_pharma_land_cost
+#: model:ir.model.fields,field_description:nh_3n_pharma_land_cost.field_nh_3n_pharma_land_cost_land_cost_confirmation_wizard_external_audit_cost_value
+#: model:ir.model.fields,field_description:nh_3n_pharma_land_cost.field_nh_3n_pharma_land_cost_land_cost_external_audit_cost_value
+#: model:ir.model.fields,field_description:nh_3n_pharma_land_cost.field_purchase_order_external_audit_cost_value
+msgid "Import Audit Cost (SGS)"
+msgstr "Import Audit Cost (SGS)"
+
+#. module: nh_3n_pharma_land_cost
+#: model:ir.model.fields,field_description:nh_3n_pharma_land_cost.field_nh_3n_pharma_land_cost_land_cost_confirmation_wizard_external_audit_cost_rate
+#: model:ir.model.fields,field_description:nh_3n_pharma_land_cost.field_nh_3n_pharma_land_cost_land_cost_external_audit_cost_rate
+#: model:ir.model.fields,field_description:nh_3n_pharma_land_cost.field_purchase_order_external_audit_cost_rate
+msgid "Import Audit Cost in percentage"
+msgstr "Import Audit Cost in percentage"
+
+#. module: nh_3n_pharma_land_cost
+#: selection:purchase.order,state_expense:0
+#: selection:purchase.order,state_local:0
+msgid "In Production"
+msgstr "In Production"
+
+#. module: nh_3n_pharma_land_cost
+#: selection:purchase.order,state_expense:0
+#: selection:purchase.order,state_local:0
+msgid "In Transit"
+msgstr "In Transit"
+
+#. module: nh_3n_pharma_land_cost
+#: model:ir.model.fields,field_description:nh_3n_pharma_land_cost.field_nh_3n_pharma_land_cost_land_cost_confirmation_wizard_intervention_charge
+#: model:ir.model.fields,field_description:nh_3n_pharma_land_cost.field_nh_3n_pharma_land_cost_land_cost_intervention_charge
+#: model:ir.model.fields,field_description:nh_3n_pharma_land_cost.field_nh_3n_pharma_land_cost_land_cost_line_line_intervention_charge
+#: model:ir.model.fields,field_description:nh_3n_pharma_land_cost.field_purchase_order_intervention_charge
+#: model:ir.model.fields,field_description:nh_3n_pharma_land_cost.field_purchase_order_line_line_intervention_charge
+msgid "Intervention Charge"
+msgstr "Intervention Charge"
+
+#. module: nh_3n_pharma_land_cost
+#: model:ir.model.fields,help:nh_3n_pharma_land_cost.field_nh_3n_pharma_land_cost_land_cost_line_use_ratio_volume
+#: model:ir.model.fields,help:nh_3n_pharma_land_cost.field_nh_3n_pharma_land_cost_land_cost_use_ratio_volume
+#: model:ir.model.fields,help:nh_3n_pharma_land_cost.field_purchase_order_line_use_ratio_volume
+#: model:ir.model.fields,help:nh_3n_pharma_land_cost.field_purchase_order_use_ratio_volume
+msgid "It is to indicate if the products are not distributed separately in the containers. In the case where one can distinguish the volumes occupied by the products, this option must be selected."
+msgstr "It is to indicate if the products are not distributed separately in the containers. In the case where one can distinguish the volumes occupied by the products, this option must be selected."
+
+#. module: nh_3n_pharma_land_cost
+#: model:ir.model.fields,field_description:nh_3n_pharma_land_cost.field_nh_3n_pharma_land_cost_land_cost_land_cost_line_ids
+msgid "Land Cost Line"
+msgstr "Land Cost Line"
+
+#. module: nh_3n_pharma_land_cost
+#: selection:purchase.order,state_expense:0
+#: selection:purchase.order,state_local:0
+msgid "Landed"
+msgstr "Landed"
+
+#. module: nh_3n_pharma_land_cost
+#: model:ir.ui.view,arch_db:nh_3n_pharma_land_cost.nh_3n_pharma_land_cost_purchase_order
+msgid "Landed Cost"
+msgstr "Landed Cost"
+
+#. module: nh_3n_pharma_land_cost
+#: model:ir.model.fields,field_description:nh_3n_pharma_land_cost.field_nh_3n_pharma_land_cost_land_cost_date_cancel
+#: model:ir.model.fields,field_description:nh_3n_pharma_land_cost.field_purchase_order_date_arrival
+msgid "Landed Date"
+msgstr "Landed Date"
+
+#. module: nh_3n_pharma_land_cost
+#: model:ir.model.fields,field_description:nh_3n_pharma_land_cost.field_nh_3n_pharma_land_cost_land_cost_export_wizard_land_cost_id
+#: model:ir.model.fields,field_description:nh_3n_pharma_land_cost.field_nh_3n_pharma_land_cost_land_cost_log_land_cost_id
+#: model:ir.model.fields,field_description:nh_3n_pharma_land_cost.field_purchase_order_land_cost_ids
+#: model:ir.model.fields,field_description:nh_3n_pharma_land_cost.field_stock_move_line_landing_cost
+#: model:ir.ui.view,arch_db:nh_3n_pharma_land_cost.landing_cost_form
+msgid "Landing Cost"
+msgstr "Landing Cost"
+
+#. module: nh_3n_pharma_land_cost
+#: model:ir.ui.view,arch_db:nh_3n_pharma_land_cost.nh_3n_pharma_land_cost_product_template
+msgid "Landing Cost History"
+msgstr "Landing Cost History"
+
+#. module: nh_3n_pharma_land_cost
+#: model:ir.model.fields,field_description:nh_3n_pharma_land_cost.field_nh_3n_pharma_land_cost_land_cost_log_land_cost_line_id
+msgid "Landing Cost Line"
+msgstr "Landing Cost Line"
+
+#. module: nh_3n_pharma_land_cost
+#: model:ir.ui.view,arch_db:nh_3n_pharma_land_cost.landing_cost_form
+msgid "Landing Cost per purchase Product"
+msgstr "Landing Cost per purchase Product"
+
+#. module: nh_3n_pharma_land_cost
+#: selection:purchase.order,state_expense:0
+#: selection:purchase.order,state_local:0
+msgid "Landing Cost saved"
+msgstr "Landing Cost saved"
+
+#. module: nh_3n_pharma_land_cost
+#: model:ir.actions.act_window,name:nh_3n_pharma_land_cost.action_landing_cost
+#: model:ir.ui.menu,name:nh_3n_pharma_land_cost.menu_landing_cost
+msgid "Landing Costs"
+msgstr "Landing Costs"
+
+#. module: nh_3n_pharma_land_cost
+#: model:ir.model.fields,field_description:nh_3n_pharma_land_cost.field_purchase_order_date_cost_saved
+msgid "Landing cost saved on"
+msgstr "Landing cost saved on"
+
+#. module: nh_3n_pharma_land_cost
+#: model:ir.model.fields,field_description:nh_3n_pharma_land_cost.field_nh_3n_pharma_land_cost_land_cost___last_update
+#: model:ir.model.fields,field_description:nh_3n_pharma_land_cost.field_nh_3n_pharma_land_cost_land_cost_confirmation_wizard___last_update
+#: model:ir.model.fields,field_description:nh_3n_pharma_land_cost.field_nh_3n_pharma_land_cost_land_cost_export_wizard___last_update
+#: model:ir.model.fields,field_description:nh_3n_pharma_land_cost.field_nh_3n_pharma_land_cost_land_cost_line___last_update
+#: model:ir.model.fields,field_description:nh_3n_pharma_land_cost.field_nh_3n_pharma_land_cost_land_cost_log___last_update
+msgid "Last Modified on"
+msgstr "Last Modified on"
+
+#. module: nh_3n_pharma_land_cost
+#: model:ir.model.fields,field_description:nh_3n_pharma_land_cost.field_nh_3n_pharma_land_cost_land_cost_confirmation_wizard_write_uid
+#: model:ir.model.fields,field_description:nh_3n_pharma_land_cost.field_nh_3n_pharma_land_cost_land_cost_export_wizard_write_uid
+#: model:ir.model.fields,field_description:nh_3n_pharma_land_cost.field_nh_3n_pharma_land_cost_land_cost_line_write_uid
+#: model:ir.model.fields,field_description:nh_3n_pharma_land_cost.field_nh_3n_pharma_land_cost_land_cost_log_write_uid
+#: model:ir.model.fields,field_description:nh_3n_pharma_land_cost.field_nh_3n_pharma_land_cost_land_cost_write_uid
+msgid "Last Updated by"
+msgstr "Last Updated by"
+
+#. module: nh_3n_pharma_land_cost
+#: model:ir.model.fields,field_description:nh_3n_pharma_land_cost.field_nh_3n_pharma_land_cost_land_cost_confirmation_wizard_write_date
+#: model:ir.model.fields,field_description:nh_3n_pharma_land_cost.field_nh_3n_pharma_land_cost_land_cost_export_wizard_write_date
+#: model:ir.model.fields,field_description:nh_3n_pharma_land_cost.field_nh_3n_pharma_land_cost_land_cost_line_write_date
+#: model:ir.model.fields,field_description:nh_3n_pharma_land_cost.field_nh_3n_pharma_land_cost_land_cost_log_write_date
+#: model:ir.model.fields,field_description:nh_3n_pharma_land_cost.field_nh_3n_pharma_land_cost_land_cost_write_date
+msgid "Last Updated on"
+msgstr "Last Updated on"
+
+#. module: nh_3n_pharma_land_cost
+#: model:ir.ui.view,arch_db:nh_3n_pharma_land_cost.landing_cost_view_tree
+msgid "List of Landing Cost"
+msgstr "List of Landing Cost"
+
+#. module: nh_3n_pharma_land_cost
+#: selection:purchase.order,type:0
+msgid "Local Purchase"
+msgstr "Local Purchase"
+
+#. module: nh_3n_pharma_land_cost
+#: model:ir.ui.view,arch_db:nh_3n_pharma_land_cost.nh_3n_pharma_land_cost_purchase_order
+msgid "Lock"
+msgstr "Lock"
+
+#. module: nh_3n_pharma_land_cost
+#: selection:purchase.order,state_expense:0
+#: selection:purchase.order,state_local:0
+msgid "Locked"
+msgstr "Locked"
+
+#. module: nh_3n_pharma_land_cost
+#: model:ir.ui.view,arch_db:nh_3n_pharma_land_cost.nh_3n_pharma_land_cost_purchase_order
+msgid "MD Validation"
+msgstr "DAF Validation"
+
+#. module: nh_3n_pharma_land_cost
+#: model:ir.model.fields,field_description:nh_3n_pharma_land_cost.field_purchase_order_date_first_level_validation
+msgid "MD validation date"
+msgstr "DAF validation date"
+
+#. module: nh_3n_pharma_land_cost
+#: model:ir.model.fields,field_description:nh_3n_pharma_land_cost.field_purchase_order_minimun_percentage_before_approve
+msgid "Minimun percentage to pay before approval"
+msgstr "Minimun percentage to pay before approval"
+
+#. module: nh_3n_pharma_land_cost
+#: model:ir.model.fields,field_description:nh_3n_pharma_land_cost.field_nh_3n_pharma_land_cost_land_cost_name
+msgid "Name"
+msgstr "Name"
+
+#. module: nh_3n_pharma_land_cost
+#: code:addons/nh_3n_pharma_land_cost/models/land_cost.py:238
+#: code:addons/nh_3n_pharma_land_cost/models/land_cost.py:241
+#: code:addons/nh_3n_pharma_land_cost/models/land_cost.py:243
+#, python-format
+msgid "New"
+msgstr "New"
+
+#. module: nh_3n_pharma_land_cost
+#: model:ir.model.fields,field_description:nh_3n_pharma_land_cost.field_nh_3n_pharma_land_cost_land_cost_log_new_product_cost
+msgid "New Product Cost"
+msgstr "New Product Cost"
+
+#. module: nh_3n_pharma_land_cost
+#: model:ir.model.fields,field_description:nh_3n_pharma_land_cost.field_nh_3n_pharma_land_cost_land_cost_line_purchase_order_line_id
+msgid "Order Line"
+msgstr "Order Line"
+
+#. module: nh_3n_pharma_land_cost
+#: model:ir.model.fields,field_description:nh_3n_pharma_land_cost.field_nh_3n_pharma_land_cost_land_cost_confirmation_wizard_outlay_charge
+#: model:ir.model.fields,field_description:nh_3n_pharma_land_cost.field_nh_3n_pharma_land_cost_land_cost_line_line_outlay_charge
+#: model:ir.model.fields,field_description:nh_3n_pharma_land_cost.field_nh_3n_pharma_land_cost_land_cost_outlay_charge
+#: model:ir.model.fields,field_description:nh_3n_pharma_land_cost.field_purchase_order_line_line_outlay_charge
+#: model:ir.model.fields,field_description:nh_3n_pharma_land_cost.field_purchase_order_outlay_charge
+msgid "Outlay Charge"
+msgstr "Outlay Charge"
+
+#. module: nh_3n_pharma_land_cost
+#: model:ir.model,name:nh_3n_pharma_land_cost.model_stock_move_line
+msgid "Packing Operation"
+msgstr "Packing Operation"
+
+#. module: nh_3n_pharma_land_cost
+#: model:ir.model.fields,field_description:nh_3n_pharma_land_cost.field_nh_3n_pharma_land_cost_land_cost_line_land_cost_id
+msgid "Parent"
+msgstr "Parent"
+
+#. module: nh_3n_pharma_land_cost
+#: model:ir.ui.view,arch_db:nh_3n_pharma_land_cost.land_cost_confirmation_wizard
+msgid "Please click on confirm if all values are corrected."
+msgstr "Please click on confirm if all values are corrected."
+
+#. module: nh_3n_pharma_land_cost
+#: model:ir.ui.view,arch_db:nh_3n_pharma_land_cost.view_land_cost_export
+msgid "Please fill the form"
+msgstr "Please fill the form"
+
+#. module: nh_3n_pharma_land_cost
+#: model:ir.ui.view,arch_db:nh_3n_pharma_land_cost.landing_cost_form
+msgid "Print"
+msgstr "Print"
+
+#. module: nh_3n_pharma_land_cost
+#: model:ir.model.fields,field_description:nh_3n_pharma_land_cost.field_nh_3n_pharma_land_cost_land_cost_line_product_id
+#: model:ir.model.fields,field_description:nh_3n_pharma_land_cost.field_nh_3n_pharma_land_cost_land_cost_log_product_template_id
+msgid "Product"
+msgstr "Product"
+
+#. module: nh_3n_pharma_land_cost
+#: model:ir.model.fields,field_description:nh_3n_pharma_land_cost.field_nh_3n_pharma_land_cost_land_cost_log_old_product_cost
+msgid "Product Cost price before Arrival"
+msgstr "Product Cost price before Arrival"
+
+#. module: nh_3n_pharma_land_cost
+#: model:ir.model,name:nh_3n_pharma_land_cost.model_product_template
+msgid "Product Template"
+msgstr "Product Template"
+
+#. module: nh_3n_pharma_land_cost
+#: model:ir.model.fields,field_description:nh_3n_pharma_land_cost.field_nh_3n_pharma_land_cost_land_cost_log_old_product_qty
+msgid "Product quantity before Cost change"
+msgstr "Product quantity before Cost change"
+
+#. module: nh_3n_pharma_land_cost
+#: model:ir.model,name:nh_3n_pharma_land_cost.model_purchase_order
+#: model:ir.model.fields,field_description:nh_3n_pharma_land_cost.field_nh_3n_pharma_land_cost_land_cost_confirmation_wizard_order_id
+#: model:ir.model.fields,field_description:nh_3n_pharma_land_cost.field_nh_3n_pharma_land_cost_land_cost_order_id
+#: selection:purchase.order,state_expense:0
+#: selection:purchase.order,state_local:0
+msgid "Purchase Order"
+msgstr "Purchase Order"
+
+#. module: nh_3n_pharma_land_cost
+#: model:ir.model,name:nh_3n_pharma_land_cost.model_purchase_order_line
+msgid "Purchase Order Line"
+msgstr "Purchase Order Line"
+
+#. module: nh_3n_pharma_land_cost
+#: model:ir.model.fields,field_description:nh_3n_pharma_land_cost.field_nh_3n_pharma_land_cost_land_cost_line_purchase_price
+msgid "Purchase Price"
+msgstr "Purchase Price"
+
+#. module: nh_3n_pharma_land_cost
+#: model:ir.model.fields,field_description:nh_3n_pharma_land_cost.field_nh_3n_pharma_land_cost_land_cost_line_purchase_unit_price
+msgid "Purchase Unit Price"
+msgstr "Purchase Unit Price"
+
+#. module: nh_3n_pharma_land_cost
+#: model:ir.model.fields,field_description:nh_3n_pharma_land_cost.field_nh_3n_pharma_land_cost_land_cost_line_purchase_qty
+msgid "Purchase quantity"
+msgstr "Purchase quantity"
+
+#. module: nh_3n_pharma_land_cost
+#: model:ir.model.fields,field_description:nh_3n_pharma_land_cost.field_nh_3n_pharma_land_cost_land_cost_log_landed_product_qty
+msgid "Quantity of Landed Product"
+msgstr "Quantity of Landed Product"
+
+#. module: nh_3n_pharma_land_cost
+#: model:ir.model.fields,field_description:nh_3n_pharma_land_cost.field_purchase_order_line_stock_available_qty
+msgid "Quantity of the product in stock"
+msgstr "Quantity of the product in stock"
+
+#. module: nh_3n_pharma_land_cost
+#: selection:purchase.order,state_expense:0
+#: selection:purchase.order,state_local:0
+msgid "RFQ"
+msgstr "RFQ"
+
+#. module: nh_3n_pharma_land_cost
+#: selection:purchase.order,state_expense:0
+#: selection:purchase.order,state_local:0
+msgid "RFQ Sent"
+msgstr "RFQ Sent"
+
+#. module: nh_3n_pharma_land_cost
+#: model:ir.model.fields,field_description:nh_3n_pharma_land_cost.field_nh_3n_pharma_land_cost_land_cost_line_ratio
+msgid "ratio per quantity"
+msgstr "ratio per quantity"
+
+#. module: nh_3n_pharma_land_cost
+#: model:ir.model.fields,help:nh_3n_pharma_land_cost.field_nh_3n_pharma_land_cost_land_cost_line_ratio
+#: model:ir.model.fields,help:nh_3n_pharma_land_cost.field_purchase_order_line_ratio
+msgid "Ratio of the line price on the purchase Total price"
+msgstr "Ratio of the line price on the purchase Total price"
+
+#. module: nh_3n_pharma_land_cost
+#: model:ir.ui.view,arch_db:nh_3n_pharma_land_cost.landing_cost_form
+msgid "SUMMARY"
+msgstr "SUMMARY"
+
+#. module: nh_3n_pharma_land_cost
+#: model:ir.ui.view,arch_db:nh_3n_pharma_land_cost.nh_3n_pharma_land_cost_purchase_order
+msgid "Set to Draft"
+msgstr "Set to Draft"
+
+#. module: nh_3n_pharma_land_cost
+#: model:ir.model.fields,field_description:nh_3n_pharma_land_cost.field_nh_3n_pharma_land_cost_land_cost_export_wizard_state
+msgid "State"
+msgstr "State"
+
+#. module: nh_3n_pharma_land_cost
+#: model:ir.model.fields,field_description:nh_3n_pharma_land_cost.field_nh_3n_pharma_land_cost_land_cost_state
+#: model:ir.model.fields,field_description:nh_3n_pharma_land_cost.field_purchase_order_state_expense
+#: model:ir.model.fields,field_description:nh_3n_pharma_land_cost.field_purchase_order_state_local
+msgid "Status"
+msgstr "Status"
+
+#. module: nh_3n_pharma_land_cost
+#: model:ir.model.fields,field_description:nh_3n_pharma_land_cost.field_nh_3n_pharma_land_cost_land_cost_line_stock_before_arrival
+msgid "Stock before arrival"
+msgstr "Stock before arrival"
+
+#. module: nh_3n_pharma_land_cost
+#: model:ir.ui.view,arch_db:nh_3n_pharma_land_cost.nh_3n_pharma_land_cost_purchase_order
+msgid "Switch to Production"
+msgstr "Switch to Production"
+
+#. module: nh_3n_pharma_land_cost
+#: model:ir.ui.view,arch_db:nh_3n_pharma_land_cost.nh_3n_pharma_land_cost_purchase_order
+msgid "Switch to Transit"
+msgstr "Switch to Transit"
+
+#. module: nh_3n_pharma_land_cost
+#: code:addons/nh_3n_pharma_land_cost/models/purchase_order.py:166
+#, python-format
+msgid "The External audit cost rate must be between 0 and 100"
+msgstr "The External audit cost rate must be between 0 and 100"
+
+#. module: nh_3n_pharma_land_cost
+#: code:addons/nh_3n_pharma_land_cost/models/purchase_order.py:162
+#, python-format
+msgid "The Financial expenses rate must be between 0 and 100"
+msgstr "The Financial expenses rate must be between 0 and 100"
+
+#. module: nh_3n_pharma_land_cost
+#: code:addons/nh_3n_pharma_land_cost/models/purchase_order.py:164
+#, python-format
+msgid "The Sale Whithholding rate must be between 0 and 100"
+msgstr "The Sale Whithholding rate must be between 0 and 100"
+
+#. module: nh_3n_pharma_land_cost
+#: code:addons/nh_3n_pharma_land_cost/models/purchase_order.py:160
+#, python-format
+msgid "The minimum percentage must be between 0 and 100"
+msgstr "The minimum percentage must be between 0 and 100"
+
+#. module: nh_3n_pharma_land_cost
+#: model:ir.model.fields,help:nh_3n_pharma_land_cost.field_nh_3n_pharma_land_cost_land_cost_line_volume_ratio
+#: model:ir.model.fields,help:nh_3n_pharma_land_cost.field_purchase_order_line_volume_ratio
+msgid "The volume ratio indicates the volume proportion of the article on the total carcase (the volume can be estimated as the number of containers occupied)"
+msgstr "The volume ratio indicates the volume proportion of the article on the total carcase (the volume can be estimated as the number of containers occupied)"
+
+#. module: nh_3n_pharma_land_cost
+#: selection:purchase.order,state_expense:0
+#: selection:purchase.order,state_local:0
+msgid "To Approve"
+msgstr "To Approve"
+
+#. module: nh_3n_pharma_land_cost
+#: model:ir.model.fields,field_description:nh_3n_pharma_land_cost.field_nh_3n_pharma_land_cost_land_cost_amount_total
+msgid "Total Purchase Price"
+msgstr "Total Purchase Price"
+
+#. module: nh_3n_pharma_land_cost
+#: model:ir.model.fields,field_description:nh_3n_pharma_land_cost.field_nh_3n_pharma_land_cost_land_cost_amount_total_with_land_costs
+#: model:ir.model.fields,field_description:nh_3n_pharma_land_cost.field_purchase_order_amount_total_with_land_costs
+#: model:ir.model.fields,field_description:nh_3n_pharma_land_cost.field_purchase_order_amount_total_with_land_costs_difference
+msgid "Total Purchase Price with Land Cost"
+msgstr "Total Purchase Price with Land Cost"
+
+#. module: nh_3n_pharma_land_cost
+#: model:ir.model.fields,field_description:nh_3n_pharma_land_cost.field_nh_3n_pharma_land_cost_land_cost_land_costs_total
+#: model:ir.model.fields,field_description:nh_3n_pharma_land_cost.field_purchase_order_land_costs_total
+msgid "Total cost of landing"
+msgstr "Total cost of landing"
+
+#. module: nh_3n_pharma_land_cost
+#: model:ir.model.fields,field_description:nh_3n_pharma_land_cost.field_purchase_order_line_type
+#: model:ir.model.fields,field_description:nh_3n_pharma_land_cost.field_purchase_order_type
+msgid "Type"
+msgstr "Type"
+
+#. module: nh_3n_pharma_land_cost
+#: model:ir.ui.view,arch_db:nh_3n_pharma_land_cost.nh_3n_pharma_land_cost_purchase_order
+msgid "Unlock"
+msgstr "Unlock"
+
+#. module: nh_3n_pharma_land_cost
+#: model:ir.model.fields,field_description:nh_3n_pharma_land_cost.field_nh_3n_pharma_land_cost_land_cost_line_use_ratio_volume
+#: model:ir.model.fields,field_description:nh_3n_pharma_land_cost.field_nh_3n_pharma_land_cost_land_cost_use_ratio_volume
+#: model:ir.model.fields,field_description:nh_3n_pharma_land_cost.field_purchase_order_line_use_ratio_volume
+#: model:ir.model.fields,field_description:nh_3n_pharma_land_cost.field_purchase_order_use_ratio_volume
+msgid "Use ratio volume ?"
+msgstr "Use ratio volume ?"
+
+#. module: nh_3n_pharma_land_cost
+#: selection:purchase.order,state_expense:0
+#: selection:purchase.order,state_local:0
+msgid "Validation GM"
+msgstr "Validation Manager"
+
+#. module: nh_3n_pharma_land_cost
+#: selection:purchase.order,state_expense:0
+#: selection:purchase.order,state_local:0
+msgid "Validation MD"
+msgstr "Validation DAF"
+
+#. module: nh_3n_pharma_land_cost
+#: model:ir.ui.view,arch_db:nh_3n_pharma_land_cost.nh_3n_pharma_land_cost_purchase_order
+msgid "View Landing Costs"
+msgstr "View Landing Costs"
+
+#. module: nh_3n_pharma_land_cost
+#: model:ir.model.fields,field_description:nh_3n_pharma_land_cost.field_nh_3n_pharma_land_cost_land_cost_line_volume_ratio
+#: model:ir.model.fields,field_description:nh_3n_pharma_land_cost.field_purchase_order_line_volume_ratio
+msgid "Volume ratio in %"
+msgstr "Volume ratio in %"
+
+#. module: nh_3n_pharma_land_cost
+#: code:addons/nh_3n_pharma_land_cost/models/purchase_order_line.py:48
+#, python-format
+msgid "Volume ratio must be between 0 and 100"
+msgstr "Volume ratio must be between 0 and 100"
+
+#. module: nh_3n_pharma_land_cost
+#: model:ir.model.fields,field_description:nh_3n_pharma_land_cost.field_purchase_order_date_production_start
+msgid "Went into production on"
+msgstr "Went into production on"
+
+#. module: nh_3n_pharma_land_cost
+#: model:ir.model.fields,field_description:nh_3n_pharma_land_cost.field_purchase_order_date_transit
+msgid "Went into transit on"
+msgstr "Went into transit on"
+
+#. module: nh_3n_pharma_land_cost
+#: model:ir.model.fields,field_description:nh_3n_pharma_land_cost.field_nh_3n_pharma_land_cost_land_cost_confirmation_wizard_whithholding_on_sale_value
+#: model:ir.model.fields,field_description:nh_3n_pharma_land_cost.field_nh_3n_pharma_land_cost_land_cost_line_line_whithholding_on_sale_value
+#: model:ir.model.fields,field_description:nh_3n_pharma_land_cost.field_nh_3n_pharma_land_cost_land_cost_whithholding_on_sale_value
+#: model:ir.model.fields,field_description:nh_3n_pharma_land_cost.field_purchase_order_line_line_whithholding_on_sale_value
+#: model:ir.model.fields,field_description:nh_3n_pharma_land_cost.field_purchase_order_whithholding_on_sale_value
+msgid "Withholding on sale"
+msgstr "Withholding on sale"
+
+#. module: nh_3n_pharma_land_cost
+#: model:ir.model.fields,field_description:nh_3n_pharma_land_cost.field_nh_3n_pharma_land_cost_land_cost_confirmation_wizard_whithholding_on_sale_rate
+#: model:ir.model.fields,field_description:nh_3n_pharma_land_cost.field_nh_3n_pharma_land_cost_land_cost_whithholding_on_sale_rate
+#: model:ir.model.fields,field_description:nh_3n_pharma_land_cost.field_purchase_order_whithholding_on_sale_rate
+msgid "Withholding on sale in percentage"
+msgstr "Withholding on sale in percentage"
+
+#. module: nh_3n_pharma_land_cost
+#: selection:nh_3n_pharma_land_cost.land_cost_export_wizard,state:0
+msgid "choose"
+msgstr "choose"
+
+#. module: nh_3n_pharma_land_cost
+#: model:ir.model.fields,help:nh_3n_pharma_land_cost.field_nh_3n_pharma_land_cost_land_cost_confirmation_wizard_freight
+#: model:ir.model.fields,help:nh_3n_pharma_land_cost.field_nh_3n_pharma_land_cost_land_cost_freight
+#: model:ir.model.fields,help:nh_3n_pharma_land_cost.field_nh_3n_pharma_land_cost_land_cost_line_line_freight
+#: model:ir.model.fields,help:nh_3n_pharma_land_cost.field_purchase_order_freight
+#: model:ir.model.fields,help:nh_3n_pharma_land_cost.field_purchase_order_line_line_freight
+msgid "freight forwarding charges from the supplier to the port"
+msgstr "freight forwarding charges from the supplier to the port"
+
+#. module: nh_3n_pharma_land_cost
+#: selection:nh_3n_pharma_land_cost.land_cost_export_wizard,state:0
+msgid "get"
+msgstr "get"
+
+#. module: nh_3n_pharma_land_cost
+#: model:ir.model,name:nh_3n_pharma_land_cost.model_nh_3n_pharma_land_cost_cost_price_log
+msgid "nh_3n_pharma_land_cost.cost_price_log"
+msgstr "nh_3n_pharma_land_cost.cost_price_log"
+
+#. module: nh_3n_pharma_land_cost
+#: model:ir.model,name:nh_3n_pharma_land_cost.model_nh_3n_pharma_land_cost_land_cost
+msgid "nh_3n_pharma_land_cost.land_cost"
+msgstr "nh_3n_pharma_land_cost.land_cost"
+
+#. module: nh_3n_pharma_land_cost
+#: model:ir.model,name:nh_3n_pharma_land_cost.model_nh_3n_pharma_land_cost_land_cost_export_wizard
+msgid "nh_3n_pharma_land_cost.land_cost_export_wizard"
+msgstr "nh_3n_pharma_land_cost.land_cost_export_wizard"
+
+#. module: nh_3n_pharma_land_cost
+#: model:ir.model,name:nh_3n_pharma_land_cost.model_nh_3n_pharma_land_cost_land_cost_line
+msgid "nh_3n_pharma_land_cost.land_cost_line"
+msgstr "nh_3n_pharma_land_cost.land_cost_line"
+
+#. module: nh_3n_pharma_land_cost
+#: model:ir.model,name:nh_3n_pharma_land_cost.model_nh_3n_pharma_land_cost_land_cost_log
+msgid "nh_3n_pharma_land_cost.land_cost_log"
+msgstr "nh_3n_pharma_land_cost.land_cost_log"
+
+#. module: nh_3n_pharma_land_cost
+#: model:ir.ui.view,arch_db:nh_3n_pharma_land_cost.land_cost_confirmation_wizard
+#: model:ir.ui.view,arch_db:nh_3n_pharma_land_cost.view_land_cost_export
+msgid "or"
+msgstr "or"
+
+#. module: nh_3n_pharma_land_cost
+#: model:ir.model.fields,field_description:nh_3n_pharma_land_cost.field_purchase_order_line_ratio
+msgid "ratio per quantity"
+msgstr "ratio per quantity"
+
+#. module: nh_3n_pharma_land_cost
+#: code:addons/nh_3n_pharma_land_cost/models/purchase_order.py:307
+#, python-format
+msgid "when you decided to use the volume ratio, the sum of the volume ratio must be 100"
+msgstr "when you decided to use the volume ratio, the sum of the volume ratio must be 100"
+

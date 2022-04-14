@@ -1,0 +1,105 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* nh_alert_contact
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 11.0e+e-20180216\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-12-05 11:39+0000\n"
+"PO-Revision-Date: 2018-12-05 11:39+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: nh_alert_contact
+#: model:ir.model.fields,field_description:nh_alert_contact.field_nh_alert_contact_contact_active
+msgid "Active"
+msgstr "Active"
+
+#. module: nh_alert_contact
+#: model:ir.actions.act_window,name:nh_alert_contact.action_window
+#: model:ir.ui.menu,name:nh_alert_contact.menu_root
+msgid "Alert Contacts"
+msgstr "Alert Contacts"
+
+#. module: nh_alert_contact
+#: model:ir.ui.view,arch_db:nh_alert_contact.form
+msgid "Allowed Alerts"
+msgstr "Allowed Alerts"
+
+#. module: nh_alert_contact
+#: model:ir.ui.view,arch_db:nh_alert_contact.form
+msgid "Allowed Branch"
+msgstr "Allowed Branch"
+
+#. module: nh_alert_contact
+#: model:ir.ui.view,arch_db:nh_alert_contact.form
+msgid "Allowed Branches"
+msgstr "Allowed Branches"
+
+#. module: nh_alert_contact
+#: model:ir.model.fields,field_description:nh_alert_contact.field_nh_alert_contact_contact_branch_ids
+msgid "Branch"
+msgstr "Branch"
+
+#. module: nh_alert_contact
+#: model:ir.model.fields,field_description:nh_alert_contact.field_nh_alert_contact_contact_partner_id
+#: model:ir.ui.view,arch_db:nh_alert_contact.form
+msgid "Contact"
+msgstr "Contact"
+
+#. module: nh_alert_contact
+#: model:ir.model.fields,field_description:nh_alert_contact.field_nh_alert_contact_contact_create_uid
+msgid "Created by"
+msgstr "Created by"
+
+#. module: nh_alert_contact
+#: model:ir.model.fields,field_description:nh_alert_contact.field_nh_alert_contact_contact_create_date
+msgid "Created on"
+msgstr "Created on"
+
+#. module: nh_alert_contact
+#: model:ir.model.fields,field_description:nh_alert_contact.field_nh_alert_contact_contact_display_name
+msgid "Display Name"
+msgstr "Display Name"
+
+#. module: nh_alert_contact
+#: model:ir.model.fields,field_description:nh_alert_contact.field_nh_alert_contact_contact_email
+#: model:ir.model.fields,field_description:nh_alert_contact.field_nh_alert_contact_contact_name
+msgid "Email"
+msgstr "Email"
+
+#. module: nh_alert_contact
+#: model:ir.model.fields,field_description:nh_alert_contact.field_nh_alert_contact_contact_id
+msgid "ID"
+msgstr "ID"
+
+#. module: nh_alert_contact
+#: model:ir.model.fields,field_description:nh_alert_contact.field_nh_alert_contact_contact___last_update
+msgid "Last Modified on"
+msgstr "Last Modified on"
+
+#. module: nh_alert_contact
+#: model:ir.model.fields,field_description:nh_alert_contact.field_nh_alert_contact_contact_write_uid
+msgid "Last Updated by"
+msgstr "Last Updated by"
+
+#. module: nh_alert_contact
+#: model:ir.model.fields,field_description:nh_alert_contact.field_nh_alert_contact_contact_write_date
+msgid "Last Updated on"
+msgstr "Last Updated on"
+
+#. module: nh_alert_contact
+#: model:ir.model.fields,field_description:nh_alert_contact.field_nh_alert_contact_contact_phone
+msgid "Phone Number"
+msgstr "Phone Number"
+
+#. module: nh_alert_contact
+#: model:ir.model,name:nh_alert_contact.model_nh_alert_contact_contact
+msgid "nh_alert_contact.contact"
+msgstr "nh_alert_contact.contact"
+

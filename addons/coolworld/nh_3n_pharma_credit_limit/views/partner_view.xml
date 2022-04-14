@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="credit_config" model="res.groups">
+            <field name="name">Config Credit Limit On partners</field>
+            <field name="category_id"  eval="ref('base.module_category_sales')" />
+    </record>
+
+    <record id="view_credit_property_form" model="ir.ui.view">
+        <field name="name">partner.show.credit.limit.form.inherit</field>
+        <field name="model">res.partner</field>
+        <field name="type">form</field>
+        <field name="inherit_id" ref="account.view_partner_property_form"/>
+
+        <field name="arch" type="xml">
+            <field name="property_payment_term_id" position="attributes">
+                <attribute name="readonly">1</attribute>
+            </field>
+            <group name="acc_sale" position="inside">
+                <field name="credit" readonly="1"/>
+                <field name="credit_limit" readonly="1"/>
+                <!--<field name="over_credit"/>-->
+            </group>
+        </field>
+    </record>
+    <record id="view_edit_partner_credit_limit_form" model="ir.ui.view">
+        <field name="name">partner.over.credit.limit.form.inherit</field>
+        <field name="model">res.partner</field>
+        <field name="type">form</field>
+        <field name="inherit_id" ref="view_credit_property_form"/>
+
+        <field name="groups_id" eval="[(6, 0, [ref('credit_config')])]"/>
+
+        <field name="arch" type="xml">
+            <field name="credit_limit" position="attributes">
+
+                <attribute name="readonly">0</attribute>
+
+                <!--<field name="over_credit"/>-->
+            </field>
+            <field name="property_payment_term_id" position="attributes">
+                    <attribute name="readonly">0</attribute>
+            </field>
+        </field>
+    </record>
+
+</odoo>

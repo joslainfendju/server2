@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <menuitem id="menu_product_family_config_stock" name="Family"
+                  action="nh_product_dict.product_family_action_product"
+                  parent="stock.menu_stock_inventory_control" sequence="3"/>
+
+    </data>
+</odoo>

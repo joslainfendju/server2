@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+<data noupdate="0">
+
+    <record model="ir.module.category" id="module_journal_management">
+        <field name="name">Journal</field>
+        <field name="sequence">19</field>
+    </record>
+    <record id="group_journal_user" model="res.groups">
+        <field name="name">User</field>
+        <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
+        <field name="category_id" ref="module_journal_management"/>
+    </record>
+
+    <record id="group_journal_user_manager" model="res.groups">
+        <field name="name">Manager</field>
+        <field name="category_id" ref="module_journal_management"/>
+        <field name="implied_ids" eval="[(4, ref('group_journal_user'))]"/>
+        <field name="users" eval="[(4, ref('base.user_root'))]"/>
+    </record>
+
+    <record id="statment_branch_manager_rule" model="ir.rule">
+        <field name="name">Statement Manager</field>
+        <field name="model_id" ref="model_account_bank_statement"/>
+        <field name="global" eval="True"/>
+        <field name="domain_force">[('journal_id','in',[journal.id for journal in user.journal_ids])]</field>
+        <field name="groups" eval="[(4, ref('nh_bank_statement_security.group_journal_user_manager'))]"/>
+    </record>
+
+    <record id="journal_branch_manager_rule" model="ir.rule">
+        <field name="name">Statement Manager</field>
+        <field name="model_id" ref="model_account_journal"/>
+        <field name="global" eval="True"/>
+        <field name="domain_force">[('id','in',[journal.id for journal in user.journal_ids])]</field>
+        <field name="groups" eval="[(4, ref('nh_bank_statement_security.group_journal_user_manager'))]"/>
+    </record>
+
+    <!--<record id="prepurchase_order_branch_manager_rule" model="ir.rule">
+        <field name="name">Prepurchase Branch Manager</field>
+        <field name="model_id" ref="model_prepurchase_order"/>
+        <field name="global" eval="True"/>
+        <field name="domain_force">[(1,'=',1)]</field>
+        <field name="groups" eval="[(4, ref('branch.group_branch_user_manager'))]"/>
+    </record>-->
+
+    <!--<record id="account_invoice_refund_branch_manager_rule" model="ir.rule">
+        <field name="name">Account Invoice Refund Branch Manager</field>
+        <field name="model_id" ref="model_account_invoice_refund"/>
+        <field name="global" eval="True"/>
+        <field name="domain_force">[(1,'=',1)]</field>
+        <field name="groups" eval="[(4, ref('branch.group_branch_user_manager'))]"/>
+    </record>-->
+
+   <!-- <record id="account_bank_statement_branch_manager_rule" model="ir.rule">
+        <field name="name">Account Bank Statement Manager</field>
+        <field name="model_id" ref="model_account_bank_statement"/>
+        <field name="global" eval="True"/>
+        <field name="domain_force">[(1,'=',1)]</field>
+        <field name="groups" eval="[(4, ref('branch.group_branch_user_manager'))]"/>
+   </record> -->
+
+</data>
+
+</openerp>

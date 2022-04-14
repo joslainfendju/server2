@@ -1,0 +1,10 @@
+<?xml version="1.0" ?>
+<odoo>
+  <data noupdate="1">
+    <record id="ir_config_parameter_expire_critical_limit" model="ir.config_parameter">
+        <field name="name">DUREE CRITIQUE STOCK EN TRANSIT EN JOUR</field>
+        <field name="key">DUREE_CRITIQUE_STOCK_EN_TRANSIT_EN_JOUR</field>
+        <field name="value">7</field>
+    </record>
+   </data>
+</odoo>

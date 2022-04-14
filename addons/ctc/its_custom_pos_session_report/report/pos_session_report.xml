@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<odoo>
+    <data>
+        <template id="front_sales_report_pdf_document_inherit"
+                  inherit_id="flexiretail_com_advance.front_sales_report_pdf_document">
+            <xpath expr="//tr[1]" position="before">
+                <!--                <t t-if="o.get_user_data_x().name">-->
+                <!--                    <t t-esc="o.get_user_data_x().name"/>-->
+                <!--                    <br/>-->
+                <!--                </t>-->
+                <!--                <span>get_user_data_x</span>-->
+                <tr>
+                    <td class="text-left">
+                        Saleperson 
+                    </td>
+                    <td class="text-right">
+                        <span t-esc="o.get_user_data_x().name"/>
+                    </td>
+                </tr>
+            </xpath>
+        </template>
+    </data>
+</odoo>

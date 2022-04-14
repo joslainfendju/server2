@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="return_request_uom_domain" model="ir.ui.view">
+                <field name="name">stock.request.form.uom.domain</field>
+                <field name="model">nh_scm.return_request</field>
+                <field name="inherit_id" ref="nh_scm.view_return_request_form" />
+                <field name="arch" type="xml">
+
+                    <xpath expr="//form[1]/sheet[1]/notebook[1]/page[1]/field[@name='request_line_ids']/tree/field[@name='product_uom_id']" position="replace" >
+
+                    </xpath>
+                     <xpath expr="//form[1]/sheet[1]/notebook[1]/page[1]/field[@name='request_line_ids']/tree/field[@name='stock_available_qty']" position="after" >
+                         <field name="sale_uom_id" invisible="1" />
+                         <field name="purchase_uom_id" invisible="1" />
+                         <field name="product_uom_id" groups="product.group_uom" attrs="{'readonly': [('state', 'in', ('purchase', 'done', 'cancel'))] }" force_save="1"
+                         domain ="[('id', 'in',(sale_uom_id ,purchase_uom_id))]"/>
+
+                    </xpath>
+                </field>
+        </record>
+    </data>
+</odoo>
+
+
+

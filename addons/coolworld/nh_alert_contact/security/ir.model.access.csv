@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+
+access_nh_alert_contact_contact_user,nh_alert_contact.contact user,model_nh_alert_contact_contact,base.group_user,1,0,0,0
+access_nh_alert_contact_contact_manager,nh_alert_contact.contact manager,model_nh_alert_contact_contact,base.group_system,1,1,1,0

@@ -1,0 +1,15 @@
+<?xml version="1.0" ?>
+<odoo>
+  <data noupdate="1">
+    <record id="ir_config_parameter_block_credit_limit" model="ir.config_parameter">
+        <field name="name">BLOCK_CREDIT_LIMIT_ON_CUSTOMER</field>
+        <field name="key">BLOCK_CREDIT_LIMIT_ON_CUSTOMER</field>
+        <field name="value">True</field>
+    </record>
+    <record id="ir_config_parameter_block_overdue_invoices" model="ir.config_parameter">
+        <field name="name">BLOCK_CUSTOMER_WITH_OVERDUE_INVOICES</field>
+        <field name="key">BLOCK_CUSTOMER_WITH_OVERDUE_INVOICES</field>
+        <field name="value">True</field>
+    </record>
+   </data>
+</odoo>

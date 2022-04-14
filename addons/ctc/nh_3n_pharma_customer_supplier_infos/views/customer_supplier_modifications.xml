@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!--showing promotion list in sale order form-->
+        <record id="res_partner_view_buttons_modification_form" model="ir.ui.view">
+            <field name="name">res.partner.view.buttons</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="/form/sheet/group/group[last()]/field[@name='title']" position="after">
+                    <!-- <field name="numero_contribuable"/> -->
+                    <field name="type_de_client" attrs="{'invisible': [('customer', '=', False)], 'required': [('customer', '=', True)]}"/>
+                    <field name="ref" string="Customer code" attrs="{'readonly': [('customer', '=', True)], }"/>
+                    <field name="person_to_contact" attrs="{'invisible': [('supplier', '=', False)]}"/>
+                    <field name="salesman_responsible_id" attrs="{'invisible': [('customer', '=', False)]}"/>
+                    <!-- <field name="branch_id" /> -->
+                </xpath>
+                <xpath expr="/form/sheet/group/group[1]/field[@name='category_id']" position="after">
+                    <field name="customer_discount"  attrs="{'invisible':[('customer', '!=', True)]}"/>
+                    <field name="discount" attrs="{'invisible':[('customer', '!=', True)]}"/>
+                </xpath>
+                <field name="phone" position="replace">
+                    <field name="phone" required="True"/>
+                </field>
+                <field name="city" position="replace">
+                    <field name="city" required="True" placeholder="City"/>
+                </field>
+                <xpath expr="/form/sheet/notebook/page[@name='sales_purchases']/group/group[3]/field[@name='ref']" position="replace"/>
+            </field>
+        </record>
+
+        <!-- <record id="res_partner_view_buttons_modification_tree" model="ir.ui.view">
+            <field name="name">res.partner.view.buttons.tree</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_res_partner_filter"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='user_id']" position="after">
+                    <field name="branch_id"/>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="branch_customer_filter" model="ir.ui.view">
+        <field name="name">branch.customer.select</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_res_partner_filter"/>
+        <field name="arch" type="xml">
+            <xpath expr="//search" position="inside">
+                <separator/>
+                <filter name="branch_id" string="Branch" domain="[('branch_id','=',uid)]"/>
+            </xpath>
+            <xpath expr="//group" position="inside">
+                <filter string="Branch" domain="[]" context="{'group_by':'branch_id'}"/>
+            </xpath>
+        </field>
+    </record> -->
+
+    </data>
+</odoo>

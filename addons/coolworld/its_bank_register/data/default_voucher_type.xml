@@ -1,0 +1,76 @@
+<odoo>
+    <data  noupdate="0">
+        <record id="bank_receipt" model="account.voucher.type">
+            <field name="code">bank_receipt</field>
+            <field name="name">Bank Receipt</field>
+        </record>
+         <record id="bank_receipt" model="account.voucher.type">
+            <field name="code">cash_receipt</field>
+            <field name="name">Cash Receipt</field>
+        </record>
+         <record id="bank_cheque_receipt" model="account.voucher.type">
+            <field name="code">bank_cheque_receipt</field>
+            <field name="name">Bank Cheque Receipt</field>
+        </record>
+         <record id="bank_transfer" model="account.voucher.type">
+            <field name="code">bank_transfer</field>
+            <field name="name">Bank Transfer</field>
+        </record>
+         <record id="contra_voucher" model="account.voucher.type">
+            <field name="code">contra_voucher</field>
+            <field name="name">Contra Voucher</field>
+        </record>
+         <record id="cash_payment" model="account.voucher.type">
+            <field name="code">cash_payment</field>
+            <field name="name">Cash Payment</field>
+        </record>
+         <record id="bank_cheque_payment" model="account.voucher.type">
+            <field name="code">bank_cheque_payment</field>
+            <field name="name">Bank Cheque payment</field>
+        </record>
+         <record id="bank_charges" model="account.voucher.type">
+            <field name="code">bank_charges</field>
+            <field name="name">Bank Charges</field>
+        </record>
+         <record id="bank_transfer_charges" model="account.voucher.type">
+            <field name="code">bank_transfer_charges</field>
+            <field name="name">Bank Transfer Charges</field>
+        </record>
+         <record id="marketting_charges" model="account.voucher.type">
+            <field name="code">marketting_charges</field>
+            <field name="name">Marketting Charges</field>
+        </record>
+         <record id="discount" model="account.voucher.type">
+            <field name="code">discount</field>
+            <field name="name">Discount</field>
+        </record>
+         <record id="commercial_marketting_transport" model="account.voucher.type">
+            <field name="code">commercial_marketting_transport</field>
+            <field name="name">Commercial and Marketting  Transport</field>
+        </record>
+         <record id="warehouse_expenses" model="account.voucher.type">
+            <field name="code">warehouse_expenses</field>
+            <field name="name">Warehouse Expenses</field>
+        </record>
+         <record id="promotion_charges" model="account.voucher.type">
+            <field name="code">promotion_charges</field>
+            <field name="name">Promotion charges</field>
+        </record>
+         <record id="stock" model="account.voucher.type">
+            <field name="code">stock</field>
+            <field name="name">Stock</field>
+        </record>
+         <record id="sale" model="account.voucher.type">
+            <field name="code">sale</field>
+            <field name="name">Sale</field>
+        </record>
+         <record id="purchase" model="account.voucher.type">
+            <field name="code">purchase</field>
+            <field name="name">Purchase</field>
+        </record>
+       <record id="other" model="account.voucher.type">
+            <field name="code">other</field>
+            <field name="name">Others</field>
+        </record>
+    </data>
+</odoo>

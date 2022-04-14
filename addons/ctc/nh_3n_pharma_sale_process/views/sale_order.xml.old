@@ -1,0 +1,166 @@
+<odoo>
+  <data>
+  <!--    security group         -->
+      <record id="button_daf_validation" model="res.groups">
+          <field name="name">Button Finance Head Validation</field>
+          <field name="category_id"  eval="ref('base.module_category_sales')" />
+      </record>
+      <record id="button_dc_validation_dg" model="res.groups">
+          <field name="name">Button Head of Sale Validation (Head office)</field>
+          <field name="category_id"  eval="ref('base.module_category_sales')" />
+      </record>
+      <record id="button_dc_validation_agence" model="res.groups">
+          <field name="name">Button Head of Sale Validation (Branch)</field>
+          <field name="category_id"  eval="ref('base.module_category_sales')" />
+      </record>
+      <record id="button_sale_order_cancel" model="res.groups">
+          <field name="name">Button Sale Order Cancel</field>
+          <field name="category_id"  eval="ref('base.module_category_sales')" />
+      </record>
+      <record id="button_stock_operation_validation" model="res.groups">
+          <field name="name">Button Stock Picking Validation</field>
+          <field name="category_id"  eval="ref('base.module_category_warehouse_management')" />
+      </record>
+
+      <record id="group_sale_quotation" model="res.groups">
+          <field name="name">Menu Sales/Quotation</field>
+          <field name="category_id"  eval="ref('base.module_category_warehouse_management')" />
+      </record>
+    <!--    end security group         -->
+
+
+
+
+      <record id="nh_3n_pharma_sale_process_order_form" model="ir.ui.view">
+        <field name="name">nh_3n_pharma_sale_process Sale Order Form</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="branch.view_sale_order_branch_added_form1"/>
+        <field name="arch" type="xml">
+            <xpath expr="//form/header/button[@id='action_confirm']" position="replace" >
+            </xpath>
+            <xpath expr="//form/header/button[@name='action_confirm']" position="replace" >
+            </xpath>
+            <xpath expr="//form/header/button[@name='action_cancel']" position="replace" >
+            </xpath>
+            <xpath expr="//form/header/button[@name='print_quotation']" position="after" >
+
+                <field name="is_office_sale" invisible="1" />
+                <field name="have_branch" invisible="1" />
+
+                <!--  Validation  DC à la direction générale-->
+                <button name="action_sale_head_validation" string="Sale Head Validation" type="object" attrs="{'invisible': ['|','|',('have_branch','=',False),('state', 'not in', ['draft','sent']),('is_office_sale','=',False)]}" groups="nh_3n_pharma_sale_process.button_dc_validation_dg"  />
+
+
+                <!--  Validation  DC dans une agence inclu la validation DAF-->
+                <button name="action_sale_head_validation_with_confirm" string="Sale Head Validation" type="object" attrs="{'invisible': ['|','|',('have_branch','=',False),('state', 'not in', ['draft','sent']),('is_office_sale','=',True)]}" groups="nh_3n_pharma_sale_process.button_dc_validation_agence"  />
+
+
+                <button name="action_confirm" id="action_confirm" string="Finance Head Validation"  type="object" attrs="{'invisible': [('state', 'in', ['sent','draft','cancel','done','sale'])]}" groups="nh_3n_pharma_sale_process.button_daf_validation"/>
+
+                <button name="action_cancel" states="draft,sent,sale_head_validation,sale" type="object" string="Cancel" groups="nh_3n_pharma_sale_process.button_sale_order_cancel"/>
+            </xpath>
+
+            <xpath expr="//form/header/field[@name='state']" position="replace" >
+                <field name="state" widget="statusbar" statusbar_visible="draft,sale_head_validation,sent,sale"  />
+            </xpath>
+
+            <xpath expr="//form/sheet/notebook/page/group/group[@name='sales_person']" position="replace" >
+            </xpath>
+            <xpath expr="//form/sheet/notebook/page/group/group[@name='sale_pay']" position="before" >
+                <group string="Sales Information" name="sales_person">
+                    <field name="user_id" attrs="{'readonly': [('state', 'in', ['sale','sale_head_validation','done','cancel'])]}"/>
+                    <field name="team_id" options="{'no_create': True}" attrs="{'readonly': [('state', 'in', ['sale','sale_head_validation','done','cancel'])]}"/>
+                    <field name="branch_id" attrs="{'readonly':True}"  />
+                    <field name="client_order_ref" attrs="{'readonly': [('state', 'in', ['sale','sale_head_validation','done','cancel'])]}"/>
+                    <field name="company_id" options="{'no_create': True}" groups="base.group_multi_company" attrs="{'readonly': [('state', 'in', ['sale','sale_head_validation','done','cancel'])]}"/>
+                    <field name="analytic_account_id" context="{'default_partner_id':partner_invoice_id, 'default_name':name}" attrs="{'readonly': ['|',('analytic_account_id','!=',False),('invoice_count','!=',0),('state','=','sale')]}" groups="analytic.group_analytic_accounting"/>
+                </group>
+
+
+            </xpath>
+
+
+             <xpath expr="//form/sheet/group/group/field[@name='validity_date']" position="replace" >
+
+              <field name="validity_date" attrs="{'invisible': True}"/>
+
+             </xpath>
+
+             <xpath expr="//form/sheet/notebook/page/field/tree/field[@name='name']" position="after">
+                 <!--<field name="stock_available_qty" />
+                 <field name="virtual_available_qty" />-->
+                 <field name="reserved_qty" />
+                 <field name="real_available_qty" />
+
+
+             </xpath>
+
+             <xpath expr="//form[1]/sheet[1]/notebook[1]/page[1]/field[@name='order_line']" position="attributes" >
+                         <attribute name="attrs">{'readonly': [('state', 'in', ['sale_head_validation', 'sale','done','cancel',])]}  </attribute>
+             </xpath>
+
+             <xpath expr="//field[@name='payment_term_id']" position="attributes" >
+                         <attribute name="attrs">{'readonly': [('state', 'in', ['sale_head_validation', 'sale','done','cancel',])]}  </attribute>
+             </xpath>
+            <xpath expr="//field[@name='origin']" position="attributes" >
+                         <attribute name="attrs">{'readonly': [('state', 'in', ['sale_head_validation', 'sale','done','cancel',])]}  </attribute>
+             </xpath>
+            <xpath expr="//field[@name='fiscal_position_id']" position="attributes" >
+                         <attribute name="attrs">{'readonly': [('state', 'in', ['sale_head_validation', 'sale','done','cancel',])]}  </attribute>
+            </xpath>
+            <xpath expr="//field[@name='note']" position="attributes" >
+                         <attribute name="attrs">{'readonly': [('state', 'in', ['sale_head_validation', 'sale','done','cancel',])]}  </attribute>
+            </xpath>
+
+
+
+
+
+        </field>
+    </record>
+      <record id="nh_3n_pharma_sale_process_stock_picking_form" model="ir.ui.view">
+        <field name="name">nh_3n_pharma_sale_process Stock Picking Form</field>
+        <field name="model">stock.picking</field>
+        <field name="inherit_id" ref="stock.view_picking_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//form/header/button[@name='button_validate']" position="replace" >
+            </xpath>
+            <xpath expr="//form/header/button[@name='action_assign']" position="after" >
+                <button name="button_validate" attrs="{'invisible': [('show_validate', '=', False)]}" string="Validate" groups="nh_3n_pharma_sale_process.button_stock_operation_validation" type="object" class="oe_highlight"/>
+            </xpath>
+        </field>
+      </record> 
+
+
+      <record id="sale.action_orders" model="ir.actions.act_window">
+          <field name="name">Sales Orders</field>
+          <field name="type">ir.actions.act_window</field>
+          <field name="res_model">sale.order</field>
+          <field name="view_type">form</field>
+          <field name="view_mode">tree,kanban,form,calendar,pivot,graph</field>
+          <field name="search_view_id" ref="sale.sale_order_view_search_inherit_sale"/>
+          <field name="context">{}</field>
+          <field name="domain">[('state', 'not in', ('None',))]</field>
+          <field name="help" type="html">
+              <p class="oe_view_nocontent_create">
+                  Create a Draft sale Order, the first step of a new sale.
+              </p><p>
+                  Once the Sale Order is confirmed, it must be validated by the sale head and by the DAF in some case.
+                  You'll be able to invoice it and collect payments.
+                  From the <i>Sales Orders</i> menu, you can track delivery
+                  orders or services.
+              </p>
+          </field>
+      </record>
+
+
+      <record model="ir.ui.menu" id="sale.menu_sale_quotations">
+          <field name="groups_id"  eval="[(6, 0, [ref('group_sale_quotation')])]"/>
+          <field name="name">Quotations</field>
+      </record>
+
+
+
+
+  </data>
+</odoo>

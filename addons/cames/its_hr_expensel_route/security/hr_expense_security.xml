@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="hr_expense_sheet_approver_rule" model="ir.rule">
+            <field name="name">Expense Sheet Approver Rule</field>
+            <field name="model_id" ref="model_expense_team_approver"/>
+            <field name="domain_force">[('user_id', '=', user.id)]</field>
+            <field name="groups" eval="[(4, ref('purchase.group_purchase_user'))]"/>
+            <field name="perm_unlink" eval="0"/>
+            <field name="perm_write" eval="1"/>
+            <field name="perm_read" eval="0"/>
+            <field name="perm_create" eval="0"/>
+        </record>
+
+        <record id="hr_expense_sheet_team_rule" model="ir.rule">
+            <field name="name">Expense Team Rule</field>
+            <field name="model_id" ref="model_expense_team"/>
+            <field name="domain_force">[('user_id', '=', user.id)]</field>
+            <field name="groups" eval="[(4, ref('purchase.group_purchase_manager'))]"/>
+            <field name="perm_unlink" eval="1"/>
+            <field name="perm_write" eval="1"/>
+            <field name="perm_read" eval="0"/>
+            <field name="perm_create" eval="1"/>
+        </record>
+
+        <record id="hr_expense_sheet_team_approver_rule" model="ir.rule">
+            <field name="name">Expense Sheet Team Approver Rule</field>
+            <field name="model_id" ref="model_expense_team_approver"/>
+            <field name="domain_force">[('team_id.user_id', '=', user.id)]</field>
+            <field name="groups" eval="[(4, ref('purchase.group_purchase_manager'))]"/>
+            <field name="perm_unlink" eval="1"/>
+            <field name="perm_write" eval="1"/>
+            <field name="perm_read" eval="0"/>
+            <field name="perm_create" eval="1"/>
+        </record>
+        <record id="group_button_approve_expense_by_superior" model="res.groups">
+          <field name="name">Button Expsence Superior Validation</field>
+        </record>
+
+    </data>
+</odoo>

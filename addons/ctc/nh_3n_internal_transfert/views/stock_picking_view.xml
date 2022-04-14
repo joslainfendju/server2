@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+		<record id="stock_picking_inherit_form" model="ir.ui.view">
+			<field name="name">nh_3n_internal_transfert</field>
+			<field name="model">stock.picking</field>
+			<field name="inherit_id" ref="stock.view_picking_form"/>
+			<field name="arch" type="xml">
+
+				<xpath expr="//form/sheet/group/group/field[@name='partner_id']" position="before">
+                    <field name="validation_dg" invisible="1"/>
+                    </xpath>
+ 
+	                <xpath expr="//form/header/button[@name='action_confirm']" position="before">
+					    
+					      <button name="transfert_dg_validation" string="Validation-DG" type="object"  class="oe_highlight" groups="nh_3n_internal_transfert.group_validation_dg_button_access"  attrs="{'invisible': [('validation_dg', 'not in', ['required'])]}"
+					      	
+					      	/>
+							
+					</xpath>
+				<!-- 	-->
+				</field> 
+			</record>
+    </data>
+
+</odoo>

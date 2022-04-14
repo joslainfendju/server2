@@ -1,0 +1,29 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* nh_3n_pharma_periodic_expirer_alert
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 10.0e+e-20180216\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-08-01 10:59+0000\n"
+"PO-Revision-Date: 2018-08-01 10:59+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+
+
+
+
+
+
+#. module: nh_3n_pharma_periodic_expirer_alert
+#: model:ir.model,name:nh_3n_pharma_periodic_expirer_alert.model_stock_production_lot
+msgid "Lot/Serial"
+msgstr ""
+
+

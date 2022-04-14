@@ -1,0 +1,136 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* nh_3n_pharma_sale_process
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 11.0e+e-20180216\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-11-21 09:07+0000\n"
+"PO-Revision-Date: 2018-11-21 09:07+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: nh_3n_pharma_sale_process
+#: model:ir.ui.view,arch_db:nh_3n_pharma_sale_process.report_saleorder_document_general
+msgid "<span>Pro-Forma Invoice # </span>"
+msgstr "<span>Pro-Forma Invoice # </span>"
+
+#. module: nh_3n_pharma_sale_process
+#: model:ir.ui.view,arch_db:nh_3n_pharma_sale_process.report_saleorder_document_general
+msgid "<strong>Order Date:</strong>"
+msgstr "<strong>Order Date:</strong>"
+
+#. module: nh_3n_pharma_sale_process
+#: model:res.groups,name:nh_3n_pharma_sale_process.button_daf_validation
+msgid "Pharmacian Validation"
+msgstr "Pharmacian Validation"
+
+
+
+#. module: nh_3n_pharma_sale_process
+#: model:res.groups,name:nh_3n_pharma_sale_process.button_dc_validation_dg
+msgid "Button Validation"
+msgstr "Button Validation"
+
+#. module: nh_3n_pharma_sale_process
+#: model:res.groups,name:nh_3n_pharma_sale_process.button_sale_order_cancel
+msgid "Button Sale Order Cancel"
+msgstr "Button Sale Order Cancel"
+
+#. module: nh_3n_pharma_sale_process
+#: model:res.groups,name:nh_3n_pharma_sale_process.button_stock_operation_validation
+msgid "Button Stock Picking Validation"
+msgstr "Button Stock Picking Validation"
+
+#. module: nh_3n_pharma_sale_process
+#: model:ir.ui.view,arch_db:nh_3n_pharma_sale_process.nh_3n_pharma_sale_process_order_form
+msgid "Cancel"
+msgstr "Cancel"
+
+#. module: nh_3n_pharma_sale_process
+#: model:ir.model.fields,help:nh_3n_pharma_sale_process.field_sale_order_sale_head_validation_date
+msgid "Date on which the sales order is validated by Head of Sales."
+msgstr "Date on which the sales order is validated by Head of Sales."
+
+#. module: nh_3n_pharma_sale_process
+#: model:ir.ui.view,arch_db:nh_3n_pharma_sale_process.nh_3n_pharma_sale_process_order_form
+msgid "Pharmacian Validation"
+msgstr "Pharmacian Validation"
+
+#. module: nh_3n_pharma_sale_process
+#: model:ir.model.fields,field_description:nh_3n_pharma_sale_process.field_sale_order_sale_head_validation_date
+msgid "Head sale Validation Date"
+msgstr "Head sale Validation Date"
+
+#. module: nh_3n_pharma_sale_process
+#: model:ir.model.fields,field_description:nh_3n_pharma_sale_process.field_sale_order_have_branch
+msgid "Have branch?"
+msgstr "Have branch?"
+
+#. module: nh_3n_pharma_sale_process
+#: model:ir.model.fields,field_description:nh_3n_pharma_sale_process.field_sale_order_is_office_sale
+msgid "Is a sale fo Head Office"
+msgstr "Is a sale fo Head Office"
+
+#. module: nh_3n_pharma_sale_process
+#: model:res.groups,name:nh_3n_pharma_sale_process.group_sale_quotation
+msgid "Menu Sales/Quotation"
+msgstr "Menu Sales/Quotation"
+
+#. module: nh_3n_pharma_sale_process
+#: model:ir.ui.view,arch_db:nh_3n_pharma_sale_process.report_saleorder_document_general
+msgid "Order #"
+msgstr "Order #"
+
+#. module: nh_3n_pharma_sale_process
+#: model:ir.model,name:nh_3n_pharma_sale_process.model_sale_order
+msgid "Quotation"
+msgstr "Quotation"
+
+#. module: nh_3n_pharma_sale_process
+#: model:ir.ui.view,arch_db:nh_3n_pharma_sale_process.nh_3n_pharma_sale_process_order_form
+msgid "Validate"
+msgstr "Validate"
+
+#. module: nh_3n_pharma_sale_process
+#: model:ir.ui.view,arch_db:nh_3n_pharma_sale_process.nh_3n_pharma_sale_process_order_form
+msgid "Sales Information"
+msgstr "Sales Information\""
+
+#. module: nh_3n_pharma_sale_process
+#: model:ir.ui.view,arch_db:nh_3n_pharma_sale_process.nh_3n_pharma_sale_process_stock_picking_form
+msgid "Validate"
+msgstr "Validate"
+
+
+#. module: nh_3n_pharma_sale_process
+#: model:ir.model.fields,field_description:nh_3n_pharma_sale_process.field_sale_order_line_stock_available_qty
+msgid "Available quantity"
+msgstr "Available quantity"
+
+#. module: nh_3n_pharma_sale_process
+#: model:ir.model.fields,field_description:nh_3n_pharma_sale_process.field_sale_order_line_virtual_available_qty
+msgid "Forecast Quantity"
+msgstr "Forecast Quantity"
+
+
+#. module: nh_3n_pharma_sale_process
+#: code:addons/nh_3n_pharma_sale_process/models/sale_order_line.py:32
+#, python-format
+msgid "Current Stock is insuffiscient for sastify this request: Need for more   of ."
+msgstr "Current Stock is insuffiscient for sastify this request: Need for more   of ."
+
+#. module: nh_3n_pharma_sale_process
+#: model:ir.model.fields,field_description:nh_3n_pharma_sale_process.field_sale_order_line_real_available_qty
+msgid "Real available quantity"
+msgstr "Real available quantity"
+
+#. module: nh_scm
+#: model:ir.model.fields,field_description:nh_3n_pharma_sale_process.field_sale_order_line_real_reserved_qty
+msgid "Reserved quantity"
+msgstr "Reserved quantity"

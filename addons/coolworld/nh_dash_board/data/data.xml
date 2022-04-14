@@ -1,0 +1,38 @@
+<?xml version="1.0" ?>
+<odoo>
+  <data noupdate="1">
+      <record id="sale_dashboard" forcecreate='True' model="nh.dashboard">
+          <field name="name">Sale Dashboard</field>
+           <field  name="application">sale</field>
+      </record>
+
+      <record id="payment_dashboard" forcecreate='True' model="nh.dashboard">
+          <field name="name">Payment Collection Dashboard</field>
+          <field  name="application">payment</field>
+      </record>
+       <record id="stock_request_dashboard" forcecreate='True' model="nh.dashboard">
+          <field name="name">Stock Request Dashboard</field>
+          <field  name="application">stock_request</field>
+      </record>
+       <record id="oustanding_customers" forcecreate='True' model="nh.dashboard">
+          <field name="name">Customers Dashboard</field>
+          <field  name="application">customers</field>
+      </record>
+
+      <record id="purchase_dashboard" forcecreate='True' model="nh.dashboard">
+          <field name="name">High Sea Dashboard</field>
+           <field  name="application">purchase</field>
+      </record>
+
+
+      <record id="product_dashboard" forcecreate='True' model="nh.dashboard">
+          <field name="name">Stock Dashboard</field>
+           <field  name="application">stock</field>
+      </record>
+
+
+
+
+
+   </data>
+</odoo>

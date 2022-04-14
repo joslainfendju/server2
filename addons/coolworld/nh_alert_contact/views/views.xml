@@ -1,0 +1,117 @@
+<odoo>
+  <data>
+    <!-- explicit list view definition -->
+
+    <record model="ir.ui.view" id="nh_alert_contact.list">
+      <field name="name">nh_alert_contact list</field>
+      <field name="model">nh_alert_contact.contact</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="partner_id"/>
+          <field name="email"/>
+          <field name="phone"/>
+        </tree>
+      </field>
+    </record>
+    <record id="nh_alert_contact.form" model="ir.ui.view">
+            <field name="name">nh_alert_contact form</field>
+            <field name="model">nh_alert_contact.contact</field>
+            <field name="arch" type="xml">
+                <form string="Contact" class="o_sale_order">
+
+
+                <sheet>
+
+                    <div class="oe_button_box" name="button_box">
+                      <button name="toggle_active" type="object" class="oe_stat_button" icon="fa-archive">
+                          <field name="active" widget="boolean_button" options="{'terminology':{'string_true': 'Active','hover_true': 'Desactivate', 'string_false': 'Inactive','hover_false': 'Activate'}}"/>
+                      </button>
+                    </div>
+
+                    <div class="oe_title">
+                        <h1>
+                            <field name="partner_id" />
+
+                        </h1>
+                    </div>
+                    <group>
+                        <group>
+                            <field name="email" />
+
+                        </group>
+                        <group>
+                            <field name="phone" />
+
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="Allowed Branches">
+
+                            <field name="branch_ids" mode="tree" >
+
+                                <tree string="Allowed Branch" >
+
+                                    <field name="name" />
+                                </tree>
+
+                            </field>
+
+                        </page>
+
+                        <page string="Allowed Alerts">
+
+                        </page>
+
+                    </notebook>
+
+                </sheet>
+
+
+                </form>
+            </field>
+        </record>
+
+    <!-- actions opening views on models -->
+
+    <record model="ir.actions.act_window" id="nh_alert_contact.action_window">
+      <field name="name">Alert Contacts</field>
+      <field name="res_model">nh_alert_contact.contact</field>
+      <field name="view_mode">tree,form</field>
+
+    </record>
+
+
+    <!-- server action to the one above -->
+    <!--
+    <record model="ir.actions.server" id="nh_alert_contact.action_server">
+      <field name="name">nh_alert_contact server</field>
+      <field name="model_id" ref="model_nh_alert_contact_nh_alert_contact"/>
+      <field name="state">code</field>
+      <field name="code">
+        action = {
+          "type": "ir.actions.act_window",
+          "view_mode": "tree,form",
+          "res_model": self._name,
+        }
+      </field>
+    </record>
+    -->
+
+    <!-- Top menu item -->
+
+    <menuitem name="Alert Contacts" id="nh_alert_contact.menu_root" parent="base.menu_email" action="nh_alert_contact.action_window"/>
+
+    <!-- menu categories -->
+    <!--
+    <menuitem name="Menu 1" id="nh_alert_contact.menu_1" parent="nh_alert_contact.menu_root"/>
+    <menuitem name="Menu 2" id="nh_alert_contact.menu_2" parent="nh_alert_contact.menu_root"/>
+    -->
+    <!-- actions -->
+    <!--
+    <menuitem name="List" id="nh_alert_contact.menu_1_list" parent="nh_alert_contact.menu_1"
+              action="nh_alert_contact.action_window"/>
+    <menuitem name="Server to list" id="nh_alert_contact" parent="nh_alert_contact.menu_2"
+              action="nh_alert_contact.action_server"/>
+    -->
+  </data>
+</odoo>

@@ -1,0 +1,31 @@
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="view_journal_form_with_voucher_type">
+            <field name="name">Account Journal Form</field>
+            <field name="model">account.journal</field>
+            <field name="inherit_id" ref="account.view_account_journal_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//page[@name='bank_account']" position="after">
+                  <page name="voucher_type" string="Permit voucher type">
+                      <field name="voucher_type_ids" mode="tree">
+                          <tree>
+                            <field name="code" />
+                            <field name="name" />
+                          </tree>
+                      </field>
+                  </page> <page name="countepart_account_ids" string="Voucher accounts">
+                      <field name="countepart_account_ids" mode="tree">
+                          <tree>
+                            <field name="code" />
+                            <field name="name" />
+                          </tree>
+                      </field>
+                  </page>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>
+
+
+

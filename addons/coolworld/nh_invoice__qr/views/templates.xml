@@ -1,0 +1,25 @@
+<odoo>
+    <data>
+        <template id="report_invoice_document_with_qr" inherit_id="account.report_invoice_document"> 
+            <xpath expr="//div/div[@class='clearfix']" position="after">
+                <img t-att-src="'/report/barcode/?type=%s&amp;value=%s&amp;width=%s&amp;height=%s' % ('QR','REF:'+str(o.number)+'\015'+'\012'+'TOTAL:'+str(o.amount_total)+'\015'+'\012'+'Client:'+str(o.partner_id.name)+'\015'+'\012'+'Date Due:'+str(o.date_due),100, 100)" style="width:250px;height:250px"/>
+                
+            </xpath>
+        </template>
+
+        <template id="report_saleorder_document_with_qr" inherit_id="sale.report_saleorder_document">
+            <xpath expr="//div/div[@class='clearfix']" position="after">
+                <img t-att-src="'/report/barcode/?type=%s&amp;value=%s&amp;width=%s&amp;height=%s' % ('QR','ref:'+str(doc.name)+'\015'+'\012'+'TOTAL:'+str(doc.amount_total)+'\015'+'\012'+'Client:'+str(doc.partner_id.name),100, 100)" style="width:250px;height:250px"/>
+                
+            </xpath>
+        </template>
+
+        <template id="report_stockpicking_document_with_qr" inherit_id="stock.report_delivery_document">
+            <xpath expr="//div/table[3]" position="after">
+                <br/>
+                <img t-att-src="'/report/barcode/?type=%s&amp;value=%s&amp;width=%s&amp;height=%s' % ('QR','ref:'+str(o.name)+'\015'+'\012'+'Date prévue (Sheduled Date):'+str(o.scheduled_date)+'\015'+'\012'+'Origine (Origin):'+str(o.origin),100, 100)" style="width:250px;height:250px"/>
+
+            </xpath>
+        </template>
+    </data>
+</odoo>

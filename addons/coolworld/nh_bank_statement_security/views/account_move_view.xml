@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="view_account_move_ihnerit_form_view" model="ir.ui.view">
+            <field name="name">account.move.form</field>
+            <field name="model">account.move</field>
+            <field name="inherit_id" ref="account.view_move_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//form/sheet/group/group[1]/field[@name='ref']" position="replace">
+                    <field name="ref" attrs="{'required': [('id', '==', False)], 'readonly': [('state', '==', 'posted')]}"/>
+                </xpath>
+            </field>
+        </record>
+        <record id="view_account_move_line_ihnerit_form_view" model="ir.ui.view">
+            <field name="name">account.move.line.form</field>
+            <field name="model">account.move.line</field>
+            <field name="inherit_id" ref="account.view_move_line_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//form/sheet/group/group[1]/field[@name='ref']" position="replace">
+                    <field name="ref" attrs="{'required': [('id', '==', False)], 'readonly': [('state', '==', 'posted')]}"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

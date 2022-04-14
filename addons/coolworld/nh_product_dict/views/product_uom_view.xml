@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="view_product_uom_factor_precision_form" model="ir.ui.view">
+            <field name="name">nh_scm.product.uom.correct.factor.precision</field>
+            <field name="model">product.uom</field>
+            <field name="inherit_id" ref="product.product_uom_form_view"/>
+            <field name="arch" type="xml">
+                <data>
+                <field name="factor" position="replace">
+                    <field name="factor"
+                            digits="[42,15]"
+                            attrs="{'invisible':[('uom_type','!=','smaller')],
+                                    'readonly':[('uom_type','=','bigger')]}"/>
+                </field>
+                </data>
+            </field>
+        </record>
+    </data>
+</odoo>

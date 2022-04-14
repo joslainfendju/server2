@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <record id="group_validation_dg_button_access" model="res.groups">
+            <field name="name">Button: validation transfert-inter-agence</field>
+        </record>
+        
+    </data>
+</openerp>

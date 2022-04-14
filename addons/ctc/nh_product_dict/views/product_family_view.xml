@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="view_product_family_family_tree_view" model="ir.ui.view">
+            <field name="name">nh_scm.product.family.tree</field>
+            <field name="model">product.family</field>
+            <field name="arch" type="xml">
+                <tree string="Product Family">
+                    <field name="display_name"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="view_product_family_family_form_view">
+            <field name="name">nh_scm.product.family.form</field>
+            <field name="model">product.family</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group name="name">
+                            <field name="name" required="1"/>
+                            <field name="parent_id"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+    </data>
+</odoo>

@@ -1,0 +1,496 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* nh_scm_stock_transit_report
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 11.0e+e-20180216\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-02-06 09:00+0000\n"
+"PO-Revision-Date: 2019-02-06 09:00+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: nh_scm_stock_transit_report
+#: model:ir.ui.view,arch_db:nh_scm_stock_transit_report.report_transit
+msgid "<b><u> From : </u></b>"
+msgstr "<b><u> From : </u></b>"
+
+#. module: nh_scm_stock_transit_report
+#: model:ir.ui.view,arch_db:nh_scm_stock_transit_report.report_transit
+msgid "<u><b>To: </b></u>"
+msgstr "<u><b>To: </b></u>"
+
+#. module: nh_scm_stock_transit_report
+#: model:ir.ui.view,arch_db:nh_scm_stock_transit_report.report_transit
+msgid "<u><b>As on the date: </b></u>"
+msgstr "<u><b>As on the date: </b></u>"
+
+#. module: nh_scm_stock_transit_report
+#: selection:nh_scm_stock_transit_report.data_wizard,direction:0
+msgid "Any"
+msgstr "Any"
+
+#. module: nh_scm_stock_transit_report
+#: selection:nh_scm_stock_transit_report.rt_wizard,when:0
+msgid "At the moment"
+msgstr "At the moment"
+
+#. module: nh_scm_stock_transit_report
+#: model:ir.ui.view,arch_db:nh_scm_stock_transit_report.view_real_time_real_time_stock_transit_report_excel
+#: model:ir.ui.view,arch_db:nh_scm_stock_transit_report.view_stock_transit_report_excel
+#: model:ir.ui.view,arch_db:nh_scm_stock_transit_report.view_transit_history_form
+#: model:ir.ui.view,arch_db:nh_scm_stock_transit_report.view_transit_stock_transit_form
+msgid "Cancel"
+msgstr "Cancel"
+
+#. module: nh_scm_stock_transit_report
+#: model:ir.model.fields,field_description:nh_scm_stock_transit_report.field_nh_scm_stock_transit_report_data_wizard_category_id
+#: model:ir.model.fields,field_description:nh_scm_stock_transit_report.field_nh_scm_stock_transit_report_rt_wizard_category_id
+msgid "Category"
+msgstr "Category"
+
+#. module: nh_scm_stock_transit_report
+#: model:ir.ui.view,arch_db:nh_scm_stock_transit_report.view_transit_history_form
+#: model:ir.ui.view,arch_db:nh_scm_stock_transit_report.view_transit_stock_transit_form
+msgid "Close"
+msgstr "Close"
+
+#. module: nh_scm_stock_transit_report
+#: model:ir.ui.view,arch_db:nh_scm_stock_transit_report.report_template
+msgid "Code"
+msgstr "Code"
+
+#. module: nh_scm_stock_transit_report
+#: model:ir.model.fields,field_description:nh_scm_stock_transit_report.field_nh_scm_stock_transit_report_data_wizard_company_id
+#: model:ir.model.fields,field_description:nh_scm_stock_transit_report.field_nh_scm_stock_transit_report_rt_wizard_company_id
+msgid "Company"
+msgstr "Company"
+
+#. module: nh_scm_stock_transit_report
+#: model:ir.model.fields,field_description:nh_scm_stock_transit_report.field_nh_scm_real_time_stock_transit_report_excel_create_uid
+#: model:ir.model.fields,field_description:nh_scm_stock_transit_report.field_nh_scm_stock_transit_report_data_wizard_create_uid
+#: model:ir.model.fields,field_description:nh_scm_stock_transit_report.field_nh_scm_stock_transit_report_excel_create_uid
+#: model:ir.model.fields,field_description:nh_scm_stock_transit_report.field_nh_scm_stock_transit_report_rt_wizard_create_uid
+msgid "Created by"
+msgstr "Created by"
+
+#. module: nh_scm_stock_transit_report
+#: model:ir.model.fields,field_description:nh_scm_stock_transit_report.field_nh_scm_real_time_stock_transit_report_excel_create_date
+#: model:ir.model.fields,field_description:nh_scm_stock_transit_report.field_nh_scm_stock_transit_report_data_wizard_create_date
+#: model:ir.model.fields,field_description:nh_scm_stock_transit_report.field_nh_scm_stock_transit_report_excel_create_date
+#: model:ir.model.fields,field_description:nh_scm_stock_transit_report.field_nh_scm_stock_transit_report_rt_wizard_create_date
+msgid "Created on"
+msgstr "Created on"
+
+#. module: nh_scm_stock_transit_report
+#: model:ir.ui.view,arch_db:nh_scm_stock_transit_report.report_template
+msgid "Date"
+msgstr "Date"
+
+#. module: nh_scm_stock_transit_report
+#: model:ir.ui.view,arch_db:nh_scm_stock_transit_report.report_template
+msgid "Date Interval"
+msgstr "Date Interval"
+
+#. module: nh_scm_stock_transit_report
+#: model:ir.ui.view,arch_db:nh_scm_stock_transit_report.view_transit_history_form
+#: model:ir.ui.view,arch_db:nh_scm_stock_transit_report.view_transit_stock_transit_form
+msgid "Dates"
+msgstr "Dates"
+
+#. module: nh_scm_stock_transit_report
+#: model:ir.model.fields,field_description:nh_scm_stock_transit_report.field_nh_scm_stock_transit_report_data_wizard_branch_dest_id
+#: model:ir.model.fields,field_description:nh_scm_stock_transit_report.field_nh_scm_stock_transit_report_rt_wizard_branch_dest_id
+#: model:ir.ui.view,arch_db:nh_scm_stock_transit_report.report_template
+msgid "Destination Branch"
+msgstr "Destination Branch"
+
+#. module: nh_scm_stock_transit_report
+#: model:ir.ui.view,arch_db:nh_scm_stock_transit_report.report_template
+msgid "Destination Location"
+msgstr "Destination Location"
+
+#. module: nh_scm_stock_transit_report
+#: model:ir.model.fields,field_description:nh_scm_stock_transit_report.field_nh_scm_stock_transit_report_data_wizard_direction
+#: model:ir.ui.view,arch_db:nh_scm_stock_transit_report.report_template
+#: model:ir.ui.view,arch_db:nh_scm_stock_transit_report.view_transit_history_form
+msgid "Direction"
+msgstr "Direction"
+
+#. module: nh_scm_stock_transit_report
+#: model:ir.model.fields,field_description:nh_scm_stock_transit_report.field_nh_scm_real_time_stock_transit_report_excel_display_name
+#: model:ir.model.fields,field_description:nh_scm_stock_transit_report.field_nh_scm_stock_transit_report_data_wizard_display_name
+#: model:ir.model.fields,field_description:nh_scm_stock_transit_report.field_nh_scm_stock_transit_report_excel_display_name
+#: model:ir.model.fields,field_description:nh_scm_stock_transit_report.field_nh_scm_stock_transit_report_rt_wizard_display_name
+#: model:ir.model.fields,field_description:nh_scm_stock_transit_report.field_report_nh_scm_stock_transit_report_report_template_display_name
+#: model:ir.model.fields,field_description:nh_scm_stock_transit_report.field_report_nh_scm_stock_transit_report_report_transit_display_name
+msgid "Display Name"
+msgstr "Display Name"
+
+#. module: nh_scm_stock_transit_report
+#: model:ir.ui.view,arch_db:nh_scm_stock_transit_report.view_transit_history_form
+#: model:ir.ui.view,arch_db:nh_scm_stock_transit_report.view_transit_stock_transit_form
+msgid "Download options :"
+msgstr "Download options :"
+
+#. module: nh_scm_stock_transit_report
+#: model:ir.model.fields,field_description:nh_scm_stock_transit_report.field_nh_scm_stock_transit_report_data_wizard_end_date
+msgid "End Date"
+msgstr "End Date"
+
+#. module: nh_scm_stock_transit_report
+#: model:ir.ui.view,arch_db:nh_scm_stock_transit_report.view_transit_history_form
+#: model:ir.ui.view,arch_db:nh_scm_stock_transit_report.view_transit_stock_transit_form
+msgid "Excel"
+msgstr "Excel"
+
+#. module: nh_scm_stock_transit_report
+#: model:ir.model.fields,field_description:nh_scm_stock_transit_report.field_nh_scm_real_time_stock_transit_report_excel_file_name
+#: model:ir.model.fields,field_description:nh_scm_stock_transit_report.field_nh_scm_stock_transit_report_excel_file_name
+msgid "Excel File"
+msgstr "Excel File"
+
+#. module: nh_scm_stock_transit_report
+#: model:ir.model.fields,field_description:nh_scm_stock_transit_report.field_nh_scm_real_time_stock_transit_report_excel_excel_file
+#: model:ir.model.fields,field_description:nh_scm_stock_transit_report.field_nh_scm_stock_transit_report_excel_excel_file
+msgid "Excel Report"
+msgstr "Excel Report"
+
+#. module: nh_scm_stock_transit_report
+#: model:ir.ui.view,arch_db:nh_scm_stock_transit_report.view_transit_history_form
+#: model:ir.ui.view,arch_db:nh_scm_stock_transit_report.view_transit_stock_transit_form
+msgid "Exportation finished"
+msgstr "Exportation finished"
+
+#. module: nh_scm_stock_transit_report
+#: model:ir.model.fields,field_description:nh_scm_stock_transit_report.field_nh_scm_stock_transit_report_data_wizard_data
+#: model:ir.model.fields,field_description:nh_scm_stock_transit_report.field_nh_scm_stock_transit_report_rt_wizard_data
+msgid "File"
+msgstr "File"
+
+#. module: nh_scm_stock_transit_report
+#: model:ir.model.fields,field_description:nh_scm_stock_transit_report.field_nh_scm_stock_transit_report_data_wizard_name
+#: model:ir.model.fields,field_description:nh_scm_stock_transit_report.field_nh_scm_stock_transit_report_rt_wizard_name
+msgid "File name"
+msgstr "File name"
+
+#. module: nh_scm_stock_transit_report
+#: model:ir.model.fields,field_description:nh_scm_stock_transit_report.field_nh_scm_stock_transit_report_data_wizard_filter_by
+#: model:ir.model.fields,field_description:nh_scm_stock_transit_report.field_nh_scm_stock_transit_report_rt_wizard_filter_by
+msgid "Filter By"
+msgstr "Filter By"
+
+#. module: nh_scm_stock_transit_report
+#: model:ir.ui.view,arch_db:nh_scm_stock_transit_report.report_transit
+msgid "From"
+msgstr "From"
+
+#. module: nh_scm_stock_transit_report
+#: model:ir.model.fields,field_description:nh_scm_stock_transit_report.field_nh_scm_real_time_stock_transit_report_excel_id
+#: model:ir.model.fields,field_description:nh_scm_stock_transit_report.field_nh_scm_stock_transit_report_data_wizard_id
+#: model:ir.model.fields,field_description:nh_scm_stock_transit_report.field_nh_scm_stock_transit_report_excel_id
+#: model:ir.model.fields,field_description:nh_scm_stock_transit_report.field_nh_scm_stock_transit_report_rt_wizard_id
+#: model:ir.model.fields,field_description:nh_scm_stock_transit_report.field_report_nh_scm_stock_transit_report_report_template_id
+#: model:ir.model.fields,field_description:nh_scm_stock_transit_report.field_report_nh_scm_stock_transit_report_report_transit_id
+msgid "ID"
+msgstr "ID"
+
+#. module: nh_scm_stock_transit_report
+#: selection:nh_scm_stock_transit_report.data_wizard,direction:0
+msgid "Incoming to transit"
+msgstr "Incoming to transit"
+
+#. module: nh_scm_stock_transit_report
+#: model:ir.ui.view,arch_db:nh_scm_stock_transit_report.report_template
+msgid "Item Description"
+msgstr "Item Description"
+
+#. module: nh_scm_stock_transit_report
+#: model:ir.model.fields,field_description:nh_scm_stock_transit_report.field_nh_scm_real_time_stock_transit_report_excel___last_update
+#: model:ir.model.fields,field_description:nh_scm_stock_transit_report.field_nh_scm_stock_transit_report_data_wizard___last_update
+#: model:ir.model.fields,field_description:nh_scm_stock_transit_report.field_nh_scm_stock_transit_report_excel___last_update
+#: model:ir.model.fields,field_description:nh_scm_stock_transit_report.field_nh_scm_stock_transit_report_rt_wizard___last_update
+#: model:ir.model.fields,field_description:nh_scm_stock_transit_report.field_report_nh_scm_stock_transit_report_report_template___last_update
+#: model:ir.model.fields,field_description:nh_scm_stock_transit_report.field_report_nh_scm_stock_transit_report_report_transit___last_update
+msgid "Last Modified on"
+msgstr "Last Modified on"
+
+#. module: nh_scm_stock_transit_report
+#: model:ir.model.fields,field_description:nh_scm_stock_transit_report.field_nh_scm_real_time_stock_transit_report_excel_write_uid
+#: model:ir.model.fields,field_description:nh_scm_stock_transit_report.field_nh_scm_stock_transit_report_data_wizard_write_uid
+#: model:ir.model.fields,field_description:nh_scm_stock_transit_report.field_nh_scm_stock_transit_report_excel_write_uid
+#: model:ir.model.fields,field_description:nh_scm_stock_transit_report.field_nh_scm_stock_transit_report_rt_wizard_write_uid
+msgid "Last Updated by"
+msgstr "Last Updated by"
+
+#. module: nh_scm_stock_transit_report
+#: model:ir.model.fields,field_description:nh_scm_stock_transit_report.field_nh_scm_real_time_stock_transit_report_excel_write_date
+#: model:ir.model.fields,field_description:nh_scm_stock_transit_report.field_nh_scm_stock_transit_report_data_wizard_write_date
+#: model:ir.model.fields,field_description:nh_scm_stock_transit_report.field_nh_scm_stock_transit_report_excel_write_date
+#: model:ir.model.fields,field_description:nh_scm_stock_transit_report.field_nh_scm_stock_transit_report_rt_wizard_write_date
+msgid "Last Updated on"
+msgstr "Last Updated on"
+
+#. module: nh_scm_stock_transit_report
+#: selection:nh_scm_stock_transit_report.data_wizard,direction:0
+msgid "Leaving Transit"
+msgstr "Leaving Transit"
+
+#. module: nh_scm_stock_transit_report
+#: model:ir.ui.view,arch_db:nh_scm_stock_transit_report.report_template
+msgid "Lot Serial Number"
+msgstr "Lot Serial Number"
+
+#. module: nh_scm_stock_transit_report
+#: model:ir.ui.view,arch_db:nh_scm_stock_transit_report.report_transit
+msgid "Number of days in transit"
+msgstr "Number of days in transit"
+
+#. module: nh_scm_stock_transit_report
+#: selection:nh_scm_stock_transit_report.rt_wizard,when:0
+msgid "On a specific Date"
+msgstr "On a specific Date"
+
+#. module: nh_scm_stock_transit_report
+#: model:ir.model.fields,field_description:nh_scm_stock_transit_report.field_nh_scm_stock_transit_report_rt_wizard_specific_date
+msgid "On the"
+msgstr "On the"
+
+#. module: nh_scm_stock_transit_report
+#: model:ir.ui.view,arch_db:nh_scm_stock_transit_report.report_template
+#: model:ir.ui.view,arch_db:nh_scm_stock_transit_report.report_transit
+msgid "Operation Qty"
+msgstr "Operation Qty"
+
+#. module: nh_scm_stock_transit_report
+#: model:ir.ui.view,arch_db:nh_scm_stock_transit_report.report_template
+msgid "Operation Value"
+msgstr "Operation Value"
+
+#. module: nh_scm_stock_transit_report
+#: model:ir.ui.view,arch_db:nh_scm_stock_transit_report.view_transit_history_form
+#: model:ir.ui.view,arch_db:nh_scm_stock_transit_report.view_transit_stock_transit_form
+msgid "PDF"
+msgstr "PDF"
+
+#. module: nh_scm_stock_transit_report
+#: model:ir.ui.view,arch_db:nh_scm_stock_transit_report.report_transit
+#: selection:nh_scm_stock_transit_report.data_wizard,filter_by:0
+#: selection:nh_scm_stock_transit_report.rt_wizard,filter_by:0
+msgid "Product"
+msgstr "Product"
+
+#. module: nh_scm_stock_transit_report
+#: selection:nh_scm_stock_transit_report.data_wizard,filter_by:0
+#: selection:nh_scm_stock_transit_report.rt_wizard,filter_by:0
+msgid "Product Category"
+msgstr "Product Category"
+
+#. module: nh_scm_stock_transit_report
+#: model:ir.model.fields,field_description:nh_scm_stock_transit_report.field_nh_scm_stock_transit_report_data_wizard_product_ids
+#: model:ir.model.fields,field_description:nh_scm_stock_transit_report.field_nh_scm_stock_transit_report_rt_wizard_product_ids
+msgid "Products"
+msgstr "Products"
+
+#. module: nh_scm_stock_transit_report
+#: model:ir.ui.view,arch_db:nh_scm_stock_transit_report.view_transit_history_form
+#: model:ir.ui.view,arch_db:nh_scm_stock_transit_report.view_transit_stock_transit_form
+msgid "Products / Category"
+msgstr "Products / Category"
+
+#. module: nh_scm_stock_transit_report
+#: model:ir.ui.view,arch_db:nh_scm_stock_transit_report.report_template
+#: model:ir.ui.view,arch_db:nh_scm_stock_transit_report.report_transit
+msgid "Request No"
+msgstr "Request No"
+
+#. module: nh_scm_stock_transit_report
+#: model:ir.ui.view,arch_db:nh_scm_stock_transit_report.view_transit_history_form
+#: model:ir.ui.view,arch_db:nh_scm_stock_transit_report.view_transit_stock_transit_form
+msgid "Source / Destination"
+msgstr "Source / Destination"
+
+#. module: nh_scm_stock_transit_report
+#: model:ir.model.fields,field_description:nh_scm_stock_transit_report.field_nh_scm_stock_transit_report_data_wizard_branch_src_id
+#: model:ir.model.fields,field_description:nh_scm_stock_transit_report.field_nh_scm_stock_transit_report_rt_wizard_branch_src_id
+#: model:ir.ui.view,arch_db:nh_scm_stock_transit_report.report_template
+msgid "Source Branch"
+msgstr "Source Branch"
+
+#. module: nh_scm_stock_transit_report
+#: model:ir.ui.view,arch_db:nh_scm_stock_transit_report.report_template
+msgid "Source Location"
+msgstr "Source Location"
+
+#. module: nh_scm_stock_transit_report
+#: model:ir.model.fields,field_description:nh_scm_stock_transit_report.field_nh_scm_stock_transit_report_data_wizard_start_date
+msgid "Start Date"
+msgstr "Start Date"
+
+#. module: nh_scm_stock_transit_report
+#: code:addons/nh_scm_stock_transit_report/wizard/transit_history_report_wizard.py:66
+#: code:addons/nh_scm_stock_transit_report/wizard/transit_history_report_wizard.py:152
+#: code:addons/nh_scm_stock_transit_report/wizard/transit_history_report_wizard.py:167
+#, python-format
+msgid "Start date can't not be greater  than end Date"
+msgstr "Start date can't not be greater  than end Date"
+
+#. module: nh_scm_stock_transit_report
+#: model:ir.model.fields,field_description:nh_scm_stock_transit_report.field_nh_scm_stock_transit_report_data_wizard_state
+#: model:ir.model.fields,field_description:nh_scm_stock_transit_report.field_nh_scm_stock_transit_report_rt_wizard_state
+msgid "State"
+msgstr "State"
+
+#. module: nh_scm_stock_transit_report
+#: model:ir.ui.menu,name:nh_scm_stock_transit_report.menu_dev_real_time_real_time_stock_transit_report
+msgid "Stock  Transit Report"
+msgstr "Stock  Transit Report"
+
+#. module: nh_scm_stock_transit_report
+#: model:ir.actions.act_window,name:nh_scm_stock_transit_report.action_stock_transit_report_excel
+msgid "Stock  Transit Report Excel"
+msgstr "Stock  Transit Report Excel"
+
+#. module: nh_scm_stock_transit_report
+#: model:ir.ui.view,arch_db:nh_scm_stock_transit_report.view_real_time_real_time_stock_transit_report_excel
+#: model:ir.ui.view,arch_db:nh_scm_stock_transit_report.view_stock_transit_report_excel
+msgid "Stock Ledger Excel"
+msgstr "Stock Ledger Excel"
+
+#. module: nh_scm_stock_transit_report
+#: model:ir.ui.menu,name:nh_scm_stock_transit_report.menu_dev_stock_transit_report
+#: model:ir.ui.view,arch_db:nh_scm_stock_transit_report.view_transit_history_form
+msgid "Stock Transit History"
+msgstr "Stock Transit History"
+
+#. module: nh_scm_stock_transit_report
+#: model:ir.ui.view,arch_db:nh_scm_stock_transit_report.report_template
+msgid "Stock Transit History Report"
+msgstr "Stock Transit History Report"
+
+#. module: nh_scm_stock_transit_report
+#: model:ir.actions.report,name:nh_scm_stock_transit_report.action_transit_report
+#: model:ir.ui.view,arch_db:nh_scm_stock_transit_report.report_transit
+#: model:ir.ui.view,arch_db:nh_scm_stock_transit_report.view_transit_stock_transit_form
+msgid "Stock Transit Report"
+msgstr "Stock Transit Report"
+
+#. module: nh_scm_stock_transit_report
+#: model:ir.actions.act_window,name:nh_scm_stock_transit_report.action_transit_history_excel
+msgid "Stock Transit Report Excel"
+msgstr "Stock Transit Report Excel"
+
+#. module: nh_scm_stock_transit_report
+#: model:ir.actions.act_window,name:nh_scm_stock_transit_report.action_stock_transit_info
+msgid "Stock transit History Report"
+msgstr "Stock transit History Report"
+
+#. module: nh_scm_stock_transit_report
+#: model:ir.actions.act_window,name:nh_scm_stock_transit_report.action_real_stock_transit_info
+#: model:ir.actions.report,name:nh_scm_stock_transit_report.print_stock_transit_report
+msgid "Stock transit Report"
+msgstr "Stock transit Report"
+
+#. module: nh_scm_stock_transit_report
+#: model:ir.ui.view,arch_db:nh_scm_stock_transit_report.report_template
+#: model:ir.ui.view,arch_db:nh_scm_stock_transit_report.report_transit
+msgid "To"
+msgstr "To"
+
+#. module: nh_scm_stock_transit_report
+#: model:ir.ui.view,arch_db:nh_scm_stock_transit_report.report_template
+msgid "Transfer No"
+msgstr "Transfer No"
+
+#. module: nh_scm_stock_transit_report
+#: model:ir.ui.view,arch_db:nh_scm_stock_transit_report.report_transit
+msgid "Transfert No"
+msgstr "Transfert No"
+
+#. module: nh_scm_stock_transit_report
+#: model:ir.ui.view,arch_db:nh_scm_stock_transit_report.report_transit
+msgid "Transit Date"
+msgstr "Transit Date"
+
+#. module: nh_scm_stock_transit_report
+#: model:ir.ui.view,arch_db:nh_scm_stock_transit_report.report_template
+#: model:ir.ui.view,arch_db:nh_scm_stock_transit_report.report_transit
+msgid "Unit of measure"
+msgstr "Unit of measure"
+
+#. module: nh_scm_stock_transit_report
+#: model:ir.ui.view,arch_db:nh_scm_stock_transit_report.report_transit
+msgid "Value"
+msgstr "Value"
+
+#. module: nh_scm_stock_transit_report
+#: model:ir.model.fields,field_description:nh_scm_stock_transit_report.field_nh_scm_stock_transit_report_rt_wizard_when
+msgid "When"
+msgstr "When"
+
+#. module: nh_scm_stock_transit_report
+#: code:addons/nh_scm_stock_transit_report/wizard/real_time_stock_transit_report_wizard.py:65
+#: code:addons/nh_scm_stock_transit_report/wizard/real_time_stock_transit_report_wizard.py:210
+#, python-format
+msgid "You most enter a date when you don't choose the current moment"
+msgstr "You most enter a date when you don't choose the current moment"
+
+#. module: nh_scm_stock_transit_report
+#: code:addons/nh_scm_stock_transit_report/wizard/transit_history_report_wizard.py:170
+#, python-format
+msgid "You must at least choose the destination or origin branch"
+msgstr "You must at least choose the destination or origin branch"
+
+#. module: nh_scm_stock_transit_report
+#: selection:nh_scm_stock_transit_report.data_wizard,state:0
+#: selection:nh_scm_stock_transit_report.rt_wizard,state:0
+msgid "choose"
+msgstr "choose"
+
+#. module: nh_scm_stock_transit_report
+#: selection:nh_scm_stock_transit_report.data_wizard,state:0
+#: selection:nh_scm_stock_transit_report.rt_wizard,state:0
+msgid "get"
+msgstr "get"
+
+#. module: nh_scm_stock_transit_report
+#: model:ir.model,name:nh_scm_stock_transit_report.model_nh_scm_real_time_stock_transit_report_excel
+msgid "nh_scm.real_time_stock_transit_report_excel"
+msgstr "nh_scm.real_time_stock_transit_report_excel"
+
+#. module: nh_scm_stock_transit_report
+#: model:ir.model,name:nh_scm_stock_transit_report.model_nh_scm_stock_transit_report_excel
+msgid "nh_scm.stock_transit_report_excel"
+msgstr "nh_scm.stock_transit_report_excel"
+
+#. module: nh_scm_stock_transit_report
+#: model:ir.model,name:nh_scm_stock_transit_report.model_nh_scm_stock_transit_report_data_wizard
+msgid "nh_scm_stock_transit_report.data_wizard"
+msgstr "nh_scm_stock_transit_report.data_wizard"
+
+#. module: nh_scm_stock_transit_report
+#: model:ir.model,name:nh_scm_stock_transit_report.model_nh_scm_stock_transit_report_rt_wizard
+msgid "nh_scm_stock_transit_report.rt_wizard"
+msgstr "nh_scm_stock_transit_report.rt_wizard"
+
+#. module: nh_scm_stock_transit_report
+#: model:ir.ui.view,arch_db:nh_scm_stock_transit_report.view_transit_history_form
+#: model:ir.ui.view,arch_db:nh_scm_stock_transit_report.view_transit_stock_transit_form
+msgid "or"
+msgstr "or"
+
+#. module: nh_scm_stock_transit_report
+#: model:ir.model,name:nh_scm_stock_transit_report.model_report_nh_scm_stock_transit_report_report_template
+msgid "report.nh_scm_stock_transit_report.report_template"
+msgstr "report.nh_scm_stock_transit_report.report_template"
+
+#. module: nh_scm_stock_transit_report
+#: model:ir.model,name:nh_scm_stock_transit_report.model_report_nh_scm_stock_transit_report_report_transit
+msgid "report.nh_scm_stock_transit_report.report_transit"
+msgstr "report.nh_scm_stock_transit_report.report_transit"
+

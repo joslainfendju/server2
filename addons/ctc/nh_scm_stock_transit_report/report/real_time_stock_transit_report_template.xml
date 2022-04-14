@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <template id="report_transit" >
+      <t t-call="nh_scm_stock_transit_report.external_layout_stock_transit_report">
+        <div class="page">
+            <style>
+                            .header_table{
+                                width:500px;
+                            }
+                            .header_table th{
+                                padding:5px;
+                                text-align:center;
+                                border:1px solid black;
+                                background:#c8cace;
+                                width :100px;
+                            }
+                            .header_table td{
+                                padding:5px;
+                                text-align:center;
+                                border:1px solid black;
+                                width :100px;
+                            }
+                            .my_table{
+                                width:100%;
+                            }
+                            .my_table th{
+                                padding:5px;
+                                border-bottom:1px solid #000;
+                            }
+                            .my_table td{
+                                padding:5px;
+                                border-bottom:1px solid #efefef;
+                            }
+                         .body_space{
+                                padding:100x;
+
+                            }
+                        </style>
+            <div class="oe_structure"/>
+            <div class="row">
+              <center>
+                <h3>Stock Transit Report</h3>
+                
+              </center>
+            </div>
+
+            <div class="row"> 
+
+               <!--
+                <table  border="0" width="100%">
+
+                        <tbody>
+                            <tr>
+                               <td>
+                                    <b><u> From : </u></b> <span t-esc="branch_src_id"/>
+                                </td>
+                                <td>
+                                </td>
+                                <td>
+                                    <u><b>To: </b></u> <span t-esc="branch_dest_id"/>
+                                </td>
+                                 <td>
+                                    <u><b>As on the date: </b></u> <span t-esc="specific_date"/>
+                                </td>
+
+
+                            </tr>
+
+                        </tbody>
+                </table>-->
+            <p>
+                <center><u><b>As on the date: </b></u> <span t-esc="specific_date"/></center>
+                <br/>
+                <br/>
+                 
+                 <table class="my_table">
+                  <thead>
+                    <tr>
+                      <th class="text-right" style="background:#d6d6d6;width:10%;">Request No</th>
+                      <th class="text-right" style="background:#d6d6d6;width:10%;">Transit Date</th>
+                      <th class="text-right" style="background:#d6d6d6;width:10%;">From</th>
+                      <th class="text-right" style="background:#d6d6d6;width:10%;">To</th>
+                      <th class="text-right" style="background:#d6d6d6;width:10%;">Transfert No</th>
+                      <th class="text-right" style="background:#d6d6d6;width:10%;">Product</th>
+                      <th class="text-right" style="background:#d6d6d6;width:10%;">Unit of measure</th>
+                      <th class="text-right" style="background:#d6d6d6;width:10%;">Operation Qty</th>
+                      <th class="text-right" style="background:#d6d6d6;width:10%;">Value</th>
+                      <th class="text-right" style="background:#d6d6d6;width:10%;">Number of days in transit</th>
+                    </tr>
+                  </thead>
+                  <tbody class="sale_tbody">
+                    
+                    <t t-set="max_line" t-value="6" />
+                    <t t-set="i" t-value="1" />
+                    <tr t-foreach="data" t-as="line" style="page-break-inside: avoid">
+                        <!--page-break-inside: avoid, ceci c'est pour forcer le saut le ligne lorsqu'on est à la fin de page -->
+                        <td><span t-esc="line['request']"/></td>
+                        <td><span t-esc="line['date']"/></td>
+                        <td><span t-esc="line['from']"/></td>
+                        <td><span t-esc="line['to']"/></td>
+                        <td><span t-esc="line['picking']"/></td>
+                        <td><span t-esc="line['product']"/></td>
+                        <td><span t-esc="line['uom']"/></td>
+                        <td><span t-esc="line['qty']"/></td>
+                        <td><span t-esc="'%.2f'%(line['value'])"/></td>
+                        <td><span t-esc="line['days']"/></td>
+                        <t t-set="i" t-value="i + 1" />
+                        <!-- <p style="page-break-inside:auto;"> </p>-->
+
+
+
+                    </tr>
+
+                  
+
+                  </tbody>
+                </table> 
+                
+              </p>   
+                           
+            </div>
+
+
+        
+        </div>
+
+      </t>
+
+    </template>
+
+  
+
+
+</odoo>

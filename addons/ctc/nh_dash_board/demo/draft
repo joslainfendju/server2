@@ -1,0 +1,26 @@
+       [
+        {
+            'values': [
+                        {'label': 'Pass駬 'value': 9089835.98, 'type': 'past'},
+                        {'label': '10-16 f귲.', 'value': 9.36, 'type': 'past'},
+                        {'label': 'Cette semaine', 'value': 0.0, 'type': 'future'},
+                        {'label': '24 f귲.-2 mars', 'value': 0.0, 'type': 'future'},
+                        {'label': '3-9 mars', 'value': 0.0, 'type': 'future'},
+                        {'label': 'Future', 'value': 0.0, 'type': 'future'}
+                       ],
+        'title': '', 'key': 'Ventes\xa0: total HT'}
+        ]
+
+
+
+               [
+
+                  {'values': [
+                                  {'label': 'Head Office', 'value': 3038464.5, 'type': 'past'},
+                                  {'label': 'Bamenda', 'value': 206905.0, 'type': 'past'},
+                                  {'label': 'Douala', 'value': 5604281.790000001, 'type': 'past'},
+                                  {'label': 'Masse', 'value': 0.0, 'type': 'past'},
+                                 {'label': 'SUD-OUEST', 'value': 0.0, 'type': 'past'}
+                              ],
+                  'title': 'Sales', 'key': 'Total'}
+               ]

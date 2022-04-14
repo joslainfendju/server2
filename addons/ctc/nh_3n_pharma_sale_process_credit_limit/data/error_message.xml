@@ -1,0 +1,40 @@
+<odoo>
+    <data noupdate="1">
+
+         <record id="balance" model="ir.config_parameter">
+             <field name="name">balance_label</field>
+             <field name="name">balance_label</field>
+             <field name="key">balance_label</field>
+             <field name="value">Balance : </field>
+         </record>
+
+         <record id="credit_limit" model="ir.config_parameter">
+             <field name="name">credit_limit_label</field>
+             <field name="key">credit_limit_label</field>
+             <field name="value">Credit Limit: </field>
+         </record>
+         <record id="available_credit" model="ir.config_parameter">
+             <field name="name">available_credit_label</field>
+             <field name="key">available_credit_label</field>
+             <field name="value">Available Credit: </field>
+         </record>
+         <record id="cash_message_header" model="ir.config_parameter">
+             <field name="name">cash_message_header</field>
+             <field name="key">cash_message_header</field>
+             <field name="value">You can not validate because this customer is cash  and must  pay before.</field>
+         </record>
+
+         <record id="credit_message_header" model="ir.config_parameter">
+             <field name="name">credit_message_header</field>
+             <field name="key">credit_message_header</field>
+             <field name="value">You can not validate because the customer's credit limit does not allow it.</field>
+         </record>
+
+        <record id="date_due_message_header" model="ir.config_parameter">
+             <field name="name">date_due_message_header</field>
+             <field name="key">date_due_message_header</field>
+             <field name="value">
+                 Can not confirm Sale Order,the settlement date of an invoice  have exceeded on the :</field>
+         </record>
+    </data>
+</odoo>

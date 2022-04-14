@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+<data>
+
+    <report 
+            id="action_credit_limit_report"
+            model="res.partner"
+            string="CREDIT LIMIT"
+            report_type="qweb-pdf"
+            name="nh_credit_limit_report.report_credit_limit"
+            file="nh_credit_limit_report.report_credit_limit"
+            menu="False"
+        />
+  </data>
+    <template id="report_credit_limit" >
+      <t t-call="web.external_layout">
+        <div class="page">
+            <div class="oe_structure"/>
+            <div class="row">
+              <center>
+                <h3>Customers credit limits report</h3>
+                
+              </center>
+            </div>
+
+            <div class="row"> 
+
+              <p t-foreach="data" t-as="e">
+                <h3><span t-esc="e['branch'] or '' "/></h3> 
+                 
+                 <table class="table table-condensed">
+                  <thead>
+                    <tr>
+                      <th>Code</th>
+                      <th>Name</th>
+                      <th>Phone</th>
+                      <th>Email</th>
+                      <th>Credit Limit</th>
+                      <th>Payment Terms</th>
+                      <th>Accumulated Debt</th>
+                      <th>Remaining Credit</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    
+                     
+                    <tr t-foreach="e['clients']" t-as="c">
+                      <td><span t-esc="c['code']"/></td>
+                      <td><span t-esc="c['name']"/></td>
+                      <td><span t-esc="c['phone']"/></td>
+                      <td><span t-esc="c['email']"/></td>
+                      <td><span t-esc="c['credit_limit']"/></td>
+                      <td><span t-esc="c['payment_term']"/></td>
+                      <td><span t-esc="c['credit']"/></td>
+                      <td><span t-esc="c['remaining_credit']"/></td>
+                    </tr>
+
+                  
+                    <tr>
+
+                      <td>Total</td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td><span t-esc="e['total_limit']"/></td>
+                      <td></td>
+                      <td><span t-esc="e['total_credit']"/></td>
+                      <td><span t-esc="e['total_remaining_credit']"/></td>
+
+                  </tr>
+                  </tbody>
+                </table> 
+                
+              </p>   
+                           
+            </div>
+
+
+        
+        </div>
+      </t>
+
+    </template>
+
+  
+
+
+</odoo>

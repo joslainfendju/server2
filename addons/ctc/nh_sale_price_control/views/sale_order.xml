@@ -1,0 +1,26 @@
+<odoo>
+  <data>
+      <!--    security group         -->
+      <record id="button_price_validation" model="res.groups">
+          <field name="name">Price Validation</field>
+          <field name="category_id"  eval="ref('base.module_category_sales')" />
+      </record>
+    <!--    end security group         -->
+
+      <record id="sale_order_need_validation" model="ir.ui.view">
+        <field name="name">Sale Order Need Validation Form</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_order_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//form/header/button[@name='print_quotation']" position="after" >
+                <field name="price_validated" invisible="1"/>
+                <field name="need_price_validation" invisible="1"/>
+                <button name="action_price_validation" string="Validate price" type="object"  class="oe_highlight"
+                        groups="nh_sale_price_control.button_price_validation"  attrs="{'invisible': ['|',('need_price_validation', '=', False),('price_validated', '=', True)]}"/>
+            </xpath>
+
+        </field>
+      </record> 
+
+  </data>
+</odoo>

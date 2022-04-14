@@ -1,0 +1,33 @@
+<odoo>
+  <data>
+
+      <!--formulaire stock picking-->
+
+      <record model="ir.ui.view" id="view_stock_move_line_tree_sequence_number" >
+            <field name="name">nh stock move line tree with readonly serial</field>
+            <field name="model">stock.move.line</field>
+            <!--<field name="priority" eval="11"/>-->
+            <field name="inherit_id" ref="stock.view_stock_move_line_operation_tree" />
+
+            <field name="arch" type="xml">
+
+
+                <field name="lot_id" position="after">
+                    <field name="sequence_numbers" placeholder="Eg. 1;2;3 or 1-3" />
+
+                </field>
+                    <!--<field name="lot_id" position="attributes">
+                      <attribute name="attrs" >{'readonly' : ['!',('usage_dest','in',('supplier',))] }</attribute>
+                </field>-->
+                 <xpath expr ="//tree" position="attributes">
+
+                </xpath>
+
+
+
+            </field>
+    </record>
+    <!--fin formulaire stock picking-->
+
+  </data>
+</odoo>

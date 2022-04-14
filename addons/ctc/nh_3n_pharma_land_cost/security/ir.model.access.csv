@@ -1,0 +1,14 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+
+access_land_cost_user,nh_3n_pharma_land_cost.land_cost user,model_nh_3n_pharma_land_cost_land_cost,purchase.group_purchase_user,1,0,0,0
+access_land_cost_manager,nh_3n_pharma_land_cost.land_cost manager,model_nh_3n_pharma_land_cost_land_cost,purchase.group_purchase_manager,1,1,1,0
+
+access_land_cost_line_user,nh_3n_pharma_land_cost.land_cost_line user,model_nh_3n_pharma_land_cost_land_cost_line,purchase.group_purchase_user,1,0,0,0
+access_land_cost_line_manager,nh_3n_pharma_land_cost.land_cost_line manager,model_nh_3n_pharma_land_cost_land_cost_line,purchase.group_purchase_manager,1,1,1,1
+
+
+access_land_cost_log_user,nh_3n_pharma_land_cost.land_cost_log user,model_nh_3n_pharma_land_cost_land_cost_log,purchase.group_purchase_user,1,0,0,0
+access_land_cost_log_manager,nh_3n_pharma_land_cost.land_cost_log manager,model_nh_3n_pharma_land_cost_land_cost_log,purchase.group_purchase_manager,1,1,1,1
+
+
+

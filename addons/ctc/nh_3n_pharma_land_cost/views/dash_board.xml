@@ -1,0 +1,42 @@
+
+<odoo>
+  <data>
+      <record model="ir.actions.act_window" id="act_purchase_order">
+            <field name="name">High Sea Board</field>
+            <field name="res_model">purchase.order</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[('type','=','abroad')]</field>
+      </record>
+
+      <record model="ir.ui.view" id="purchase_dashboard_form">
+            <field name="name">Purchase Dashboard Form</field>
+            <field name="model">board.board</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <form string="Purchase Dashboard">
+                    <hpaned>
+                        <child1>
+                            <action string="Purchases" name="%(act_purchase_order)d"
+                                colspan="2" />
+                            <field name="vi" />
+                        </child1>
+                    </hpaned>
+                </form>
+            </field>
+      </record>
+
+      <record model="ir.actions.act_window" id="purchase_board">
+            <field name="name">Purchase Dashboard Dashboard</field>
+            <field name="res_model">board.board</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">form</field>
+            <field name="usage">menu</field>
+            <field name="view_id" ref="purchase_dashboard_form" />
+        </record>
+
+      <menuitem id="openacademy_menu" name="Purchase DashBoard"
+            action="purchase_board" parent="purchase.purchase_report" />
+
+  </data>
+</odoo>

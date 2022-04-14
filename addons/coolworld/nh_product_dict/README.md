@@ -1,0 +1,1 @@
+## erp-requirement/v11/community-entreprise/nh_product_dict

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record model="ir.ui.view" id="view_voucher_type_fixer_form">
+        <field name="name">voucher type fixer form</field>
+        <field name="model">voucher.type.fixer</field>
+        <field name="arch" type="xml">
+            <form string="Voucher" >
+                    <group>
+                        <field name="voucher_type_id" />
+                        <field name="code" />
+                    </group>
+
+					<footer >
+                        <button name="start" string="Launch" type="object" class="oe_highlight"/>
+						 or
+                        <button string="Cancel" class="oe_link" special="cancel"/>
+                    </footer>
+            </form>
+        </field>
+    </record>
+    <record model="ir.actions.act_window" id="action_voucher_type_fixer">
+        <field name="name">voucher.type.fixer</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">voucher.type.fixer</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="view_voucher_type_fixer_form"/>
+    </record>
+    <menuitem name="Fix voucher type"
+              id="menu_voucher_type_fixer"
+              parent="account.account_management_menu"
+              action="action_voucher_type_fixer"
+              sequence="3"/>
+</odoo>

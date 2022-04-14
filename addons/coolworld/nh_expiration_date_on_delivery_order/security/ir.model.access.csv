@@ -1,0 +1,2 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_nh_invoice__qr_nh_invoice__qr,nh_invoice__qr.nh_invoice__qr,model_nh_invoice__qr_nh_invoice__qr,,1,0,0,0

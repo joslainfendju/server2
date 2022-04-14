@@ -1,0 +1,2 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_hr_zk_company_adjust_hr_zk_company_adjust,hr_zk_company_adjust.hr_zk_company_adjust,model_hr_zk_company_adjust_hr_zk_company_adjust,,1,0,0,0

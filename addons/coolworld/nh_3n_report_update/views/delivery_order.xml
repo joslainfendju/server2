@@ -1,0 +1,259 @@
+<odoo>
+    <data>
+        
+        <template id="report_delivery_document_expiration_date" inherit_id="stock.report_delivery_document"> 
+            <xpath expr="//div/table[3]/thead/tr" position="replace">
+               <tr>
+                  <th><strong>Product</strong></th>
+                  <th name="lot_serial" t-if="has_serial_number">
+                      Lot/Serial Number
+                  </th>
+                  <th name="lot_serial" t-if="has_serial_number">
+                      Expiration Date
+                  </th>
+                  <th class="text-center"><strong>Ordered Quantity</strong></th>
+                  <th t-if="any([move_line.state == 'done' for move_line in o.move_line_ids])" class="text-right">
+                          <strong>Delivered Quantity</strong>
+                  </th>
+                   <th><strong>State</strong></th>
+                   <th><strong>Weight</strong></th>
+                </tr>
+                
+            </xpath>
+
+            <xpath expr="//div/table[3]/tbody/tr" position="replace">
+
+              <tr t-foreach="o.move_line_ids" t-as="move_line">
+                                <td>
+                                    <span t-field="move_line.product_id"/>
+                                    <p t-if="o.picking_type_code == 'outgoing'">
+                                        <span t-field="move_line.product_id.sudo().description_pickingout"/>
+                                    </p>
+                                    <p t-if="o.picking_type_code == 'incoming'">
+                                        <span t-field="move_line.product_id.sudo().description_pickingin"/>
+                                    </p>
+                                </td>
+                                <t t-if="has_serial_number">
+                                   <td>
+                                        <table width="100%">
+                                            <tr>
+                                                <td>
+                                                     <span t-field="move_line.lot_id"/>
+                                                     <t t-if="not move_line.lot_id">
+                                                         <span t-field="move_line.lot_name"/>
+                                                     </t>
+                                                 </td>
+                                                 <td name="lot_qty">
+                                                     <t t-if="move_line.product_qty"> 
+                                                        <span t-field="move_line.product_qty"/>
+                                                    </t>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                  </td>
+                                </t>
+                                <t t-if="has_serial_number">
+                                   <td>
+                                       <span t-field="move_line.lot_id.life_date"/>
+                                  </td>
+                                </t>
+                                <td class="text-center">
+                                    <span t-field="move_line.ordered_qty"/>
+                                    <span t-field="move_line.product_uom_id"/>
+                                </td>
+                                <td class="text-right" t-if="move_line.state == 'done'">
+                                    <t t-if="move_line.ordered_qty != move_line.qty_done">
+                                        <t t-set="backorder" t-value="True"/>
+                                    </t>
+                                    <span t-field="move_line.qty_done"/>
+                                    <span t-field="move_line.product_uom_id"/>
+                                </td>
+                                <td class="text-center">
+                                    <span t-field="move_line.state"/>
+                                </td>
+                                <td class="text-center">
+                                    <span t-field="move_line.product_id.weight"/>
+                                </td>
+                </tr>
+                
+            </xpath>
+        
+       </template>
+
+        <template id ="report_picking_with_expiration_date" inherit_id="stock.report_picking">
+            <xpath expr="//div/table[1]" position="replace">
+                <table class="table table-condensed">
+                            <thead>
+                                <tr>
+                                    <th t-if="o.origin"><strong>Order (Origin)</strong></th>
+                                    <th><strong>State</strong></th>
+                                    <th><strong>Commitment Date</strong></th>
+                                    <th name="td_sched_date_h"><strong>Scheduled Date</strong></th>
+                                    <th name="td_sched_date_h"><strong>Destination</strong></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td t-if="o.origin">
+                                        <span t-field="o.origin"/>
+                                    </td>
+                                    <td>
+                                        <span t-field="o.state"/>
+                                    </td>
+                                    <td>
+                                        <span t-field="o.date"/>
+                                    </td>
+                                    <td name="td_sched_date">
+                                        <span t-field="o.scheduled_date"/>
+                                    </td>
+                                    <td name="location_dest_id">
+                                        <span t-field="o.location_dest_id.display_name"/>
+                                    </td>
+                                </tr>
+                            </tbody>
+                            </table>
+
+
+            </xpath>
+            <xpath expr="//div/table[2]/thead/tr" position="replace">
+               <tr>
+                  <th width="15%">Product</th>
+                  <th width="10%">Quantity</th>
+                  <th width="5%" class="text-center">
+                      <t t-if="has_barcode">Barcode</t>
+                  </th>
+                  <th width="10%">
+                      <t t-if="o.picking_type_id.code != 'incoming'" align="left">Source</t>
+                  </th>
+                  <th width="15%">
+                      <t t-if="has_serial_number">Lot/Serial Number / Expiration Date</t>
+                  </th>
+                   <!-- <th width="45%">
+                      <t t-if="has_serial_number"></t>
+                  </th>-->
+
+
+                </tr>
+
+            </xpath>
+            <xpath expr="//div/table[2]/tbody/tr/td[4]" position="replace">
+                <td colspan="4">
+                    <t t-if="move.move_line_ids">
+                        <table width="100%">
+                            <tr t-foreach="move.move_line_ids.sorted(key=lambda ml: ml.location_id.id)" t-as="ml">
+                                <td width="20%">
+                                    <t t-if="o.picking_type_id.code != 'incoming'">
+                                        <span t-esc="ml.location_id.display_name"/>
+                                        <t t-if="ml.package_id">
+                                            - <span t-field="ml.package_id"/>
+                                        </t>
+                                    </t>
+                                </td>
+                                <td width="50%">
+                                    <t t-if="has_serial_number and ml.product_id.tracking != 'none'">
+                                        <div class="col-xs-6">
+                                            <span t-field="ml.lot_id"/>
+                                            <span t-if="not ml.lot_id" t-field="ml.lot_name"/>
+                                            <span t-field="ml.lot_id.life_date"/>
+                                        </div>
+
+
+
+                                        <div class="col-xs-6">
+                                            <span t-field="ml.qty_done"/>
+                                            <t t-if="o.state!='done'">
+                                                / <span t-field="ml.product_uom_qty"/>
+                                            </t>
+                                        </div>
+                                       <!-- <div class="col-xs-3">
+                                            <span t-field="ml.lot_id.life_date"/>
+
+                                        </div>-->
+                                    </t>
+                                </td>
+
+                            </tr>
+                        </table>
+                                            </t>
+                                            <t t-else="">
+                                                <span>No reservation or quantity done yet.</span>
+                                            </t>
+                                        </td>
+
+            </xpath>
+
+
+
+</template>
+         <template id="report_delivery_signature" inherit_id="stock.report_delivery_document">
+            <xpath expr="//div/table[3]" position="after">
+                <br/><br/><br/>
+                <table width="100%" border="0">
+                    <tr>
+                         <td>
+                                La direction<br/><br/><br/>
+                                Le Magasinier
+                         </td>
+                        <td>
+                                Le Livreur (nom&amp;signature)
+                        </td>
+                        <td>
+                                Le Client
+                        </td>
+
+                    </tr>
+                 </table>
+                <br/><br/><br/>
+                <b> <u>NB:</u>Les médicamants ne sont ni repris, ni retournés après 48h</b>
+
+            </xpath>
+        </template>
+
+        <template id="report_delivery_header" inherit_id="stock.report_delivery_document">
+            <xpath expr="//div/table[1]/thead/tr" position="replace">
+
+                            <tr>
+
+                                <th name="td_sched_date_h">
+                                    <strong>Order Date</strong>
+                                </th>
+                                 <th name="td_sched_date_h">
+                                    <strong>Delivery Date</strong>
+                                </th>
+                                <th t-if="o.origin"><strong>Order (Origin)</strong></th>
+                                <th t-if="o.partner_id"><strong>Customer Code</strong></th>
+                            </tr>
+            </xpath>
+             <xpath expr="//div/table[1]/tbody/tr" position="replace">
+                            <tr>
+                                <td name="td_sched_date">
+                                    <t>
+                                        <span t-field="o.create_date"/>
+                                   </t>
+                                </td>
+                                <td>
+                                    <t t-if="o.state == 'done'">
+                                        <span t-field="o.date_done"/>
+                                   </t>
+                                </td>
+                                <td t-if="o.origin">
+                                    <span t-field="o.origin"/>
+                                </td>
+                                 <td t-if="o.partner_id">
+                                    <span t-field="o.partner_id.ref"/>
+                                </td>
+                            </tr>
+             </xpath>
+
+
+
+        </template>
+       
+    </data>
+
+
+
+
+
+
+</odoo>

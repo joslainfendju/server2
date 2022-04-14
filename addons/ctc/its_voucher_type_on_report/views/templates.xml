@@ -1,0 +1,12 @@
+<odoo>
+    <data>
+        <template id="report_generalledger" inherit_id="account.report_generalledger">
+            <xpath expr="//table/thead/tr/th[1]" position="after">
+              <th>Voucher type</th>
+            </xpath>
+            <xpath expr="//table/tbody/t/tr[2]/td[1]" position="after">
+              <td><span t-esc="line['voucher_type']"/></td>
+            </xpath>
+        </template>
+    </data>
+</odoo>

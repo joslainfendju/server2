@@ -1,0 +1,2 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_nh_credit_limit_report_nh_credit_limit_report,nh_credit_limit_report.nh_credit_limit_report,model_nh_credit_limit_report_nh_credit_limit_report,,1,0,0,0

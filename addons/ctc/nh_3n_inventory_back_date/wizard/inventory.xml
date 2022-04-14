@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record model="ir.ui.view" id="view_inventory_date_correc_form2">
+        <field name="name">inventory.date.correct form2</field>
+        <field name="model">inventory.date.correct</field>
+        <field name="arch" type="xml">
+            <form string="inventory.date.correct form2" >
+                    <group>
+
+                        <field name="inventory_id" />
+                        <field name="date" />
+
+                    </group>
+
+					<footer >
+                        <button name="update_inventory" string="Launch2" type="object" class="oe_highlight"/>
+						 or
+                        <button string="Cancel" class="oe_link" special="cancel"/>
+                    </footer>
+            </form>
+        </field>
+    </record>
+
+
+    <record model="ir.actions.act_window" id="action_inventory_date_correct2">
+        <field name="name">inventory.date.correct</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">inventory.date.correct</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="view_inventory_date_correc_form2"/>
+    </record>
+
+    <menuitem name="show-inventory_date_co_menu"
+              id="menu_inventory_date_correct2"
+              parent="account.account_management_menu"
+              action="action_inventory_date_correct2"
+              sequence="4"
+
+        />
+
+
+</odoo>

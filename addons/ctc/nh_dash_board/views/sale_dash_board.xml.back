@@ -1,0 +1,100 @@
+<odoo>
+    <data>
+       <record id="channel_dashboard_kanban_view" model="ir.ui.view">
+          <field name="name">nh.dashboard.view</field>
+          <field name="model">nh.dashboard</field>
+          <field name="arch" type="xml">
+              <style>
+                            .dashboard{
+                                width:1000px;
+                            }
+
+                        </style>
+            <kanban class="oe_background_grey o_kanban_dashboard o_salesteam_kanban o_project_kanban "   create="0">
+               <field name="color"/>
+               <field name="name"/>
+               <field name="branch_sale_table"/>
+
+               <templates>
+                  <span t-name="kanban-box"> <!-- Use <t> tag instead of <span> for color change -->
+                     <div t-attf-class="#{kanban_color(record.color.raw_value)}" >
+                        <div class="o_project_kanban_manage">
+                           <a class="o_kanban_manage_toggle_button" href="#">More
+                               <i class="fa fa-caret-down"/>
+                            </a>
+                        </div>
+                        <div class="o_project_kanban_main"  >
+                          <div class="o_kanban_card_content o_visible">
+                              <div class="o_kanban_primary_left" >
+                                  <div class="">
+                                      <center>
+                                         <span>
+                                            <span t-field="record.name"/>
+
+                                          </span>
+                                      </center>
+                                   </div>
+                                    <div>
+                                    <center>
+                                       <button class="btn btn-primary" type="action" name="dashboard_sales_action_id" string="Quotations">Quotations</button>
+                                            <button class="btn btn-primary" type="action" name="dashboard_sales_order_action_id" >Sales order</button>
+                                            <h3>Custom Dashboard for Sales</h3>
+
+
+
+
+
+
+                                        <field name="branch_sale_table"    widget="html"  />
+                                        <field name="branch_sale_dashboard_graph"    widget="dashboard_graph"  graph_type="bar"/>
+
+                                       </center>
+
+                                        </div>
+                                    </div>
+                                </div>
+                             <div class="o_kanban_card_manage_pane o_invisible">
+                                 <div class="col-xs-6 o_kanban_card_manage_section o_kanban_manage_view">
+                                     <div class="o_kanban_card_manage_title">
+                                         <span>View</span>
+                                     </div>
+                                    </div>
+                                  <div t-if="widget.editable" class="o_project_kanban_colorpicker" >
+                                    <ul class="oe_kanban_colorpicker" data-field="color"/>
+                                  </div>
+                             </div>
+
+                           </div>
+                        </div>
+                    </span>
+
+
+
+
+                </templates>
+            </kanban>
+          </field>
+       </record>
+        <record id="channel_dashboard_form_view" model="ir.ui.view">
+            <field name="name">nh.dashboard.form.view</field>
+            <field name="model">nh.dashboard</field>
+            <field name="arch" type="xml">
+               <form>
+                   <field name="color"/>
+                   <field name="name"/>
+              </form>
+            </field>
+        </record>
+
+        <record id="custom_sales_dashboard_action" model="ir.actions.act_window">
+            <field name="name">Dashboard</field>
+            <field name="res_model">nh.dashboard</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="view_type">form</field>
+            <field name="context">{}</field>
+            <field name="view_mode">kanban,graph, form</field>
+        </record>
+
+        <menuitem id="menu_sales_config_inherited" parent= "sale.menu_sale_report" sequence= "1" name= "Sales Test dashboard" action="custom_sales_dashboard_action"/>
+    </data>
+</odoo>

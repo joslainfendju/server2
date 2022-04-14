@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="land_cost_confirmation_wizard" model="ir.ui.view">
+            <field name="name">Confirm Landing Costs</field>
+            <field name="model">nh_3n_pharma_land_cost.land_cost_confirmation_wizard</field>
+            <field name="arch" type="xml">
+                <form string="Please click on confirm if all values are corrected." >
+
+                     <group>
+                            <group>
+                                <field name="arrival_country"  required="1" />
+                                <field name="arrival_town" required="1"/>
+                                <field name="bill_of_landing_number" required="1"/>
+                                <field name="sgs_number" required="1"/>
+                                <field name="land_cost_currency_id" attrs="{'readonly':  False}"/>
+                                <field name="financial_expense_rate" attrs="{'readonly': True}" />
+                                <field name="whithholding_on_sale_rate" attrs="{'readonly': True}"/>
+                                <field name="external_audit_cost_rate" attrs="{'readonly':  True}"/>
+
+                            </group>
+                            <group>
+                                <field name="currency_id" invisible="1"/>
+                                <field name="transit_cost_mode" attrs="{'invisible': True}"/>
+                                <field name="freight" attrs="{'invisible': [('transit_cost_mode','=','cif')]}"
+                                  widget="monetary" options="{'currency_field': 'land_cost_currency_id'}" />
+                                <field name="intervention_charge" attrs="{'readonly': False}"  widget="monetary" options="{'currency_field': 'land_cost_currency_id'}"/>
+                                <field name="outlay_charge" attrs="{'readonly': False}"  widget="monetary" options="{'currency_field': 'land_cost_currency_id'}"/>
+                                <field name="custom_cost"  attrs="{'readonly': False}"  widget="monetary" options="{'currency_field': 'land_cost_currency_id'}"/>
+                                <field name="handling_cost" attrs="{'readonly': False}"  widget="monetary" options="{'currency_field': 'land_cost_currency_id'}"/>
+
+                                <field name="financial_expense_value"  widget="monetary" options="{'currency_field': 'land_cost_currency_id'}"/>
+                                <field name="whithholding_on_sale_value"  widget="monetary" options="{'currency_field': 'land_cost_currency_id'}"/>
+                                <field name="external_audit_cost_value"  widget="monetary" options="{'currency_field': 'land_cost_currency_id'}"/>
+                            </group>
+                     </group>
+
+                    <footer>
+
+                        <button string="Cancel" class="oe_link" special="cancel"/>
+                        or
+                        <button name="action_confirm" string="Confirm" type="object" class="oe_highlight"/>
+                    </footer>
+
+                </form>
+            </field>
+        </record>
+
+    </data>
+</odoo>

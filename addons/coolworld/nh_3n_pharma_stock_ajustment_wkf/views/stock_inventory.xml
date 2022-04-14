@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <!--    security group         -->
+
+        <record id="button_view_first_level_validation" model="res.groups">
+          <field name="name">Button  Stock Adjustment/ MD Validation</field>
+          <field name="category_id"  eval="ref('base.module_category_warehouse_management')" />
+        </record>
+
+        <record id="button_view_second_level_validation" model="res.groups">
+          <field name="name">Button stock adjustment/ GM Validation</field>
+          <field name="category_id"  eval="ref('base.module_category_warehouse_management')" />
+        </record>
+         <record id="button_cancel_stock_ajustment" model="res.groups">
+          <field name="name">Button stock adjustment/ Cancel</field>
+          <field name="category_id"  eval="ref('base.module_category_warehouse_management')" />
+        </record>
+         <record id="button_start_stock_ajustment" model="res.groups">
+          <field name="name">Button stock adjustment/ Start</field>
+          <field name="category_id"  eval="ref('base.module_category_warehouse_management')" />
+        </record>
+
+
+
+        <!--    end security group         -->
+
+
+        <record id="stock_inventory_form" model="ir.ui.view">
+            <field name="name">stock.inventory</field>
+            <field name="model">stock.inventory</field>
+            <field name="inherit_id" ref="stock.view_inventory_form" />
+            <field name="arch" type="xml">
+
+                <!-- positionnement des boutons-->
+                <xpath expr="//form/header/button[@name='action_done']" position="replace" >
+
+                </xpath>
+                <xpath expr="//form/header/button[@name='action_cancel_draft']" position="replace" >
+
+                </xpath>
+
+                <xpath expr="//form/header/button[@name='action_start']" position="replace" >
+                    <button name="action_start" states="draft" string="Start Inventory" type="object" class="oe_highlight"
+                     groups="nh_3n_pharma_stock_ajustment_wkf.button_start_stock_ajustment"/>
+                </xpath>
+
+                <xpath expr="//header" position="inside">
+                    <button name="button_first_level_validation"  type="object" attrs="{'invisible': ['!',('state', 'in', ['confirm',])]}" string="MD Validation" id="draft_confirm" groups="nh_3n_pharma_stock_ajustment_wkf.button_view_first_level_validation"/>
+                    <button name="button_second_level_validation" type="object" attrs="{'invisible': ['!',('state', 'in', ['first_level_validation'])]}" string="GM Validation"  groups="nh_3n_pharma_stock_ajustment_wkf.button_view_second_level_validation"/>
+                    <button name="action_cancel_draft" states="cancel" string="Set to Draft" type="object" groups="nh_3n_pharma_stock_ajustment_wkf.button_cancel_stock_ajustment"/>
+                    <button name="action_cancel_draft" states="confirm" string="Cancel Inventory" type="object" groups="nh_3n_pharma_stock_ajustment_wkf.button_cancel_stock_ajustment"/>
+s               </xpath>
+                <!-- fin  positionnement des boutons-->
+
+                <!--mise à jour de la barre d'état-->
+                <xpath expr="//form/header/field[@name='state']" position="replace" >
+                    <field name="state" widget="statusbar" statusbar_visible="draft,confirm,first_level_validation,second_level_validation,done"   />
+                </xpath>
+                <!--fin de la mise à jour de la barre d'état-->
+
+                 <xpath expr="//form/sheet/group/group/field[@name='date']" position="after" >
+
+                    <field name="date_first_level_validation" attrs="{'invisible': ['!',('state', 'in' , ('first_level_validation','second_level_validation','done',))],'readonly': True}"   />
+                    <field name="date_second_level_validation" attrs="{'invisible': ['!',('state', 'in', ('second_level_validation','done',))],'readonly': True}"   />
+
+                </xpath>
+
+            </field>
+        </record>
+
+
+
+
+    </data>
+</odoo>

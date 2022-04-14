@@ -1,0 +1,14 @@
+<odoo>
+  <data>
+       <record id="pricelist_need_validation" model="ir.ui.view">
+        <field name="name">Price List Need Validation Form</field>
+        <field name="model">product.pricelist</field>
+        <field name="inherit_id" ref="product.product_pricelist_view"/>
+            <field name="arch" type="xml">
+               <xpath expr="//field[@name='currency_id']" position="before" >
+                   <field name="need_price_validation" />
+               </xpath>
+            </field>
+        </record>
+  </data>
+</odoo>

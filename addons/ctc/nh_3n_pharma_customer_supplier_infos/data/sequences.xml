@@ -1,0 +1,25 @@
+<?xml version="1.0" ?>
+<odoo>
+	<data noupdate="1">
+		<record id="seq_customer_registration_number_id" model="ir.sequence">
+		    <field name="name">SC</field>
+		    <field name="code">SC</field>
+		    <field name="prefix">SC</field>
+		    <field name="padding">5</field>
+		</record>
+
+		<record id="seq_supplier_number_id" model="ir.sequence">
+		    <field name="name">SS</field>
+		    <field name="code">SS</field>
+		    <field name="prefix">SS</field>
+		    <field name="padding">5</field>
+		</record>
+
+        <record id="seq_other_partner_id" model="ir.sequence">
+		    <field name="name">OP</field>
+		    <field name="code">OP</field>
+		    <field name="prefix">OP</field>
+		    <field name="padding">5</field>
+		</record>
+	</data>
+</odoo>

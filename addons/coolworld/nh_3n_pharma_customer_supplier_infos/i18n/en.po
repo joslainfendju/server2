@@ -1,0 +1,103 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* nh_3n_pharma_customer_supplier_infos
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 11.0e+e-20180216\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-12-31 13:40+0000\n"
+"PO-Revision-Date: 2018-12-31 13:40+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: nh_3n_pharma_customer_supplier_infos
+#: selection:res.partner,customer_type:0
+msgid "Cash"
+msgstr "Cash"
+
+#. module: nh_3n_pharma_customer_supplier_infos
+#: model:ir.ui.view,arch_db:nh_3n_pharma_customer_supplier_infos.view_npharma_partner_form
+msgid "City"
+msgstr "City"
+
+
+
+#. module: nh_3n_pharma_customer_supplier_infos
+#: model:ir.model,name:nh_3n_pharma_customer_supplier_infos.model_res_partner
+msgid "Contact"
+msgstr "Contact"
+
+#. module: nh_3n_pharma_customer_supplier_infos
+#: selection:res.partner,customer_type:0
+msgid "Credit"
+msgstr "Credit"
+
+#. module: nh_3n_pharma_customer_supplier_infos
+#: model:ir.ui.view,arch_db:nh_3n_pharma_customer_supplier_infos.view_npharma_partner_form
+msgid "Name"
+msgstr "Name"
+
+#. module: nh_3n_pharma_customer_supplier_infos
+#: model:ir.model.fields,field_description:nh_3n_pharma_customer_supplier_infos.field_res_branch_partner_ids
+msgid "Partner"
+msgstr "Partner"
+
+#. module: nh_3n_pharma_customer_supplier_infos
+#: model:ir.model.fields,field_description:nh_3n_pharma_customer_supplier_infos.field_res_partner_registration_number
+#: model:ir.model.fields,field_description:nh_3n_pharma_customer_supplier_infos.field_res_users_registration_number
+msgid "Registration Number"
+msgstr "Registration Number"
+
+
+
+#. module: nh_3n_pharma_customer_supplier_infos
+#: model:ir.model.fields,field_description:nh_3n_pharma_customer_supplier_infos.field_res_partner_customer_type
+#: model:ir.model.fields,field_description:nh_3n_pharma_customer_supplier_infos.field_res_users_customer_type
+msgid "Type of customer"
+msgstr "Type of customer"
+
+
+
+
+#. module: nh_3n_pharma_customer_supplier_infos
+#: model:ir.model,name:nh_3n_pharma_customer_supplier_infos.model_res_users
+msgid "Users"
+msgstr "Users"
+
+
+#. module: nh_3n_pharma_customer_supplier_infos
+#: model:ir.model,name:nh_3n_pharma_customer_supplier_infos.model_res_branch
+msgid "res.branch"
+msgstr "res.branch"
+
+#. module: nh_3n_pharma_customer_supplier_infos
+#: model:ir.model.fields,help:nh_3n_pharma_customer_supplier_infos.field_res_partner_tax_payer_number
+#: model:ir.model.fields,help:nh_3n_pharma_customer_supplier_infos.field_res_users_tax_payer_number
+msgid "Tax Identification Number.Fill it if the company is subjected to taxes. Used by the some of the legal statements."
+msgstr "Tax Identification Number.Fill it if the company is subjected to taxes. Used by the some of the legal statements."
+
+#. module: nh_3n_pharma_customer_supplier_infos
+#: model:ir.model.fields,field_description:nh_3n_pharma_customer_supplier_infos.field_res_partner_tax_payer_number
+#: model:ir.model.fields,field_description:nh_3n_pharma_customer_supplier_infos.field_res_users_tax_payer_number
+msgid "Tax Payer Number"
+msgstr "Tax Payer Number"
+
+
+#. module: nh_3n_pharma_customer_supplier_infos
+#: model:ir.ui.view,arch_db:nh_3n_pharma_customer_supplier_infos.view_npharma_partner_form
+#: model:ir.ui.view,arch_db:nh_3n_pharma_customer_supplier_infos.view_partner_tree_npharma
+msgid "e.g. BE0477472701"
+msgstr "e.g. BE0477472701"
+
+
+
+
+
+
+
+

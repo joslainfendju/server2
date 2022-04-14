@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data noupdate="1">
+
+    <!-- Sequence types for customer codes   
+
+    <record id="seq_type_res_customer" model="ir.sequence.type">
+        <field name="name">Customer Code</field>
+        <field name="code">seq.customer</field>
+    </record> -->  
+ 
+    <!-- Sequences for customer codes -->
+ 
+    <record id="seq_res_customer" model="ir.sequence">
+        <field name="name">Customer Code</field>
+        <field name="code">seq.customer</field>
+        <field name="prefix">CE</field>
+        <field name="padding">5</field>
+    </record>  
+    </data>
+</openerp>

@@ -1,0 +1,2 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_nh_sale_price_control_nh_sale_price_control,nh_sale_price_control.nh_sale_price_control,model_nh_sale_price_control_nh_sale_price_control,,1,0,0,0

@@ -1,0 +1,17 @@
+<odoo>
+  <data>
+    <record id="expiry_contact_form" model="ir.ui.view">
+        <field name="name">nh_3n_pharma_partenaire_pour_alerte_perimes</field>
+        <field name="model">nh_alert_contact.contact</field>
+        <field name="inherit_id" ref="nh_alert_contact.form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//form/sheet/notebook/page[2]" position="inside">
+                <group>
+                    <field name="alert_payment" />
+                </group>
+            </xpath>
+
+        </field>
+      </record>
+  </data>
+</odoo>

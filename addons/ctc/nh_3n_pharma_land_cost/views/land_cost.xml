@@ -1,0 +1,203 @@
+<odoo>
+  <data>
+
+
+      <record model="ir.actions.act_window" id="action_landing_cost">
+          <field name="name">Landing Costs</field>
+          <field name="res_model">nh_3n_pharma_land_cost.land_cost</field>
+          <field name="views">landing_cost_view_tree,landing_cost_form</field>
+          <field name="view_mode">tree,form</field>
+      </record>
+      <menuitem name="Landing Costs" sequence="100" id="menu_landing_cost" parent="purchase.menu_procurement_management" action="action_landing_cost"/>
+      <!--    security group         -->
+      <record id="button_approve_landing_cost" model="res.groups">
+          <field name="name">Button Approve Landing Cost</field>
+          <field name="category_id"  eval="ref('base.module_category_purchases')" />
+      </record>
+      <record id="button_cancel_landing_cost" model="res.groups">
+          <field name="name">Button cancel Landing Cost</field>
+          <field name="category_id"  eval="ref('base.module_category_purchases')" />
+      </record>
+
+
+       <record id="button_print_landing_cost" model="res.groups">
+          <field name="name">Button Print Landing Cost</field>
+          <field name="category_id"  eval="ref('base.module_category_purchases')" />
+      </record>
+
+      <!-- TreeView pour les Lands Costs -->
+      <record id="landing_cost_view_tree" model="ir.ui.view">
+          <field name="name">Landing Cost List</field>
+          <field name="model">nh_3n_pharma_land_cost.land_cost</field>
+          <field name="arch" type="xml">
+              <tree string="List of Landing Cost" decoration-info="state == 'draft'" decoration-muted="state == 'cancel'" create="false" edit="false">
+                  <field name="name"/>
+                  <field name="order_id"/>
+                  <field name="create_date"/>
+                  <field name="state"/>
+              </tree>
+          </field>
+      </record>
+      <!--Fin TreeView pour les Lands Costs-->
+
+
+      <!--formulaire pour les lands Costs-->
+      <record id="landing_cost_form" model="ir.ui.view">
+          <field name="name">nh_3n_pharma_land_cost.land_cost.form</field>
+          <field name="model">nh_3n_pharma_land_cost.land_cost</field>
+          <field name="arch" type="xml">
+              <form string="Landing Cost" class="o_sale_order" create="false" edit="false">
+                  <header>
+                      <button name="button_cancel" states="draft"  type="object" string="Cancel" groups="nh_3n_pharma_land_cost.button_cancel_landing_cost"/>
+                      <button name="button_print"  states="draft,approved,cancel"  type="object" string="Print" groups="nh_3n_pharma_land_cost.button_print_landing_cost"/>
+                      <button name="button_approve" type="object" string="Approve" groups="nh_3n_pharma_land_cost.button_approve_landing_cost"
+                        help="If request is transit, you can not modify it anymore."  attrs="{'invisible': ['!',('state','=','draft')]}"/>
+                      <field name="state" widget="statusbar" statusbar_visible="draft,approved"/>
+                  </header>
+                <sheet>
+                    <div class="oe_title">
+                        <h1>
+                            <field name="name" /><br/>
+                        </h1>
+                    </div>
+                    <group>
+                        <group>
+                            <field name="order_id" />
+                            <field name="use_ratio_volume" attrs="{'readonly': True}" />
+                            <field name="transit_cost_mode" attrs="{'readonly': True}"/>
+                            <field name="create_date" attrs="{'readonly': True}"  />
+                            <field name="date_approve" attrs="{'invisible': ['!',('state', 'in', ('approved',))],'readonly': True}"   />
+                            <field name="date_cancel" attrs="{'invisible': ['!',('state', 'in', ('cancel',))],'readonly': True}"   />
+
+                        </group>
+                        <group>
+                            <field name="financial_expense_rate" attrs="{'readonly': True}" />
+                            <field name="whithholding_on_sale_rate" attrs="{'readonly': True}"/>
+                            <field name="external_audit_cost_rate" attrs="{'readonly': True}"/>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="Landing Cost per purchase Product">
+
+                            <field name="land_cost_line_ids" mode="tree" attrs="{'readonly': True}">
+
+                                <tree string="Landing Cost per purchase Product" >
+                                    <field name="currency_id" invisible="1"/>
+
+                                    <field name="product_id" />
+                                    <field name="purchase_qty" />
+                                    <field name="purchase_price" />
+                                    <field name="ratio" />
+                                    <field name="use_ratio_volume" invisible="1" />
+                                    <field name="volume_ratio"  attrs="{'invisible': [('use_ratio_volume','=',False)]}"/>
+                                    <field name="line_custom_cost"/>
+                                    <field name="line_outlay_charge"/>
+                                    <field name="line_intervention_charge"/>
+                                    <field name="line_freight"/>
+                                    <field name="line_financial_expense_value"/>
+                                    <field name="line_whithholding_on_sale_value"/>
+                                    <field name="line_handling_cost"/>
+                                    <field name="line_external_audit_cost_value"/>
+                                    <field name="global_cost_purchase"/>
+                                    <field name="cost_per_unit_purchase"/>
+                                    <field name="stock_before_arrival"/>
+                                    <field name="cost_before_purchase"/>
+                                    <field name="cost_price_after_purchase" options="{'currency_field': 'currency_id'}"  widget="monetary" />
+
+                                </tree>
+
+                            </field>
+
+                        </page>
+
+
+
+                    </notebook>
+                                <H5>SUMMARY</H5>
+
+
+                                <table border="1" width="100%" class="oe_subtotal_footer oe_left">
+                                    <field name="currency_id" invisible="1"/>
+                                    <tr>
+                                        <td><b>Total</b></td>
+                                        <td><label for="freight"/></td>
+                                        <td><label for="intervention_charge"/></td>
+                                        <td><label for="outlay_charge"/></td>
+                                        <td><label for="custom_cost"/></td>
+                                        <td><label for="handling_cost"/></td>
+                                        <td><label for="financial_expense_value"/></td>
+                                        <td><label for="whithholding_on_sale_value"/></td>
+                                        <td><label for="external_audit_cost_value"/></td>
+                                        <td><label for="amount_total"/></td>
+                                        <td><label for="land_costs_total"/></td>
+                                        <td><label for="amount_total_with_land_costs"/></td>
+
+                                    </tr>
+                                    <tr>
+                                        <td><b>Manual</b></td>
+                                        <td><field name="freight"/></td>
+                                        <td><field name="intervention_charge"/></td>
+                                        <td><field name="outlay_charge"/></td>
+                                        <td><field name="custom_cost"/></td>
+                                        <td><field name="handling_cost"/></td>
+                                        <td><field name="financial_expense_value"/></td>
+                                        <td><field name="whithholding_on_sale_value"/></td>
+                                        <td><field name="external_audit_cost_value"/></td>
+                                        <td><field name="amount_total"/></td>
+                                        <td><field name="land_costs_total"/></td>
+                                        <td><field name="amount_total_with_land_costs" options="{'currency_field': 'currency_id'}"  widget="monetary"/></td>
+                                    </tr>
+                                     <tr>
+                                        <td><b>Formula &#x2063;</b></td>
+                                        <td><label for="freight_formula" invisible="1"/> <field name="freight_formula"/></td>
+                                        <td><label for="intervention_charge_formula" invisible="1"/> <field  name="intervention_charge_formula"/></td>
+                                        <td><label for="outlay_charge_formula" invisible="1"/><field name="outlay_charge_formula"/></td>
+                                        <td><label for="custom_cost_formula" invisible="1"/> <field name="custom_cost_formula"/></td>
+                                        <td><label for="handling_cost_formula" invisible="1"/><field name="handling_cost_formula"/></td>
+                                        <td><label for="financial_expense_value_formula" invisible="1"/> <field name="financial_expense_value_formula"/></td>
+                                        <td><label for="whithholding_on_sale_value_formula" invisible="1"/><field name="whithholding_on_sale_value_formula"/></td>
+                                        <td><label for="external_audit_cost_value_formula" invisible="1"/><field name="external_audit_cost_value_formula"/></td>
+                                        <td><label for="amount_total_formula" invisible="1"/><field name="amount_total_formula"/></td>
+                                        <td><label for="land_costs_total_formula" invisible="1"/><field name="land_costs_total_formula"/></td>
+                                        <td><label for="amount_total_with_land_costs_formula" invisible="1"/><field name="amount_total_with_land_costs_formula"  options="{'currency_field': 'currency_id'}" widget="monetary"/></td>
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td><b>difference &#x2063;</b></td>
+                                        <td><label for="freight_difference" invisible="1"/> <field name="freight_difference"/></td>
+                                        <td><label for="intervention_charge_difference" invisible="1"/> <field  name="intervention_charge_difference"/></td>
+                                        <td><label for="outlay_charge_difference" invisible="1"/><field name="outlay_charge_difference"/></td>
+                                        <td><label for="custom_cost_difference" invisible="1"/> <field name="custom_cost_difference"/></td>
+                                        <td><label for="handling_cost_difference" invisible="1"/><field name="handling_cost_difference"/></td>
+                                        <td><label for="financial_expense_value_difference" invisible="1"/> <field name="financial_expense_value_difference"/></td>
+                                        <td><label for="whithholding_on_sale_value_difference" invisible="1"/><field name="whithholding_on_sale_value_difference"/></td>
+                                        <td><label for="external_audit_cost_value_difference" invisible="1"/><field name="external_audit_cost_value_difference"/></td>
+                                        <td><label for="amount_total_difference" invisible="1"/><field name="amount_total_difference"/></td>
+                                        <td><label for="land_costs_total_difference" invisible="1"/><field name="land_costs_total_difference"/></td>
+                                        <td><label for="amount_total_with_land_costs_difference" invisible="1"/><field name="amount_total_with_land_costs_difference" options="{'currency_field': 'currency_id'}" widget="monetary"/></td>
+                                    </tr>
+
+
+
+
+
+
+                                </table>
+
+
+
+                </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids" widget="mail_followers"/>
+                    <field name="activity_ids" widget="mail_activity"/>
+                    <field name="message_ids" widget="mail_thread"/>
+                </div>
+
+                </form>
+            </field>
+        </record>
+
+
+    <!--fin formulaire land_cost-->
+  </data>
+</odoo>

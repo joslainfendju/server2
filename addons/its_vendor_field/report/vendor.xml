@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <template id="flexiretail_com_advance.front_sales_report_pdf_document_inherit"
+                  inherit_id="front_sales_report_pdf_document">
+            <xpath expr="//div/div[2]/div[1]" position="inside">
+                <span>vendor</span>
+            </xpath>
+        </template>
+    </data>
+</odoo>
+
+

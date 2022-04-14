@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="view_its_account_form">
+            <field name="name">wizard.account.move form</field>
+            <field name="model">wizard.account.move</field>
+            <field name="arch" type="xml">
+                <form string="budget category form" version="7.0">
+                    <group>
+                        <field name="move_ids"/>
+                    </group>
+                    <footer>
+                        <button name="create_move" string="Launch" type="object" class="oe_highlight"/>
+                        or
+                        <button string="Cancel" class="oe_link" special="cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="action_its_move_create">
+            <field name="name">wizard.account.move</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">wizard.account.move</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="view_its_account_form"/>
+            <field name="target">new</field>
+        </record>
+
+        <menuitem name="Create move with stock move"
+              id="menu_nh_move_patch"
+              parent="account.account_management_menu"
+              action="action_its_move_create"
+              sequence="3"
+        />
+
+    </data>
+</odoo>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <data>
+        <template id="report_header_custom" inherit_id="account.report_invoice_document">
+            <xpath expr="//table[@name='invoice_line_table']/thead/tr//th[3]" position="after">
+                <th class="text-right">
+                    Info.
+                </th>
+            </xpath>
+            <xpath expr="//table[@name='invoice_line_table']/tbody/tr//td[3]" position="after">
+                <t t-if="l.free_product!='unité gratuite'">
+                    <td>
+                        <span t-esc="''"/>
+                    </td>
+                </t>
+                <t t-if="l.free_product=='unité gratuite'">
+                    <td style="background-color:lightgray;">
+                        <span t-field="l.free_product"/>
+                    </td>
+                </t>
+
+            </xpath>
+        </template>
+    </data>
+
+</odoo>

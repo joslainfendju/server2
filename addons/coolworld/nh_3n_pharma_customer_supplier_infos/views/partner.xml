@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!--showing promotion list in sale order form-->
+        <record id="view_npharma_partner_form" model="ir.ui.view">
+            <field name="name">res.partner.view.buttons</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_form"/>
+            <field name="arch" type="xml">
+
+
+                <!-- form header -->
+                <xpath expr="/form/sheet/notebook/page/group/group/field[@name='ref']" position="replace">
+                </xpath>
+
+                <xpath expr="/form/sheet/div/h1[1]" position="replace">
+
+                </xpath>
+
+                <xpath expr="/form/sheet/div/field[@name='company_type']" position="after">
+                    <h1>
+                      [<field name="ref"  attrs="{'readonly' : True}"/>]<field name="name" default_focus="1" placeholder="Name" attrs="{'required' : [('type', '=', 'contact')]}"/>
+
+                    </h1>
+                </xpath>
+                <!-- end of form header -->
+
+
+                <!-- customer attributes -->
+                <xpath expr="/form/sheet/notebook/page/group/group/field[@name='customer']" position="after">
+                    <field name="customer_type" attrs="{'invisible': [('customer', '=', False)], 'required': [('customer', '=', True)]}"/>
+                </xpath>
+                <!-- end of customer attributes -->
+
+                <!-- supplier attributes -->
+                <xpath expr="/form/sheet/notebook/page/group/group/field[@name='supplier']" position="after">
+
+                </xpath>
+                <!-- end of  supplier attributes -->
+
+                 <!-- commons suppliers and customers attributes -->
+                <xpath expr="/form/sheet/group/group/field[@name='vat']" position="replace">
+                    <field name="vat"  invisible="1" />
+                    <field name="tax_payer_number"   placeholder="e.g. BE0477472701"  attrs="{'required':['|',('customer', '=', True),('supplier', '=', True)]}"/>
+
+                </xpath>
+
+                <xpath expr="/form/sheet/group/group/field[@name='category_id']" position="before">
+
+                     <field name="registration_number"   attrs="{'required':['|',('customer', '=', True),('supplier', '=', True)]}"/>
+                </xpath>
+
+                <field name="phone" position="replace">
+                    <field name="phone"  attrs="{'required':['|',('customer', '=', True),('supplier', '=', True)]}"/>
+                </field>
+                <field name="city" position="replace">
+                    <field name="city"  attrs="{'required':['|',('customer', '=', True),('supplier', '=', True)]}" placeholder="City"/>
+                </field>
+
+                <!--end of  commons suppliers and customers attributes -->
+
+            </field>
+        </record>
+
+        <record id="view_partner_tree_npharma" model="ir.ui.view">
+            <field name="name">res.partner.view.tree</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_tree"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='display_name']" position="before">
+                    <field name="ref" />
+                </xpath>
+                <xpath expr="//field[@name='display_name']" position="after">
+                    <field name="street" />
+                </xpath>
+            </field>
+        </record>
+        <record id="view_partner_kanban_npharma" model="ir.ui.view">
+            <field name="name">res.partner.view.kanban</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.res_partner_kanban_view"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='display_name']" position="before">
+                    <field name="ref" />
+                </xpath>
+
+                <xpath expr='//kanban/templates/t/div/div[2]/strong' position="before">
+                    <strong class="o_kanban_record_title oe_partner_heading"><field name="ref" /></strong><br/>
+                </xpath>
+                 <xpath expr='//kanban/templates/t/div/div[2]/ul/li[1]' position="after">
+                   <li t-if="record.phone.raw_value"><field name="phone"/></li>
+                </xpath>
+
+            </field>
+        </record>
+
+        <record id="view_partner_short_form_npharma" model="ir.ui.view">
+            <field name="name">res.partner.view.tree</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_short_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='vat']" position="replace">
+                    <field name="ref"/>
+
+                </xpath>
+            </field>
+        </record>
+
+
+
+    </data>
+</odoo>

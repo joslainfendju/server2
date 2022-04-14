@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record model="ir.ui.view" id="nh_account_chart_import_form">
+        <field name="name">Import Account Chart Form</field>
+        <field name="model">nh.account.chart.import</field>
+        <field name="arch" type="xml">
+            <form string="budget.category form" >
+                <group>
+                    <field name="data" filename='file_name' widget="binary" />
+                    <field name="file_name" invisible='1' />
+
+                </group>
+
+                <footer >
+                    <button name="action_import" string="Launch" type="object" class="oe_highlight"/>
+                     or
+                    <button string="Cancel" class="oe_link" special="cancel"/>
+                </footer>
+
+
+            </form>
+        </field>
+    </record>
+
+
+    <record model="ir.actions.act_window" id="action_nh_account_chart_import">
+        <field name="name">action.nh.account.chart.import</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">nh.account.chart.import</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="nh_account_chart_import_form"/>
+        <field name="target">new</field>
+    </record>
+
+    <menuitem name="Chart of account import"
+              id="menu_chart_account_import"
+              parent="account.account_management_menu"
+              action="action_nh_account_chart_import"
+              sequence="4"
+    />
+
+</odoo>

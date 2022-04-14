@@ -1,0 +1,43 @@
+<odoo>
+    <data>
+
+        <record model="ir.ui.view" id="voucher_type_list">
+            <field name="name">account_voucher_type list</field>
+            <field name="model">account.voucher.type</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="code"/>
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
+        <record id="voucher_type_form" model="ir.ui.view">
+            <field name="name">account_voucher_type form</field>
+            <field name="model">account.voucher.type</field>
+            <field name="arch" type="xml">
+                <form string="Voucher type" class="o_sale_order">
+                    <sheet>
+                    <div class="oe_title">
+                        <h1>
+                            <field name="name" placeholder="Enter the visible name" />
+                        </h1>
+                    </div>
+                    <group>
+                        <group>
+                            <field name="code" />
+                        </group>
+                    </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+    <!-- actions opening views on models -->
+    <record model="ir.actions.act_window" id="voucher_type_action_window">
+      <field name="name">Voucher type</field>
+      <field name="res_model">account.voucher.type</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+    <menuitem name="Voucher type" id="account_voucher_type_menu_config" parent="account.menu_finance_configuration"
+              action="voucher_type_action_window"/>
+  </data>
+</odoo>

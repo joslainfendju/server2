@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="view_product_template_family_form" model="ir.ui.view">
+            <field name="name">nh_scm.product.family</field>
+            <field name="model">product.template</field>
+            <field name="inherit_id" ref="product.product_template_form_view"/>
+            <field name="arch" type="xml">
+                <data>
+                    <field name="categ_id" position="after">
+                        <field name="family_id" />
+                    </field>
+                    <field name="property_stock_account_input" position="before">
+                        <field name="property_valuation"/>
+                        <field name="property_stock_valuation_account_id"
+                                domain="[('deprecated', '=', False)]"/>
+                    </field>
+                </data>
+            </field>
+        </record>
+
+    </data>
+</odoo>

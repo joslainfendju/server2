@@ -1,0 +1,203 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* nh_credit_limit_report
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 11.0e+e-20180216\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-11-09 10:50+0000\n"
+"PO-Revision-Date: 2018-11-09 10:50+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: nh_credit_limit_report
+#: model:ir.ui.view,arch_db:nh_credit_limit_report.report_credit_limit
+msgid "Accumulated Debt"
+msgstr "Dettes accumulées"
+
+#. module: nh_credit_limit_report
+#: model:ir.actions.report,name:nh_credit_limit_report.action_credit_limit_report
+msgid "CREDIT LIMIT"
+msgstr "Limite de crédit"
+
+#. module: nh_credit_limit_report
+#: model:ir.ui.view,arch_db:nh_credit_limit_report.view_boite_dialogue_credit_limit
+msgid "Cancel"
+msgstr "Annuler"
+
+#. module: nh_credit_limit_report
+#: model:ir.ui.view,arch_db:nh_credit_limit_report.view_boite_dialogue_credit_limit
+msgid "Close"
+msgstr "Fermer"
+
+#. module: nh_credit_limit_report
+#: model:ir.ui.view,arch_db:nh_credit_limit_report.report_credit_limit
+msgid "Code"
+msgstr "Code"
+
+#. module: nh_credit_limit_report
+#: model:ir.model,name:nh_credit_limit_report.model_res_partner
+msgid "Contact"
+msgstr "Contact"
+
+#. module: nh_credit_limit_report
+#: model:ir.model.fields,field_description:nh_credit_limit_report.field_nh_credit_limit_report_credit_limit_report_wizard_create_uid
+msgid "Created by"
+msgstr "Created by"
+
+#. module: nh_credit_limit_report
+#: model:ir.model.fields,field_description:nh_credit_limit_report.field_nh_credit_limit_report_credit_limit_report_wizard_create_date
+msgid "Created on"
+msgstr "Created on"
+
+#. module: nh_credit_limit_report
+#: model:ir.actions.act_window,name:nh_credit_limit_report.action_view_credit_limit_report
+#: model:ir.ui.view,arch_db:nh_credit_limit_report.report_credit_limit
+msgid "Credit Limit"
+msgstr "Limite de crédit"
+
+#. module: nh_credit_limit_report
+#: model:ir.ui.menu,name:nh_credit_limit_report.menu_credit_limit_report
+msgid "Credit Limit Report"
+msgstr "Etat des limites de crédit par client"
+
+#. module: nh_credit_limit_report
+#: model:ir.ui.view,arch_db:nh_credit_limit_report.report_credit_limit
+msgid "Customers credit limits report"
+msgstr "Etat des limites de crédit par client"
+
+#. module: nh_credit_limit_report
+#: model:ir.model.fields,field_description:nh_credit_limit_report.field_nh_credit_limit_report_credit_limit_report_wizard_display_name
+#: model:ir.model.fields,field_description:nh_credit_limit_report.field_report_nh_credit_limit_report_report_credit_limit_display_name
+msgid "Display Name"
+msgstr "Display Name"
+
+#. module: nh_credit_limit_report
+#: model:ir.ui.view,arch_db:nh_credit_limit_report.view_boite_dialogue_credit_limit
+msgid "Download options :"
+msgstr "Options de téléchargement :"
+
+#. module: nh_credit_limit_report
+#: model:ir.ui.view,arch_db:nh_credit_limit_report.report_credit_limit
+msgid "Email"
+msgstr "Adresse Mail"
+
+#. module: nh_credit_limit_report
+#: model:ir.ui.view,arch_db:nh_credit_limit_report.view_boite_dialogue_credit_limit
+msgid "Export to EXCEL FILE"
+msgstr "Exporter sous format EXCEL"
+
+#. module: nh_credit_limit_report
+#: model:ir.ui.view,arch_db:nh_credit_limit_report.view_boite_dialogue_credit_limit
+msgid "Export to PDF FILE"
+msgstr "Exporter sous Format PDF"
+
+#. module: nh_credit_limit_report
+#: model:ir.ui.view,arch_db:nh_credit_limit_report.view_boite_dialogue_credit_limit
+msgid "Exportation finished"
+msgstr "Exportation Terminée"
+
+#. module: nh_credit_limit_report
+#: model:ir.model.fields,field_description:nh_credit_limit_report.field_nh_credit_limit_report_credit_limit_report_wizard_data
+msgid "File"
+msgstr "Fichier"
+
+#. module: nh_credit_limit_report
+#: model:ir.model.fields,field_description:nh_credit_limit_report.field_nh_credit_limit_report_credit_limit_report_wizard_name
+msgid "File name"
+msgstr "Nom du fichier"
+
+#. module: nh_credit_limit_report
+#: model:ir.model.fields,field_description:nh_credit_limit_report.field_nh_credit_limit_report_credit_limit_report_wizard_id
+#: model:ir.model.fields,field_description:nh_credit_limit_report.field_report_nh_credit_limit_report_report_credit_limit_id
+msgid "ID"
+msgstr "ID"
+
+#. module: nh_credit_limit_report
+#: model:ir.model.fields,field_description:nh_credit_limit_report.field_nh_credit_limit_report_credit_limit_report_wizard___last_update
+#: model:ir.model.fields,field_description:nh_credit_limit_report.field_report_nh_credit_limit_report_report_credit_limit___last_update
+msgid "Last Modified on"
+msgstr "Last Modified on"
+
+#. module: nh_credit_limit_report
+#: model:ir.model.fields,field_description:nh_credit_limit_report.field_nh_credit_limit_report_credit_limit_report_wizard_write_uid
+msgid "Last Updated by"
+msgstr "Last Updated by"
+
+#. module: nh_credit_limit_report
+#: model:ir.model.fields,field_description:nh_credit_limit_report.field_nh_credit_limit_report_credit_limit_report_wizard_write_date
+msgid "Last Updated on"
+msgstr "Last Updated on"
+
+#. module: nh_credit_limit_report
+#: model:ir.ui.view,arch_db:nh_credit_limit_report.report_credit_limit
+msgid "Name"
+msgstr "Nom"
+
+#. module: nh_credit_limit_report
+#: model:ir.ui.view,arch_db:nh_credit_limit_report.report_credit_limit
+msgid "Payment Terms"
+msgstr "Condition de Paiements"
+
+#. module: nh_credit_limit_report
+#: model:ir.ui.view,arch_db:nh_credit_limit_report.report_credit_limit
+msgid "Phone"
+msgstr "Téléphone"
+
+#. module: nh_credit_limit_report
+#: model:ir.ui.view,arch_db:nh_credit_limit_report.view_boite_dialogue_credit_limit
+msgid "Please fill the form"
+msgstr "SVP Remplissez le formulaire"
+
+#. module: nh_credit_limit_report
+#: model:ir.model.fields,field_description:nh_credit_limit_report.field_res_partner_remaining_credit
+#: model:ir.model.fields,field_description:nh_credit_limit_report.field_res_users_remaining_credit
+#: model:ir.ui.view,arch_db:nh_credit_limit_report.report_credit_limit
+msgid "Remaining Credit"
+msgstr "Crédit restant"
+
+#. module: nh_credit_limit_report
+#: model:ir.model.fields,field_description:nh_credit_limit_report.field_nh_credit_limit_report_credit_limit_report_wizard_state
+msgid "State"
+msgstr "Etat"
+
+#. module: nh_credit_limit_report
+#: model:ir.ui.view,arch_db:nh_credit_limit_report.report_credit_limit
+msgid "Total"
+msgstr "Total"
+
+#. module: nh_credit_limit_report
+#: model:ir.model.fields,field_description:nh_credit_limit_report.field_nh_credit_limit_report_credit_limit_report_wizard_branch_id
+msgid "branch"
+msgstr "branche"
+
+#. module: nh_credit_limit_report
+#: selection:nh_credit_limit_report.credit_limit_report_wizard,state:0
+msgid "choose"
+msgstr "Choisissez"
+
+#. module: nh_credit_limit_report
+#: selection:nh_credit_limit_report.credit_limit_report_wizard,state:0
+msgid "get"
+msgstr "get"
+
+#. module: nh_credit_limit_report
+#: model:ir.model,name:nh_credit_limit_report.model_nh_credit_limit_report_credit_limit_report_wizard
+msgid "nh_credit_limit_report.credit_limit_report_wizard"
+msgstr "nh_credit_limit_report.credit_limit_report_wizard"
+
+#. module: nh_credit_limit_report
+#: model:ir.ui.view,arch_db:nh_credit_limit_report.view_boite_dialogue_credit_limit
+msgid "or"
+msgstr "ou"
+
+#. module: nh_credit_limit_report
+#: model:ir.model,name:nh_credit_limit_report.model_report_nh_credit_limit_report_report_credit_limit
+msgid "report.nh_credit_limit_report.report_credit_limit"
+msgstr "report.nh_credit_limit_report.report_credit_limit"
+

@@ -1,0 +1,661 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* nh_dash_board
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 11.0e+e-20180216\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-04-11 11:31+0000\n"
+"PO-Revision-Date: 2019-04-11 11:31+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: nh_dash_board
+#: model:ir.ui.view,arch_db:nh_dash_board.channel_dashboard_kanban_view
+msgid "<span>View</span>"
+msgstr "<span>View</span>"
+
+#. module: nh_dash_board
+#: model:ir.model.fields,field_description:nh_dash_board.field_nh_dashboard_application
+msgid "Application"
+msgstr "Application"
+
+#. module: nh_dash_board
+#: model:ir.ui.view,arch_db:nh_dash_board.channel_dashboard_kanban_view
+msgid "Approved"
+msgstr "Approved"
+
+#. module: nh_dash_board
+#: model:ir.ui.view,arch_db:nh_dash_board.channel_dashboard_kanban_view
+msgid "Approved ["
+msgstr "Approved ["
+
+#. module: nh_dash_board
+#: model:ir.model.fields,field_description:nh_dash_board.field_nh_dashboard_branch_ids
+msgid "Branch"
+msgstr "Branch"
+
+#. module: nh_dash_board
+#: model:ir.model.fields,field_description:nh_dash_board.field_nh_dashboard_branch_payment_dashboard_graph
+msgid "Branch Payment Dashboard Graph"
+msgstr "Branch Payment Dashboard Graph"
+
+#. module: nh_dash_board
+#: model:ir.model.fields,field_description:nh_dash_board.field_nh_dashboard_branch_payment_json
+msgid "Branch Payment Json"
+msgstr "Branch Payment Json"
+
+#. module: nh_dash_board
+#: model:ir.model.fields,field_description:nh_dash_board.field_nh_dashboard_branch_payment_table
+msgid "Branch Payment Table"
+msgstr "Branch Payment Table"
+
+#. module: nh_dash_board
+#: model:ir.model.fields,field_description:nh_dash_board.field_nh_dashboard_branch_sale_dashboard_graph
+msgid "Branch Sale Dashboard Graph"
+msgstr "Branch Sale Dashboard Graph"
+
+#. module: nh_dash_board
+#: model:ir.model.fields,field_description:nh_dash_board.field_nh_dashboard_branch_sale_json
+msgid "Branch Sale Json"
+msgstr "Branch Sale Json"
+
+#. module: nh_dash_board
+#: model:ir.model.fields,field_description:nh_dash_board.field_nh_dashboard_branch_sale_table
+msgid "Branch Sale Table"
+msgstr "Branch Sale Table"
+
+#. module: nh_dash_board
+#: model:ir.ui.view,arch_db:nh_dash_board.channel_dashboard_kanban_view
+msgid "Branch Sale will load here!"
+msgstr "Branch Sale will load here!"
+
+#. module: nh_dash_board
+#: model:ir.model.fields,field_description:nh_dash_board.field_nh_dashboard_branch_transit_table
+msgid "Branch Transit Table"
+msgstr "Branch Transit Table"
+
+#. module: nh_dash_board
+#: model:ir.model.fields,field_description:nh_dash_board.field_res_branch_collect_amount_month
+msgid "Collect  Amount of Month"
+msgstr "Collect  Amount of Month"
+
+#. module: nh_dash_board
+#: model:ir.model.fields,field_description:nh_dash_board.field_nh_dashboard_color
+msgid "Color Index"
+msgstr "Color Index"
+
+#. module: nh_dash_board
+#: model:ir.ui.view,arch_db:nh_dash_board.channel_dashboard_kanban_view
+msgid "Confirmed"
+msgstr "Confirmed"
+
+#. module: nh_dash_board
+#: model:ir.ui.view,arch_db:nh_dash_board.channel_dashboard_kanban_view
+msgid "Confirmed ["
+msgstr "Confirmed ["
+
+#. module: nh_dash_board
+#: model:ir.model.fields,field_description:nh_dash_board.field_nh_dashboard_count_approved_request
+msgid "Count Approved Request"
+msgstr "Count Approved Request"
+
+#. module: nh_dash_board
+#: model:ir.model.fields,field_description:nh_dash_board.field_nh_dashboard_count_approved_request_max_days
+msgid "Count Approved Request Max Days"
+msgstr "Count Approved Request Max Days"
+
+#. module: nh_dash_board
+#: model:ir.model.fields,field_description:nh_dash_board.field_nh_dashboard_count_confirmed_purchase
+msgid "Count Confirmed Purchase"
+msgstr "Count Confirmed Purchase"
+
+#. module: nh_dash_board
+#: model:ir.model.fields,field_description:nh_dash_board.field_nh_dashboard_count_confirmed_purchase_max_days
+msgid "Count Confirmed Purchase Max Days"
+msgstr "Count Confirmed Purchase Max Days"
+
+#. module: nh_dash_board
+#: model:ir.model.fields,field_description:nh_dash_board.field_nh_dashboard_count_done_deliveries
+msgid "Count Done Deliveries"
+msgstr "Count Done Deliveries"
+
+#. module: nh_dash_board
+#: model:ir.model.fields,field_description:nh_dash_board.field_nh_dashboard_count_done_receipt_orders
+msgid "Count Done Receipt Orders"
+msgstr "Count Done Receipt Orders"
+
+#. module: nh_dash_board
+#: model:ir.model.fields,field_description:nh_dash_board.field_nh_dashboard_count_done_request
+msgid "Count Done Request"
+msgstr "Count Done Request"
+
+#. module: nh_dash_board
+#: model:ir.model.fields,field_description:nh_dash_board.field_nh_dashboard_count_done_request_max_days
+msgid "Count Done Request Max Days"
+msgstr "Count Done Request Max Days"
+
+#. module: nh_dash_board
+#: model:ir.model.fields,field_description:nh_dash_board.field_nh_dashboard_count_done_sales
+msgid "Count Done Sales"
+msgstr "Count Done Sales"
+
+#. module: nh_dash_board
+#: model:ir.model.fields,field_description:nh_dash_board.field_nh_dashboard_count_draft_invoices
+msgid "Count Draft Invoices"
+msgstr "Count Draft Invoices"
+
+#. module: nh_dash_board
+#: model:ir.model.fields,field_description:nh_dash_board.field_nh_dashboard_count_draft_purchase
+msgid "Count Draft Purchase"
+msgstr "Count Draft Purchase"
+
+#. module: nh_dash_board
+#: model:ir.model.fields,field_description:nh_dash_board.field_nh_dashboard_count_draft_purchase_max_days
+msgid "Count Draft Purchase Max Days"
+msgstr "Count Draft Purchase Max Days"
+
+#. module: nh_dash_board
+#: model:ir.model.fields,field_description:nh_dash_board.field_nh_dashboard_count_draft_request
+msgid "Count Draft Request"
+msgstr "Count Draft Request"
+
+#. module: nh_dash_board
+#: model:ir.model.fields,field_description:nh_dash_board.field_nh_dashboard_count_draft_request_max_days
+msgid "Count Draft Request Max Days"
+msgstr "Count Draft Request Max Days"
+
+#. module: nh_dash_board
+#: model:ir.model.fields,field_description:nh_dash_board.field_nh_dashboard_count_landed_purchase
+msgid "Count Landed Purchase"
+msgstr "Count Landed Purchase"
+
+#. module: nh_dash_board
+#: model:ir.model.fields,field_description:nh_dash_board.field_nh_dashboard_count_landed_purchase_max_days
+msgid "Count Landed Purchase Max Days"
+msgstr "Count Landed Purchase Max Days"
+
+#. module: nh_dash_board
+#: model:ir.model.fields,field_description:nh_dash_board.field_nh_dashboard_count_open_invoices
+msgid "Count Open Invoices"
+msgstr "Count Open Invoices"
+
+#. module: nh_dash_board
+#: model:ir.model.fields,field_description:nh_dash_board.field_nh_dashboard_count_outstanding_customers
+msgid "Count Outstanding Customers"
+msgstr "Count Outstanding Customers"
+
+#. module: nh_dash_board
+#: model:ir.model.fields,field_description:nh_dash_board.field_nh_dashboard_count_paid_invoices
+msgid "Count Paid Invoices"
+msgstr "Count Paid Invoices"
+
+#. module: nh_dash_board
+#: model:ir.model.fields,field_description:nh_dash_board.field_nh_dashboard_count_production_purchase
+msgid "Count Production Purchase"
+msgstr "Count Production Purchase"
+
+#. module: nh_dash_board
+#: model:ir.model.fields,field_description:nh_dash_board.field_nh_dashboard_count_production_purchase_max_days
+msgid "Count Production Purchase Max Days"
+msgstr "Count Production Purchase Max Days"
+
+#. module: nh_dash_board
+#: model:ir.model.fields,field_description:nh_dash_board.field_nh_dashboard_count_total_purchase
+msgid "Count Total Purchase"
+msgstr "Count Total Purchase"
+
+#. module: nh_dash_board
+#: model:ir.model.fields,field_description:nh_dash_board.field_nh_dashboard_count_total_request
+msgid "Count Total Request"
+msgstr "Count Total Request"
+
+#. module: nh_dash_board
+#: model:ir.model.fields,field_description:nh_dash_board.field_nh_dashboard_count_total_request_max_days
+msgid "Count Total Request Max Days"
+msgstr "Count Total Request Max Days"
+
+#. module: nh_dash_board
+#: model:ir.model.fields,field_description:nh_dash_board.field_nh_dashboard_count_transit_purchase
+msgid "Count Transit Purchase"
+msgstr "Count Transit Purchase"
+
+#. module: nh_dash_board
+#: model:ir.model.fields,field_description:nh_dash_board.field_nh_dashboard_count_transit_purchase_max_days
+msgid "Count Transit Purchase Max Days"
+msgstr "Count Transit Purchase Max Days"
+
+#. module: nh_dash_board
+#: model:ir.model.fields,field_description:nh_dash_board.field_nh_dashboard_count_transit_request
+msgid "Count Transit Request"
+msgstr "Count Transit Request"
+
+#. module: nh_dash_board
+#: model:ir.model.fields,field_description:nh_dash_board.field_nh_dashboard_count_transit_request_max_days
+msgid "Count Transit Request Max Days"
+msgstr "Count Transit Request Max Days"
+
+#. module: nh_dash_board
+#: model:ir.model.fields,field_description:nh_dash_board.field_nh_dashboard_count_undone_deliveries
+msgid "Count Undone Deliveries"
+msgstr "Count Undone Deliveries"
+
+#. module: nh_dash_board
+#: model:ir.model.fields,field_description:nh_dash_board.field_nh_dashboard_count_undone_receipt_orders
+msgid "Count Undone Receipt Orders"
+msgstr "Count Undone Receipt Orders"
+
+#. module: nh_dash_board
+#: model:ir.model.fields,field_description:nh_dash_board.field_nh_dashboard_count_undone_sales
+msgid "Count Undone Sales"
+msgstr "Count Undone Sales"
+
+#. module: nh_dash_board
+#: model:ir.ui.view,arch_db:nh_dash_board.channel_dashboard_kanban_view
+msgid "Counter"
+msgstr "Counter"
+
+#. module: nh_dash_board
+#: model:ir.model.fields,field_description:nh_dash_board.field_nh_dashboard_create_uid
+msgid "Created by"
+msgstr "Created by"
+
+#. module: nh_dash_board
+#: model:ir.model.fields,field_description:nh_dash_board.field_nh_dashboard_create_date
+msgid "Created on"
+msgstr "Created on"
+
+#. module: nh_dash_board
+#: model:ir.model.fields,field_description:nh_dash_board.field_nh_dashboard_currency_id
+msgid "Currency"
+msgstr "Currency"
+
+#. module: nh_dash_board
+#: model:ir.ui.view,arch_db:nh_dash_board.channel_dashboard_kanban_view
+msgid "Current Inventory"
+msgstr "Current Inventory"
+
+#. module: nh_dash_board
+#: selection:nh.dashboard,application:0
+msgid "Customers"
+msgstr "Customers"
+
+#. module: nh_dash_board
+#: model:ir.actions.act_window,name:nh_dash_board.custom_sales_dashboard_action
+msgid "Dashboard"
+msgstr "Dashboard"
+
+#. module: nh_dash_board
+#: model:ir.model.fields,field_description:nh_dash_board.field_nh_dashboard_display_name
+msgid "Display Name"
+msgstr "Display Name"
+
+#. module: nh_dash_board
+#: model:ir.ui.view,arch_db:nh_dash_board.channel_dashboard_kanban_view
+msgid "Done Delivery Orders  ["
+msgstr "Done Delivery Orders  ["
+
+#. module: nh_dash_board
+#: model:ir.ui.view,arch_db:nh_dash_board.channel_dashboard_kanban_view
+msgid "Done Receipt Order["
+msgstr "Done Receipt Order["
+
+#. module: nh_dash_board
+#: model:ir.ui.view,arch_db:nh_dash_board.channel_dashboard_kanban_view
+msgid "Done Sales ["
+msgstr "Done Sales ["
+
+#. module: nh_dash_board
+#: model:ir.ui.view,arch_db:nh_dash_board.channel_dashboard_kanban_view
+msgid "Draft"
+msgstr "Draft"
+
+#. module: nh_dash_board
+#: model:ir.ui.view,arch_db:nh_dash_board.channel_dashboard_kanban_view
+msgid "Draft  ["
+msgstr "Draft  ["
+
+#. module: nh_dash_board
+#: model:ir.ui.view,arch_db:nh_dash_board.channel_dashboard_kanban_view
+msgid "Draft Invoices  ["
+msgstr "Draft Invoices  ["
+
+#. module: nh_dash_board
+#: model:ir.ui.menu,name:nh_dash_board.menu_root
+#: model:res.groups,name:nh_dash_board.gm_dashboard
+msgid "GM DASHBOARD"
+msgstr "GM DASHBOARD"
+
+#. module: nh_dash_board
+#: model:ir.model.fields,field_description:nh_dash_board.field_nh_dashboard_id
+msgid "ID"
+msgstr "ID"
+
+#. module: nh_dash_board
+#: model:ir.ui.view,arch_db:nh_dash_board.channel_dashboard_kanban_view
+msgid "In Production  ["
+msgstr "In Production  ["
+
+#. module: nh_dash_board
+#: model:ir.ui.view,arch_db:nh_dash_board.channel_dashboard_kanban_view
+msgid "In Transit  ["
+msgstr "In Transit  ["
+
+#. module: nh_dash_board
+#: model:ir.ui.view,arch_db:nh_dash_board.channel_dashboard_kanban_view
+msgid "In production"
+msgstr "In production"
+
+#. module: nh_dash_board
+#: model:ir.ui.view,arch_db:nh_dash_board.channel_dashboard_kanban_view
+msgid "In transit"
+msgstr "In transit"
+
+#. module: nh_dash_board
+#: model:ir.ui.view,arch_db:nh_dash_board.channel_dashboard_kanban_view
+msgid "In transit  ["
+msgstr "In transit  ["
+
+#. module: nh_dash_board
+#: model:ir.model.fields,field_description:nh_dash_board.field_nh_dashboard___last_update
+msgid "Last Modified on"
+msgstr "Last Modified on"
+
+#. module: nh_dash_board
+#: model:ir.model.fields,field_description:nh_dash_board.field_nh_dashboard_write_uid
+msgid "Last Updated by"
+msgstr "Last Updated by"
+
+#. module: nh_dash_board
+#: model:ir.model.fields,field_description:nh_dash_board.field_nh_dashboard_write_date
+msgid "Last Updated on"
+msgstr "Last Updated on"
+
+#. module: nh_dash_board
+#: model:ir.ui.view,arch_db:nh_dash_board.channel_dashboard_kanban_view
+msgid "MTD"
+msgstr "MTD"
+
+#. module: nh_dash_board
+#: model:ir.ui.view,arch_db:nh_dash_board.channel_dashboard_kanban_view
+msgid "MTD:"
+msgstr "MTD:"
+
+#. module: nh_dash_board
+#: model:ir.ui.menu,name:nh_dash_board.menu_sales_config_inherited
+msgid "Main Dash Board"
+msgstr "Main Dash Board"
+
+#. module: nh_dash_board
+#: model:ir.ui.view,arch_db:nh_dash_board.channel_dashboard_kanban_view
+msgid "Max. Days"
+msgstr "Max. Days"
+
+#. module: nh_dash_board
+#: model:ir.ui.view,arch_db:nh_dash_board.channel_dashboard_kanban_view
+msgid "More\n"
+"                               <i class=\"fa fa-caret-down\"/>"
+msgstr "More\n"
+"                               <i class=\"fa fa-caret-down\"/>"
+
+#. module: nh_dash_board
+#: model:ir.model.fields,field_description:nh_dash_board.field_nh_dashboard_name
+msgid "Name"
+msgstr "Name"
+
+#. module: nh_dash_board
+#: model:ir.ui.view,arch_db:nh_dash_board.channel_dashboard_kanban_view
+msgid "Open Invoices Per Customers["
+msgstr "Open Invoices Per Customers["
+
+#. module: nh_dash_board
+#: model:ir.ui.view,arch_db:nh_dash_board.channel_dashboard_kanban_view
+msgid "Open Invoices ["
+msgstr "Open Invoices ["
+
+#. module: nh_dash_board
+#: model:ir.model.fields,field_description:nh_dash_board.field_nh_dashboard_oustanding_customers_json
+msgid "Oustanding Customers Json"
+msgstr "Oustanding Customers Json"
+
+#. module: nh_dash_board
+#: model:ir.model.fields,field_description:nh_dash_board.field_nh_dashboard_oustanding_customers_table
+msgid "Oustanding Customers Table"
+msgstr "Oustanding Customers Table"
+
+#. module: nh_dash_board
+#: model:ir.ui.view,arch_db:nh_dash_board.channel_dashboard_kanban_view
+msgid "Oustanding Customers ["
+msgstr "Oustanding Customers ["
+
+#. module: nh_dash_board
+#: model:ir.ui.view,arch_db:nh_dash_board.channel_dashboard_kanban_view
+msgid "Outstanding custumers Chart will load here!"
+msgstr "Outstanding custumers Chart will load here!"
+
+#. module: nh_dash_board
+#: model:ir.ui.view,arch_db:nh_dash_board.channel_dashboard_kanban_view
+msgid "Paid Invoices ["
+msgstr "Paid Invoices ["
+
+#. module: nh_dash_board
+#: selection:nh.dashboard,application:0
+msgid "Payment"
+msgstr "Payment"
+
+#. module: nh_dash_board
+#: model:ir.ui.view,arch_db:nh_dash_board.channel_dashboard_kanban_view
+msgid "Payment Chart will load here!"
+msgstr "Payment Chart will load here!"
+
+#. module: nh_dash_board
+#: model:ir.model.fields,field_description:nh_dash_board.field_nh_dashboard_products_json
+msgid "Products Json"
+msgstr "Products Json"
+
+#. module: nh_dash_board
+#: model:ir.model.fields,field_description:nh_dash_board.field_nh_dashboard_products_table
+msgid "Products Table"
+msgstr "Products Table"
+
+#. module: nh_dash_board
+#: selection:nh.dashboard,application:0
+msgid "Purchase"
+msgstr "Purchase"
+
+#. module: nh_dash_board
+#: model:ir.model.fields,field_description:nh_dash_board.field_nh_dashboard_purchase_dashboard_graph
+msgid "Purchase Dashboard Graph"
+msgstr "Purchase Dashboard Graph"
+
+#. module: nh_dash_board
+#: model:ir.ui.view,arch_db:nh_dash_board.channel_dashboard_kanban_view
+msgid "Quotation"
+msgstr "Quotation"
+
+#. module: nh_dash_board
+#: model:ir.ui.view,arch_db:nh_dash_board.channel_dashboard_kanban_view
+msgid "Quotations  ["
+msgstr "Quotations  ["
+
+#. module: nh_dash_board
+#: model:ir.model.fields,field_description:nh_dash_board.field_nh_dashboard_request_dashboard_graph
+msgid "Request Dashboard Graph"
+msgstr "Request Dashboard Graph"
+
+#. module: nh_dash_board
+#: selection:nh.dashboard,application:0
+msgid "Sale"
+msgstr "Sale"
+
+#. module: nh_dash_board
+#: model:ir.model.fields,field_description:nh_dash_board.field_res_branch_sale_amount_total
+msgid "Sale  Amount Total"
+msgstr "Sale  Amount Total"
+
+#. module: nh_dash_board
+#: code:addons/nh_dash_board/models/nh_dash_board.py:599
+#, python-format
+msgid "Sales: Untaxed Total"
+msgstr "Sales: Untaxed Total"
+
+#. module: nh_dash_board
+#: model:ir.ui.view,arch_db:nh_dash_board.channel_dashboard_kanban_view
+msgid "State"
+msgstr "State"
+
+#. module: nh_dash_board
+#: selection:nh.dashboard,application:0
+msgid "Stock"
+msgstr "Stock"
+
+#. module: nh_dash_board
+#: model:ir.ui.view,arch_db:nh_dash_board.channel_dashboard_kanban_view
+msgid "Stock Chart will load here!"
+msgstr "Stock Chart will load here!"
+
+#. module: nh_dash_board
+#: selection:nh.dashboard,application:0
+msgid "Stock Request"
+msgstr "Stock Request"
+
+#. module: nh_dash_board
+#: model:ir.model.fields,field_description:nh_dash_board.field_nh_dashboard_total_collect_monthly
+msgid "Total Collect Monthly"
+msgstr "Total Collect Monthly"
+
+#. module: nh_dash_board
+#: model:ir.model.fields,field_description:nh_dash_board.field_nh_dashboard_total_collect_weekly
+msgid "Total Collect Weekly"
+msgstr "Total Collect Weekly"
+
+#. module: nh_dash_board
+#: model:ir.model.fields,field_description:nh_dash_board.field_nh_dashboard_total_collect_yearly
+msgid "Total Collect Yearly"
+msgstr "Total Collect Yearly"
+
+#. module: nh_dash_board
+#: model:ir.model.fields,field_description:nh_dash_board.field_nh_dashboard_total_sale_monthly
+msgid "Total Sale Monthly"
+msgstr "Total Sale Monthly"
+
+#. module: nh_dash_board
+#: model:ir.model.fields,field_description:nh_dash_board.field_nh_dashboard_total_sale_weekly
+msgid "Total Sale Weekly"
+msgstr "Total Sale Weekly"
+
+#. module: nh_dash_board
+#: model:ir.model.fields,field_description:nh_dash_board.field_nh_dashboard_total_sale_yearly
+msgid "Total Sale Yearly"
+msgstr "Total Sale Yearly"
+
+#. module: nh_dash_board
+#: model:ir.ui.view,arch_db:nh_dash_board.channel_dashboard_kanban_view
+msgid "Undone Delivery Orders ["
+msgstr "Undone Delivery Orders ["
+
+#. module: nh_dash_board
+#: model:ir.ui.view,arch_db:nh_dash_board.channel_dashboard_kanban_view
+msgid "Unfinished Sales  ["
+msgstr "Unfinished Sales  ["
+
+#. module: nh_dash_board
+#: model:ir.ui.view,arch_db:nh_dash_board.channel_dashboard_kanban_view
+msgid "Value"
+msgstr "Value"
+
+#. module: nh_dash_board
+#: model:ir.model.fields,field_description:nh_dash_board.field_nh_dashboard_value_approved_request
+msgid "Value Approved Request"
+msgstr "Value Approved Request"
+
+#. module: nh_dash_board
+#: model:ir.model.fields,field_description:nh_dash_board.field_nh_dashboard_value_confirmed_purchase
+msgid "Value Confirmed Purchase"
+msgstr "Value Confirmed Purchase"
+
+#. module: nh_dash_board
+#: model:ir.model.fields,field_description:nh_dash_board.field_nh_dashboard_value_done_request
+msgid "Value Done Request"
+msgstr "Value Done Request"
+
+#. module: nh_dash_board
+#: model:ir.model.fields,field_description:nh_dash_board.field_nh_dashboard_value_draft_purchase
+msgid "Value Draft Purchase"
+msgstr "Value Draft Purchase"
+
+#. module: nh_dash_board
+#: model:ir.model.fields,field_description:nh_dash_board.field_nh_dashboard_value_draft_request
+msgid "Value Draft Request"
+msgstr "Value Draft Request"
+
+#. module: nh_dash_board
+#: model:ir.model.fields,field_description:nh_dash_board.field_nh_dashboard_value_landed_purchase
+msgid "Value Landed Purchase"
+msgstr "Value Landed Purchase"
+
+#. module: nh_dash_board
+#: model:ir.model.fields,field_description:nh_dash_board.field_nh_dashboard_value_production_purchase
+msgid "Value Production Purchase"
+msgstr "Value Production Purchase"
+
+#. module: nh_dash_board
+#: model:ir.model.fields,field_description:nh_dash_board.field_nh_dashboard_value_transit_purchase
+msgid "Value Transit Purchase"
+msgstr "Value Transit Purchase"
+
+#. module: nh_dash_board
+#: model:ir.model.fields,field_description:nh_dash_board.field_nh_dashboard_value_transit_request
+msgid "Value Transit Request"
+msgstr "Value Transit Request"
+
+#. module: nh_dash_board
+#: model:ir.ui.view,arch_db:nh_dash_board.channel_dashboard_kanban_view
+msgid "WTD"
+msgstr "WTD"
+
+#. module: nh_dash_board
+#: model:ir.ui.view,arch_db:nh_dash_board.channel_dashboard_kanban_view
+msgid "WTD:"
+msgstr "WTD:"
+
+#. module: nh_dash_board
+#: model:ir.ui.view,arch_db:nh_dash_board.channel_dashboard_kanban_view
+msgid "Waiting Receipt Order ["
+msgstr "Waiting Receipt Order ["
+
+#. module: nh_dash_board
+#: model:ir.ui.view,arch_db:nh_dash_board.channel_dashboard_kanban_view
+msgid "Waiting for cost saving  ["
+msgstr "Waiting for cost saving  ["
+
+#. module: nh_dash_board
+#: model:ir.ui.view,arch_db:nh_dash_board.channel_dashboard_kanban_view
+msgid "Waiting for cost validation"
+msgstr "Waiting for cost validation"
+
+#. module: nh_dash_board
+#: model:ir.ui.view,arch_db:nh_dash_board.channel_dashboard_kanban_view
+msgid "YTD"
+msgstr "YTD"
+
+#. module: nh_dash_board
+#: model:ir.ui.view,arch_db:nh_dash_board.channel_dashboard_kanban_view
+msgid "YTD:"
+msgstr "YTD:"
+
+#. module: nh_dash_board
+#: model:ir.model,name:nh_dash_board.model_nh_dashboard
+msgid "nh.dashboard"
+msgstr "nh.dashboard"
+
+#. module: nh_dash_board
+#: model:ir.model,name:nh_dash_board.model_res_branch
+msgid "res.branch"
+msgstr "res.branch"
+

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record model="ir.ui.view" id="view_inventory_correc_form">
+        <field name="name">inventory.correct form</field>
+        <field name="model">inventory.correct</field>
+        <field name="arch" type="xml">
+            <form string="inventory.correc form" >
+                    <group>
+                        <field name="branch_id" />
+                        <field name="code" />
+                    </group>
+
+					<footer >
+                        <button name="start" string="Launch" type="object" class="oe_highlight"/>
+						 or
+                        <button string="Cancel" class="oe_link" special="cancel"/>
+                    </footer>
+            </form>
+        </field>
+    </record>
+
+
+    <record model="ir.actions.act_window" id="action_inventory_correct">
+        <field name="name">inventory.correct</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">inventory.correct</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="view_inventory_correc_form"/>
+    </record>
+
+    <menuitem name="show-account-entries"
+              id="menu_inventory_correct"
+              parent="account.account_management_menu"
+              action="action_inventory_correct"
+              sequence="3"
+
+        />
+
+
+</odoo>

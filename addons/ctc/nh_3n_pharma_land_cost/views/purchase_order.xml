@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <!--    security group         -->
+        <record id="button_production" model="res.groups">
+          <field name="name">Button Switch to production</field>
+          <field name="category_id"  eval="ref('base.module_category_purchases')" />
+        </record>
+
+        <record id="button_transit" model="res.groups">
+          <field name="name">Button Switch to transit</field>
+          <field name="category_id"  eval="ref('base.module_category_purchases')" />
+        </record>
+         <record id="button_confirm" model="res.groups">
+          <field name="name">Button Confirm</field>
+          <field name="category_id"  eval="ref('base.module_category_purchases')" />
+        </record>
+
+        <record id="button_landed" model="res.groups">
+          <field name="name">Button Landed</field>
+          <field name="category_id"  eval="ref('base.module_category_purchases')" />
+        </record>
+
+        <record id="button_cancel" model="res.groups">
+          <field name="name">Button cancel</field>
+          <field name="category_id"  eval="ref('base.module_category_purchases')" />
+        </record>
+          <record id="button_approve" model="res.groups">
+          <field name="name">Button approve</field>
+          <field name="category_id"  eval="ref('base.module_category_purchases')" />
+        </record>
+          <record id="button_done" model="res.groups">
+          <field name="name">Button done</field>
+          <field name="category_id"  eval="ref('base.module_category_purchases')" />
+        </record>
+          <record id="button_unlock" model="res.groups">
+          <field name="name">Button unlock'</field>
+          <field name="category_id"  eval="ref('base.module_category_purchases')" />
+        </record>
+        <record id="button_draft" model="res.groups">
+          <field name="name">Button draft</field>
+          <field name="category_id"  eval="ref('base.module_category_purchases')" />
+        </record>
+        <record id="button_generate_landing_cost" model="res.groups">
+          <field name="name">Button Compute Landing Cost</field>
+          <field name="category_id"  eval="ref('base.module_category_purchases')" />
+        </record>
+
+        <record id="button_view_landing_cost" model="res.groups">
+          <field name="name">Button View Landing Cost</field>
+          <field name="category_id"  eval="ref('base.module_category_purchases')" />
+        </record>
+        <record id="button_view_first_level_validation" model="res.groups">
+          <field name="name">Button MD Validation</field>
+          <field name="category_id"  eval="ref('base.module_category_purchases')" />
+        </record>
+
+        <record id="button_view_second_level_validation" model="res.groups">
+          <field name="name">Button GM Validation</field>
+          <field name="category_id"  eval="ref('base.module_category_purchases')" />
+        </record>
+
+
+
+        <!--    end security group         -->
+
+
+        <record id="nh_3n_pharma_land_cost_purchase_order" model="ir.ui.view">
+            <field name="name">purchase.order.form</field>
+            <field name="model">purchase.order</field>
+            <field name="inherit_id" ref="branch.view_purchase_order_form_extended" />
+            <field name="arch" type="xml">
+
+                <!-- positionnement des boutons-->
+                <xpath expr="//form/header/button[@id='draft_confirm']" position="replace" >
+
+                </xpath>
+                <xpath expr="//form/header/button[@id='bid_confirm']" position="replace" >
+
+                </xpath>
+                <xpath expr="//form/header/button[@name='button_cancel']" position="replace" >
+
+                </xpath>
+                <xpath expr="//form/header/button[@name='button_approve']" position="replace" >
+
+                </xpath>
+                <xpath expr="//form/header/button[@name='button_done']" position="replace" >
+
+                </xpath>
+                <xpath expr="//form/header/button[@name='button_unlock']" position="replace" >
+
+                </xpath>
+                <xpath expr="//form/header/button[@name='button_draft']" position="replace" >
+
+                </xpath>
+                <xpath expr="//form/sheet/notebook/page/group/group/div/field[@name='date_planned']" position="replace" >
+
+                </xpath>
+                <xpath expr="//header/button[@name='print_quotation']" position="after">
+                    <field name="has_land_cost" invisible="1"/>
+                    <field name="has_valid_land_cost" invisible="1"/>
+                    <field name="type"   invisible="1"/>
+
+                    <!-- local purchase button -->
+                    <button name="button_confirm_local" type="object" attrs="{'invisible': ['|','!',('type','in', ('local',)),'!',('state', 'in', ['sent','draft'])]}" string="Confirm Order" id="draft_confirm" groups="nh_3n_pharma_land_cost.button_confirm"/>
+                    <!-- end of local purchase button -->
+
+                    <!-- import purchase button -->
+                    <button name="button_confirm" type="object" attrs="{'invisible': ['|','!',('type','in', ('abroad',)),'!',('state', 'in', ['sent','draft'])]}" string="Confirm Order" id="draft_confirm" groups="nh_3n_pharma_land_cost.button_confirm"/>
+                    <button name="button_production" attrs="{'invisible': ['|','!',('type','in', ('abroad',)),'!',('state', 'in', ['purchase'])]}" string="Switch to Production" type="object" states="button_production" groups="nh_3n_pharma_land_cost.button_production"/>
+                    <button name="button_transit"  attrs="{'invisible': ['|','!',('type','in', ('abroad',)),'!',('state', 'in', ['production',])]}" string="Switch to Transit" type="object" states="button_transit" groups="nh_3n_pharma_land_cost.button_transit"/>
+                    <button name="button_landed" type="object" attrs="{'invisible': ['|','!',('type','in', ('abroad',)),'!',('state', 'in', ['transit',])]}" string="Confirm product have landed" groups="nh_3n_pharma_land_cost.button_landed"/>
+                    <button name="button_generate_landing_cost" type="object" attrs="{'invisible': ['|','|','!',('type','in', ('abroad',)),'!',('state', 'in', ['landed',]),('has_valid_land_cost','=',True)]}" string="Compute Landing Cost" groups="nh_3n_pharma_land_cost.button_generate_landing_cost"/>
+                    <!-- end of import purchase button -->
+
+                    <!-- local purchase button -->
+                    <button name="button_first_level_validation" type="object" attrs="{'invisible': ['|','!',('type','in', ('expense',)),'!',('state', 'in', ['sent','draft'])]}" string="MD Validation" id="draft_confirm" groups="nh_3n_pharma_land_cost.button_view_first_level_validation"/>
+                    <button name="button_second_level_validation" type="object" attrs="{'invisible': ['|','!',('type','in', ('expense',)),'!',('state', 'in', ['first_level_validation'])]}" string="GM Validation" id="draft_confirm" groups="nh_3n_pharma_land_cost.button_view_second_level_validation"/>
+                    <!-- end of local purchase button -->
+
+                    <!-- commons purchase button -->
+                    <button name="button_draft" states="cancel" string="Set to Draft" type="object" groups="nh_3n_pharma_land_cost.button_draft"/>
+                    <button name="button_cancel" states="draft,to approve,sent,purchase" string="Cancel" type="object"  groups="nh_3n_pharma_land_cost.button_cancel"/>
+                    <button name="button_done" type="object" string="Lock" states="landed" groups="nh_3n_pharma_land_cost.button_done"/>
+                    <button name="button_unlock" type="object" string="Unlock" states="done" groups="nh_3n_pharma_land_cost.button_unlock"/>
+                    <button name="action_view_land_cost" string="View Landing Costs" type="object"  class="oe_stat_button" icon="fa-truck"  attrs="{'invisible':[('has_land_cost','=',False)]}" groups="nh_3n_pharma_land_cost.button_view_landing_cost"/>
+                     <!-- end of commons purchase button -->
+                     <!--<button name="button_confirm" type="object" states="sent" string="Confirm Order" class="oe_highlight" id="bid_confirm" groups="nh_3n_pharma_land_cost.button_confirm"/>-->
+                 </xpath>
+                <!-- fin  positionnement des boutons-->
+
+                <!--mise à jour de la barre d'état-->
+                <xpath expr="//form/header/field[@name='state']" position="replace" >
+                    <field name="type"   invisible="1"/>
+                    <field name="state" widget="statusbar" statusbar_visible="draft,sent,purchase,production,transit,landed,cost_saved"  attrs="{ 'invisible' : [('type','in', ('local','expense',))]}"  />
+                    <field name="state_local" widget="statusbar" statusbar_visible="draft,sent,purchase"  attrs="{ 'invisible' : [('type','in', ('abroad','expense'))]}"  />
+                    <field name="state_expense" widget="statusbar" statusbar_visible="draft,sent,first_level_validation,second_level_validation,purchase"  attrs="{ 'invisible' : [('type','in', ('abroad','local'))]}"  />
+
+
+                </xpath>
+                <!--fin de la mise à jour de la barre d'état-->
+
+
+                <xpath expr="//form/sheet/group/group/field[@name='partner_id']" position="before" >
+                    <field name="use_ratio_volume" attrs="{'readonly': [('state', 'in', ['cost_saved','cancel','locked'])] , 'invisible' : ['!',('type','in', ('abroad',))]}" />
+                    <field name="type"  widget="radio" required="True" attrs="{'readonly': ['!',('state', 'in', ['draft',])]}"/>
+                    <field name="origin_country"   attrs="{'required': [('type','in', ('abroad',))] ,'invisible' : ['!',('type','in', ('abroad',))], 'readonly': [('state', 'in', ['cost_saved',])] } " />
+                    <field name="shipment_number" attrs="{'readonly': ['!',('state', 'in', ['transit','landed',])]}"/>
+
+                </xpath>
+
+                <xpath expr="//form/sheet/group/group/field[@name='currency_id']" position="after" >
+                     <field name="transit_cost_mode" attrs="{'required': [('type','in', ('abroad',))] ,'invisible' : ['!',('type','in', ('abroad',))], 'readonly': ['!',('state', 'in', ['draft',])] } "    />
+                     <field name="minimun_percentage_before_approve" attrs="{'required': [('type','in', ('abroad',))] , 'invisible' : ['!',('type','in', ('abroad',))], 'readonly': ['!',('state', 'in', ['draft',])]}"  placeholder="For example enter 10 if value is 10%" />
+                </xpath>
+                <xpath expr="//form/sheet/group/group/field[@name='date_order']" position="after" >
+                    <field name="date_planned" required="0" attrs="{'readonly': [('state', 'not in', ('draft', 'sent'))]}"/>
+
+                    <field name="date_confirm" attrs="{'invisible': ['!',('state', 'in',  ['!',('state', 'in', ('production','transit','landed','purchase','done',))])],'readonly': True}"   />
+                    <!-- date  of import purchase -->
+                    <field name="date_production_start" attrs="{'invisible': ['|','!',('type','in', ('abroad',)),'!',('state', 'in',  ['!',('state', 'in', ('production','transit','landed','purchase','done',))])],'readonly': True}"   />
+                    <field name="expected_production_end_date" attrs="{'invisible': ['|','!',('type','in', ('abroad',)),('state', 'in', ('draft',))], 'readonly': ['!',('state', 'in', ('production',))]}"   />
+                    <field name="date_transit" attrs="{'invisible': ['|','!',('type','in', ('abroad',)),'!',('state', 'in',  ['!',('state', 'in', ('transit','landed','purchase','done',))])],'readonly': True}"   />
+                    <field name="expected_landed_date" attrs="{'invisible': ['|','!',('type','in', ('abroad',)),'!',('state', 'in', ('transit','landed','purchase','done',))], 'readonly': ['!',('state', 'in', ('transit',))]}"   />
+                    <field name="date_arrival" attrs="{'readonly': True, 'invisible' :  ['|','!',('type','in', ('abroad',)),'!',('state', 'in', ('landed','purchase','done',))]}"   />
+                    <!-- end of date  of import purchase -->
+
+                    <!-- attributes  of expense purchase -->
+                    <field name="date_first_level_validation" attrs="{'invisible': ['|','!',('type','in', ('expense',)),'!',('state', 'in',  ['!',('state', 'in', ('first_level_validation','second_level_validation','purchase','done',))])],'readonly': True}"   />
+                    <field name="date_second_level_validation" attrs="{'invisible': ['|','!',('type','in', ('expense',)),'!',('state', 'in',  ['!',('state', 'in', ('second_level_validation','purchase','done',))])],'readonly': True}"   />
+
+                    <!-- end of attributes  of expense purchase -->
+                </xpath>
+
+
+                 <xpath expr="//form[1]/sheet[1]/notebook[1]/page" position="after" >
+
+                     <page string="Landed Cost" attrs="{'invisible': ['!',('type','in', ('abroad',))]}">
+                            <group>
+                                <group>
+                                    <field name="arrival_country" attrs="{'readonly': ['!',('state', 'in', ['landed',])]}"/>
+                                    <field name="arrival_town" attrs="{'readonly': ['!',('state', 'in', ['landed',])]}"/>
+                                    <field name="bill_of_landing_number" attrs="{'readonly': ['!',('state', 'in', ['landed','transit',])]}"/>
+
+                                    <field name="sgs_number" attrs="{'readonly': ['!',('state', 'in', ['landed',])]}"/>
+                                    <field name="land_cost_currency_id" attrs="{'readonly':  False}"/>
+                                    <field name="financial_expense_rate" attrs="{'readonly': True}" />
+                                    <field name="whithholding_on_sale_rate" attrs="{'readonly': True}"/>
+                                    <field name="external_audit_cost_rate" attrs="{'readonly': True}"/>
+                                </group>
+                                <group>
+                                    <field name="freight" attrs="{'invisible': [('transit_cost_mode','=','cif')], 'readonly': ['!',('state', 'in', ['landed',])]}"
+                                      widget="monetary" options="{'currency_field': 'land_cost_currency_id'}" />
+                                    <field name="intervention_charge" attrs="{'readonly': ['!',('state', 'in', ['landed',])]}"  widget="monetary" options="{'currency_field': 'land_cost_currency_id'}"/>
+                                    <field name="outlay_charge" attrs="{'readonly': ['!',('state', 'in', ['landed',])]}"  widget="monetary" options="{'currency_field': 'land_cost_currency_id'}"/>
+                                    <field name="custom_cost" attrs="{'readonly': ['!',('state', 'in', ['landed',])]}"  widget="monetary" options="{'currency_field': 'land_cost_currency_id'}"/>
+                                    <field name="handling_cost" attrs="{'readonly': ['!',('state', 'in', ['landed',])]}"  widget="monetary" options="{'currency_field': 'land_cost_currency_id'}"/>
+                                    <field name="financial_expense_value"  widget="monetary" options="{'currency_field': 'land_cost_currency_id'}"/>
+                                    <field name="whithholding_on_sale_value"  widget="monetary" options="{'currency_field': 'land_cost_currency_id'}"/>
+                                    <field name="external_audit_cost_value"  widget="monetary" options="{'currency_field': 'land_cost_currency_id'}"/>
+                                </group>
+                            </group>
+                     </page>
+                </xpath>
+
+
+                <xpath expr="//field[@name='partner_id']" position="replace" >
+                     <field name="partner_id"  attrs="{'readonly': ['!',('state', 'in', ['draft',])]}"/>
+                </xpath>
+                <xpath expr="//field[@name='partner_ref']" position="replace" >
+                     <field name="partner_ref"  attrs="{'readonly': ['!',('state', 'in', ['draft',])]}"/>
+                </xpath>
+
+                <xpath expr="//field[@name='branch_id']" position="replace" >
+                     <field name="branch_id"  attrs="{'readonly': ['!',('state', 'in', ['draft',])]}"/>
+                </xpath>
+                <!--<xpath expr="//field[@name='date_order']" position="replace" >
+                     <field name="date_order"  attrs="{'readonly': ['!',('state', 'in', ['draft',])]}"/>
+                </xpath>
+                -->
+                 <xpath expr="//field[@name='date_order']" position="attributes" >
+                         <attribute name="attrs">{'readonly': True}  </attribute>
+                </xpath>
+                 <xpath expr="//field[@name='branch_id']" position="replace" >
+                     <field name="branch_id"  attrs="{'required': True}"/>
+                </xpath>
+
+                <xpath expr="//form[1]/sheet[1]/notebook[1]/page[1]/field/tree/field[@name='product_id']" position="replace" >
+                    <field name="state" invisible="1"/>
+
+                    <field name="type" invisible="1"/>
+                    <field name="product_id"  context="{'partner_id':parent.partner_id, 'quantity':product_qty,'uom':product_uom, 'company_id': parent.company_id}" force_save="1"/>
+                </xpath>
+
+
+                <xpath expr="//form[1]/sheet[1]/notebook[1]/page[1]/field[@name='order_line']" position="attributes" >
+                         <attribute name="attrs">{'readonly': [('state', 'in', ['purchase', 'to approve','done', 'cancel','first_level_validation','second_level_validation','production','cost_saved',])]}  </attribute>
+                </xpath>
+
+
+
+
+                <xpath expr="//form[1]/sheet[1]/notebook[1]/page[1]/field/tree/field[@name='product_uom']" position="after" >
+                    <field name="use_ratio_volume" invisible="1" />
+                    <field name="volume_ratio"  attrs="{ 'readonly': [('state', 'in', ['cost_saved','cancel','locked'])] , 'invisible': [('use_ratio_volume','=',False)] }"/>
+                </xpath>
+                <xpath expr="//form[1]/sheet[1]/notebook[1]/page[1]/field/tree/field[@name='date_planned']" position="replace" >
+
+                </xpath>
+            </field>
+        </record>
+
+
+
+
+    </data>
+</odoo>

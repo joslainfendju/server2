@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="expense_team_tree" model="ir.ui.view">
+            <field name="name">expense.team.tree</field>
+            <field name="model">expense.team</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="active" invisible="True"/>
+                    <field name="name"/>
+                    <field name="user_id"/>
+                    <field name="company_id" groups="base.group_multi_company"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="expense_team_form" model="ir.ui.view">
+            <field name="name">expense.team.form</field>
+            <field name="model">expense.team</field>
+            <field name="arch" type="xml">
+                <form string="Expense Team" class="o_purchase_team">
+                    <sheet>
+                        <div class="oe_title">
+                            <h1>
+                                <field name="name"/>
+                            </h1>
+                        </div>
+                        <group>
+                            <group>
+                                <field name="user_id" domain="[('share', '=', False)]" widget="many2one_avatar_user"/>
+                            </group>
+                            <group>
+                                <field name="company_id" groups="base.group_multi_company"
+                                       options="{'no_create': True}"/>
+                            </group>
+                        </group>
+                        <group>
+                            <group>
+                                <field name="lock_amount_total"/>
+                            </group>
+                            <group></group>
+                        </group>
+                        <group string="Approvers">
+                            <field name="approver_ids" nolabel="1">
+                                <tree editable="bottom">
+                                    <field name="sequence" widget="handle"/>
+                                    <field name="user_id"/>
+                                    <field name="role"/>
+                                    <field name="min_amount"/>
+                                    <field name="company_currency_id" invisible="True"/>
+                                    <field name="lock_amount_total"/>
+                                </tree>
+                            </field>
+                        </group>
+                        <group>
+                            <p>
+                                Please ensure that each approver is at least expense module user!
+                                It is mandatory to avoid access issues.
+                            </p>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        <record id="expense_team_act_window" model="ir.actions.act_window">
+            <field name="name">Expense Teams</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">expense.team</field>
+            <field name="view_mode">tree,form</field>
+            <field name="context">{}</field>
+            <field name="view_id" eval="False"/>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    No team found. Let's create one!
+                </p>
+            </field>
+        </record>
+        <menuitem name="Expense Teams" id="expense_team_menu" action="expense_team_act_window"
+                  parent="hr_expense.menu_hr_expense_configuration" sequence="50"/>
+
+
+        <record id="expense_sheet_approval_form" model="ir.ui.view">
+            <field name="name">expense.sheet.approval.form</field>
+            <field name="inherit_id" ref="hr_expense.view_hr_expense_sheet_form"/>
+            <field name="model">hr.expense.sheet</field>
+            <field name="arch" type="xml">
+                <xpath expr="//form/sheet/notebook/page/field[@name='expense_line_ids']" position="after">
+                    <group class="oe_subtotal_footer oe_right">
+                        <div class="oe_subtotal_footer_separator oe_inline">
+                            <label for="total_amount"/>
+                        </div>
+                        <field name="total_amount" nolabel="1" class="oe_subtotal_footer_separator" widget="monetary" options="{'currency_field': 'currency_id'}"/>
+                    </group>
+                </xpath>
+                <xpath expr="//form/sheet/notebook/page/field[@name='expense_line_ids']/tree/field[@name='date']" position="after">
+                    <field name="product_id"/>
+                </xpath>
+                <field name="state" position="replace">
+                    <field name="state" widget="statusbar" statusbar_visible="draft,submit,approve,to approve,post,done"/>
+                </field>
+
+                <button name="approve_expense_sheets" position="after">
+                    <button name="button_approve" type="object" string="Approve" attrs="{'invisible':['|', ('is_current_approver', '=', False), '!',('state', '=', 'to approve')]}" />
+                </button>
+                <button name="approve_expense_sheets" position="attributes">
+                    <attribute name="attrs">{'invisible':['!' , ('state', 'in', ('submit',))]}</attribute>
+                    <attribute name="string">Superior Validation</attribute>
+                    <attribute name="grouos">its_hr_expensel_route.group_button_approve_expense_by_superior</attribute>
+                </button>
+
+                <field name="currency_id" position="after">
+                    <field name="expense_approval_route" invisible="True"/>
+                    <field name="team_id"
+                           attrs="{'invisible':[('expense_approval_route', '=', 'no')], 'required':[('expense_approval_route', '=', 'required')]}"/>
+                </field>
+                <notebook position="inside">
+                    <page name="approval_route" string="Approval Route"
+                          attrs="{'invisible':['|', ('state', 'in', ['draft', 'sent']), ('team_id', '=', False)]}">
+                        <field name="approver_ids">
+                            <tree>
+                                <field name="user_id"/>
+                                <field name="role"/>
+                                <field name="state"/>
+                            </tree>
+                        </field>
+                        <field name="is_current_approver" invisible="True"/>
+                    </page>
+                </notebook>
+            </field>
+        </record>
+        <record id="view_hr_expense_sheet_filter" model="ir.ui.view">
+            <field name="name">hr.expense.sheet.filter - hr_expense_tier_validation</field>
+            <field name="model">hr.expense.sheet</field>
+            <field name="inherit_id" ref="hr_expense.view_hr_expense_sheet_filter"/>
+            <field name="arch" type="xml">
+                <xpath expr="//filter[@name='submitted']" position="replace">
+                   <filter domain="[('state', 'in', ('submit', 'to approve'))]" string="To Approve" name="submitted" help="Confirmed Expenses"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

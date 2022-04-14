@@ -1,0 +1,10 @@
+<?xml version="1.0" ?>
+<odoo>
+  <data noupdate="1">
+    <record id="ir_config_parameter_expire_critical_limit" model="ir.config_parameter">
+        <field name="name">SEUIL CRITIQUE PEREMTION EN JOUR</field>
+        <field name="key">SEUIL_CRITIQUE_PEREMTION_EN_JOUR</field>
+        <field name="value">1</field>
+    </record>
+   </data>
+</odoo>
